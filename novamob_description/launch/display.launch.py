@@ -1,5 +1,6 @@
 import launch
 from launch.substitutions import Command, LaunchConfiguration
+from launch.actions import AppendEnvironmentVariable
 import launch_ros
 import os
 
@@ -7,7 +8,13 @@ def generate_launch_description():
     pkg_share = launch_ros.substitutions.FindPackageShare(package='novamob_description').find('novamob_description')
     default_model_path = os.path.join(pkg_share, 'src/description/novamob_description.urdf')
     default_rviz_config_path = os.path.join(pkg_share, 'rviz/urdf_config.rviz')
-    world_path=os.path.join(pkg_share, 'world/outdoor.world')
+    world_path=os.path.join(pkg_share, 'world/empty_world.world')
+
+
+
+    set_env_vars_resources = AppendEnvironmentVariable(
+        'GZ_SIM_RESOURCE_PATH',
+        os.path.join(pkg_share, 'meshes'))
 
 
     robot_state_publisher_node = launch_ros.actions.Node(
@@ -29,9 +36,9 @@ def generate_launch_description():
         arguments=['-d', LaunchConfiguration('rvizconfig')],
     )
     spawn_entity = launch_ros.actions.Node(
-        package='gazebo_ros',
-        executable='spawn_entity.py',
-        arguments=['-entity', 'novamob', '-topic', 'robot_description'],
+        package='ros_gz_sim',
+        executable='create',
+        arguments=['-name', 'novamob', '-topic', 'robot_description'],
         output='screen'
     )
     robot_localization_node = launch_ros.actions.Node(
@@ -49,7 +56,8 @@ def generate_launch_description():
                                             description='Absolute path to rviz config file'),
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='True',
                                             description='Flag to enable use_sim_time'),
-        launch.actions.ExecuteProcess(cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so', world_path], output='screen'),
+        launch.actions.ExecuteProcess(cmd=['ign', 'gazebo', '-r', world_path], output='screen'),
+        set_env_vars_resources,
         joint_state_publisher_node,
         #joint_state_publisher_gui_node,
         robot_state_publisher_node,
