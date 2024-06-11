@@ -126,7 +126,12 @@
       <parent link="base_link"/>
       <child link="${prefix}_link"/>
       <origin xyz="${x_reflect*wheel_set} ${y_reflect*wheel_ygap} ${-wheel_zoff}" rpy="0 0 0"/>
-      <axis xyz="0 1 0"/>
+      <axis> 
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>20</effort>          <!-- wheel torque previously in lib_gazebo_ross_diff_drive.so -->
+        </limit>
+      </axis> 
     </joint>
   </xacro:macro>
 
@@ -163,16 +168,17 @@
 
   <gazebo reference="imu_link">
     <sensor name="imu_sensor" type="imu">
-    <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+    <!-- <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
         <ros>
           <namespace>/demo</namespace>
           <remapping>~/out:=imu</remapping>
         </ros>
         <initial_orientation_as_reference>false</initial_orientation_as_reference>
-      </plugin>
+      </plugin> -->
       <always_on>true</always_on>
       <update_rate>100</update_rate>
       <visualize>true</visualize>
+      <topic>imu</topic>
       <imu>
         <angular_velocity>
           <x>
@@ -235,39 +241,54 @@
   <!-- Diff Drive -->
 
   <gazebo>
-    <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
-      <ros>
+    <plugin name='gz::sim::systems::DiffDrive' filename='gz-sim-diff-drive-system'>
+      <!-- <ros>
         <namespace>/demo</namespace>
-      </ros>
+      </ros> -->
 
-        <num_wheel_pairs>2</num_wheel_pairs>
+      <!-- <num_wheel_pairs>2</num_wheel_pairs> -->
 
-        <!--back wheels -->
-        <left_joint>drivewhl_l_joint</left_joint>
-        <right_joint>drivewhl_r_joint</right_joint>
+      <!--back wheels -->
+      <left_joint>drivewhl_l_joint</left_joint>
+      <right_joint>drivewhl_r_joint</right_joint>
 
-        <!-- front wheels -->
-        <left_joint>drivewhl2_l_joint</left_joint>
-        <right_joint>drivewhl2_r_joint</right_joint>
+      <!-- front wheels -->
+      <left_joint>drivewhl2_l_joint</left_joint>
+      <right_joint>drivewhl2_r_joint</right_joint>
+
 
       <!-- kinematics -->
       <wheel_separation>${wheel_ygap*2}</wheel_separation>
-      <wheel_diameter>${wheel_radius*2}</wheel_diameter>
+      <wheel_radius>${wheel_radius}</wheel_radius>
+      <!-- <wheel_diameter>${wheel_radius*2}</wheel_diameter> -->
       <wheel_separation>${wheel_ygap*2}</wheel_separation>
-      <wheel_diameter>${wheel_radius*2}</wheel_diameter>
+      <wheel_radius>${wheel_radius}</wheel_radius>
+      <!-- <wheel_diameter>${wheel_radius*2}</wheel_diameter> -->
+
+
       <!-- limits -->
-      <max_wheel_torque>20</max_wheel_torque>
-      <max_wheel_acceleration>1.0</max_wheel_acceleration>
-      <updateRate>100</updateRate>
+      <max_linear_acceleration>${wheel_radius*1.0}</max_linear_acceleration>
+      <!-- <max_wheel_torque>20</max_wheel_torque>
+      <max_wheel_acceleration>1.0</max_wheel_acceleration> -->
+      <!-- <updateRate>100</updateRate> -->
+      <topic>cmd_vel</topic>
 
 
       <!-- output -->
-      <publish_odom>true</publish_odom>
+      <odom_topic>odom</odom_topic>
+      <frame_id>odom</frame_id>
+      <tf_topic>tf</tf_topic>
+      <odom_publisher_frequency>100</odom_publisher_frequency>
+      <child_frame_id>base_link</child_frame_id>
+
+
+      <!-- <publish_odom>true</publish_odom>
       <publish_odom_tf>false</publish_odom_tf>
       <publish_wheel_tf>true</publish_wheel_tf>
 
       <odometry_frame>odom</odometry_frame>
-      <robot_base_frame>base_link</robot_base_frame>
+      <robot_base_frame>base_link</robot_base_frame> -->
+   
     </plugin>
   </gazebo>
 
@@ -304,11 +325,13 @@
   </joint>
 
   <gazebo reference="lidar_link">
-    <sensor name="lidar" type="ray">
+    <sensor name="lidar" type="gpu_lidar">
       <always_on>true</always_on>
       <visualize>false</visualize>
       <update_rate>5</update_rate>
-      <ray>
+      <topic>scan</topic>
+      <gz_frame_id>lidar_link</gz_frame_id>
+      <lidar>
         <scan>
           <horizontal>
             <samples>360</samples>
@@ -327,18 +350,18 @@
           <mean>0.0</mean>
           <stddev>0.01</stddev>
         </noise>
-      </ray>
-      <plugin name="scan" filename="libgazebo_ros_ray_sensor.so">
+      </lidar>
+      <!-- <plugin name="scan" filename="libgazebo_ros_ray_sensor.so">
         <ros>
           <remapping>~/out:=scan</remapping>
         </ros>
         <output_type>sensor_msgs/LaserScan</output_type>
         <frame_name>lidar_link</frame_name>
-      </plugin>
+      </plugin> -->
     </sensor>
   </gazebo>
 
-  <!-- Camera/Deph Sensor -->
+  <!-- Camera/Depth Sensor -->
 
 
   <link name="camera_link">
@@ -383,7 +406,10 @@
     <sensor name="depth_camera" type="depth">
       <visualize>true</visualize>
       <update_rate>30.0</update_rate>
+      <topic>camera/imageraw</topic>
+      <gz_frame_id>camera_depth_frame</gz_frame_id>
       <camera name="camera">
+        <camera_info_topic>camera/camera_info</camera_info_topic>
         <horizontal_fov>1.50098</horizontal_fov>
         <image>
           <width>640</width>
@@ -395,7 +421,7 @@
           <far>3</far>
         </clip>
       </camera>
-      <plugin name="depth_camera_controller" filename="libgazebo_ros_camera.so">
+      <!-- <plugin name="depth_camera_controller" filename="libgazebo_ros_camera.so">
         <baseline>0.2</baseline>
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
@@ -412,7 +438,7 @@
         <Cy>0</Cy>
         <focalLength>0</focalLength>
         <hackBaseline>0</hackBaseline>
-      </plugin>
+      </plugin> -->
     </sensor>
   </gazebo>
 

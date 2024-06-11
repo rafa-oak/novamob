@@ -9,8 +9,7 @@ def generate_launch_description():
     default_model_path = os.path.join(pkg_share, 'src/description/novamob_description.urdf')
     default_rviz_config_path = os.path.join(pkg_share, 'rviz/urdf_config.rviz')
     world_path=os.path.join(pkg_share, 'world/empty_world.world')
-
-
+    bridge_params=os.path.join(pkg_share, 'params/bridge.yaml')
 
     set_env_vars_resources = AppendEnvironmentVariable(
         'GZ_SIM_RESOURCE_PATH',
@@ -47,7 +46,25 @@ def generate_launch_description():
        name='ekf_filter_node',
        output='screen',
        parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
-)
+    )
+    
+    start_gazebo_ros_bridge_cmd = launch_ros.actions.Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        arguments=[
+            '--ros-args',
+            '-p',
+            f'config_file:={bridge_params}',
+        ],
+        output='screen',
+    )
+
+    start_gazebo_ros_image_bridge_cmd = launch_ros.actions.Node(
+        package='ros_gz_image',
+        executable='image_bridge',
+        arguments=['/camera/image_raw'],
+        output='screen',
+    )
 
     return launch.LaunchDescription([
         launch.actions.DeclareLaunchArgument(name='model', default_value=default_model_path,
@@ -63,5 +80,7 @@ def generate_launch_description():
         robot_state_publisher_node,
         spawn_entity,
         robot_localization_node,
-        rviz_node
+        rviz_node,
+        start_gazebo_ros_bridge_cmd,
+        start_gazebo_ros_image_bridge_cmd
     ])
