@@ -126,12 +126,8 @@
       <parent link="base_link"/>
       <child link="${prefix}_link"/>
       <origin xyz="${x_reflect*wheel_set} ${y_reflect*wheel_ygap} ${-wheel_zoff}" rpy="0 0 0"/>
-      <axis> 
-        <xyz>0 1 0</xyz>
-        <limit>
-          <effort>20</effort>          <!-- wheel torque previously in lib_gazebo_ross_diff_drive.so -->
-        </limit>
-      </axis> 
+      <axis xyz="0 1 0"/>
+
     </joint>
   </xacro:macro>
 
@@ -178,7 +174,7 @@
       <always_on>true</always_on>
       <update_rate>100</update_rate>
       <visualize>true</visualize>
-      <topic>imu</topic>
+      <topic>/demo/imu</topic>
       <imu>
         <angular_velocity>
           <x>
@@ -241,7 +237,7 @@
   <!-- Diff Drive -->
 
   <gazebo>
-    <plugin name='gz::sim::systems::DiffDrive' filename='gz-sim-diff-drive-system'>
+    <plugin name="ignition::gazebo::systems::DiffDrive" filename="libignition-gazebo-diff-drive-system.so">
       <!-- <ros>
         <namespace>/demo</namespace>
       </ros> -->
@@ -253,16 +249,16 @@
       <right_joint>drivewhl_r_joint</right_joint>
 
       <!-- front wheels -->
-      <left_joint>drivewhl2_l_joint</left_joint>
-      <right_joint>drivewhl2_r_joint</right_joint>
+      <!-- <left_joint>drivewhl2_l_joint</left_joint>
+      <right_joint>drivewhl2_r_joint</right_joint> -->
 
 
       <!-- kinematics -->
       <wheel_separation>${wheel_ygap*2}</wheel_separation>
       <wheel_radius>${wheel_radius}</wheel_radius>
       <!-- <wheel_diameter>${wheel_radius*2}</wheel_diameter> -->
-      <wheel_separation>${wheel_ygap*2}</wheel_separation>
-      <wheel_radius>${wheel_radius}</wheel_radius>
+      <!-- <wheel_separation>${wheel_ygap*2}</wheel_separation>
+      <wheel_radius>${wheel_radius}</wheel_radius> -->
       <!-- <wheel_diameter>${wheel_radius*2}</wheel_diameter> -->
 
 
@@ -271,11 +267,12 @@
       <!-- <max_wheel_torque>20</max_wheel_torque>
       <max_wheel_acceleration>1.0</max_wheel_acceleration> -->
       <!-- <updateRate>100</updateRate> -->
+     
       <topic>cmd_vel</topic>
 
 
       <!-- output -->
-      <odom_topic>odom</odom_topic>
+      <odom_topic>/demo/odom</odom_topic>
       <frame_id>odom</frame_id>
       <tf_topic>tf</tf_topic>
       <odom_publisher_frequency>100</odom_publisher_frequency>

@@ -26,6 +26,7 @@ def generate_launch_description():
         executable='joint_state_publisher',
         name='joint_state_publisher',
         arguments=[default_model_path],
+        parameters=[{'use_sim_time' : False}]
     )
     rviz_node = launch_ros.actions.Node(
         package='rviz2',
@@ -76,11 +77,11 @@ def generate_launch_description():
         launch.actions.ExecuteProcess(cmd=['ign', 'gazebo', '-r', world_path], output='screen'),
         set_env_vars_resources,
         joint_state_publisher_node,
-        #joint_state_publisher_gui_node,
         robot_state_publisher_node,
         spawn_entity,
-        robot_localization_node,
-        rviz_node,
         start_gazebo_ros_bridge_cmd,
-        start_gazebo_ros_image_bridge_cmd
+        start_gazebo_ros_image_bridge_cmd,
+        robot_localization_node,
+        rviz_node
+
     ])
