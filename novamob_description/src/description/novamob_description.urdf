@@ -268,7 +268,7 @@
       <max_wheel_acceleration>1.0</max_wheel_acceleration> -->
       <!-- <updateRate>100</updateRate> -->
      
-      <topic>cmd_vel</topic>
+      <topic>demo/cmd_vel</topic>
 
 
       <!-- output -->
