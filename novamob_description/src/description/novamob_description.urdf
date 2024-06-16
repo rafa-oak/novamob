@@ -139,7 +139,6 @@
   <!-- IMU -->
 
 
-
   <link name="imu_link">
     <visual>
       <geometry>
@@ -174,7 +173,7 @@
       <always_on>true</always_on>
       <update_rate>100</update_rate>
       <visualize>true</visualize>
-      <topic>/demo/imu</topic>
+      <topic>/imu</topic>
       <imu>
         <angular_velocity>
           <x>
@@ -237,7 +236,7 @@
   <!-- Diff Drive -->
 
   <gazebo>
-    <plugin name="ignition::gazebo::systems::DiffDrive" filename="libignition-gazebo-diff-drive-system.so">
+    <plugin name="gz::sim::systems::DiffDrive" filename="gz-sim-diff-drive-system">
       <!-- <ros>
         <namespace>/demo</namespace>
       </ros> -->
@@ -249,8 +248,8 @@
       <right_joint>drivewhl_r_joint</right_joint>
 
       <!-- front wheels -->
-      <!-- <left_joint>drivewhl2_l_joint</left_joint>
-      <right_joint>drivewhl2_r_joint</right_joint> -->
+      <left_joint>drivewhl2_l_joint</left_joint>
+      <right_joint>drivewhl2_r_joint</right_joint>
 
 
       <!-- kinematics -->
@@ -268,11 +267,11 @@
       <max_wheel_acceleration>1.0</max_wheel_acceleration> -->
       <!-- <updateRate>100</updateRate> -->
      
-      <topic>demo/cmd_vel</topic>
+      <topic>cmd_vel</topic>
 
 
       <!-- output -->
-      <odom_topic>/demo/odom</odom_topic>
+      <odom_topic>odom</odom_topic>
       <frame_id>odom</frame_id>
       <tf_topic>tf</tf_topic>
       <odom_publisher_frequency>100</odom_publisher_frequency>
@@ -438,6 +437,7 @@
       </plugin> -->
     </sensor>
   </gazebo>
+
 
 
 </robot>
