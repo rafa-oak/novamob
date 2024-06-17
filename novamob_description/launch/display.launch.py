@@ -28,11 +28,6 @@ def generate_launch_description():
         arguments=[default_model_path],
         parameters=[{'use_sim_time' : LaunchConfiguration('use_sim_time')}]
     )
-
-
-
-
-    
     rviz_node = launch_ros.actions.Node(
         package='rviz2',
         executable='rviz2',
@@ -45,8 +40,7 @@ def generate_launch_description():
         package='ros_gz_sim',
         executable='create',
         arguments=['-name', 'novamob', '-topic', 'robot_description'],
-        output='screen',
-        parameters=[{'use_sim_time' : LaunchConfiguration('use_sim_time')}]
+        output='screen'
     )
     robot_localization_node = launch_ros.actions.Node(
        package='robot_localization',
@@ -55,35 +49,7 @@ def generate_launch_description():
        output='screen',
        parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
     )
-
-    #github 
-    gz_env = {'GZ_SIM_SYSTEM_PLUGIN_PATH':
-           ':'.join([os.environ.get('GZ_SIM_SYSTEM_PLUGIN_PATH', default=''),
-                     os.environ.get('LD_LIBRARY_PATH', default='')]),
-           'IGN_GAZEBO_SYSTEM_PLUGIN_PATH':  # TODO(CH3): To support pre-garden. Deprecated.
-                      ':'.join([os.environ.get('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', default=''),
-                                os.environ.get('LD_LIBRARY_PATH', default='')])}
-    gazebo = [
-        ExecuteProcess(
-            condition=launch.conditions.IfCondition(run_headless),
-            cmd=['ruby', FindExecutable(name="ign"), 'gazebo',  '-r', '-v', gz_verbosity, '-s', '--headless-rendering', world_path],
-            output='screen',
-            additional_env=gz_env, # type: ignore
-            shell=False,
-        ),
-        ExecuteProcess(
-            condition=launch.conditions.UnlessCondition(run_headless),
-            cmd=['ruby', FindExecutable(name="ign"), 'gazebo',  '-r', '-v', gz_verbosity, world_path],
-            output='screen',
-            additional_env=gz_env, # type: ignore
-            shell=False,
-        )
-    ]
-
-
-
-
-
+    
     
     start_gazebo_ros_bridge_cmd = launch_ros.actions.Node(
         package='ros_gz_bridge',
@@ -111,7 +77,6 @@ def generate_launch_description():
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='True',
                                             description='Flag to enable use_sim_time'),
         launch.actions.ExecuteProcess(cmd=['ign', 'gazebo', '-r', world_path], output='screen'),
-        
         set_env_vars_resources,
         joint_state_publisher_node,
         robot_state_publisher_node,
