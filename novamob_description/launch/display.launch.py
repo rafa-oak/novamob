@@ -76,7 +76,7 @@ def generate_launch_description():
                                             description='Flag to enable use_sim_time'),
         launch.actions.ExecuteProcess(cmd=['ign', 'gazebo', '-r', world_path], output='screen'),
         set_env_vars_resources,
-        joint_state_publisher_node,
+        #joint_state_publisher_node,
         robot_state_publisher_node,
         spawn_entity,
         robot_localization_node,
