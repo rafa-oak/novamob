@@ -54,7 +54,7 @@ def generate_launch_description():
                     "display.launch.py",
                 ]
             ),
-            "use_rviz:=false",
+            "use_rviz:=true",
             ["run_headless:=", run_headless],
             "use_localization:=false",
         ],

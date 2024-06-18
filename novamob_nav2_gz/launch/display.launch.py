@@ -23,10 +23,10 @@ import os
 
 def generate_launch_description():
     pkg_share = launch_ros.substitutions.FindPackageShare(
-        package="sam_bot_nav2_gz"
-    ).find("sam_bot_nav2_gz")
+        package="novamob_nav2_gz"
+    ).find("novamob_nav2_gz")
     default_model_path = os.path.join(
-        pkg_share, "src/description/sam_bot_description.urdf"
+        pkg_share, "src/description/novamob_description.urdf"
     )
     default_rviz_config_path = os.path.join(pkg_share, "rviz/urdf_config.rviz")
     world_path = os.path.join(pkg_share, "world/empty.sdf")
@@ -103,7 +103,7 @@ def generate_launch_description():
         output="screen",
         arguments=[
             "-name",
-            "sam_bot",
+            "novamob",
             "-topic",
             "robot_description",
             "-z",
