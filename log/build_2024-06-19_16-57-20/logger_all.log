@@ -1,0 +1,601 @@
+[0.067s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.067s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7a3d3add12a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7a3d3add0d90>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7a3d3add0d90>>)
+[0.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.195s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/rafael/ros2_ws/src'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_description) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_description) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_description) by extension 'ignore_ament_install'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_description) by extensions ['colcon_pkg']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_description) by extension 'colcon_pkg'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_description) by extensions ['colcon_meta']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_description) by extension 'colcon_meta'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_description) by extensions ['ros']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_description) by extension 'ros'
+[0.207s] DEBUG:colcon.colcon_core.package_identification:Package 'novamob_description' with type 'ros.ament_cmake' and name 'novamob_description'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_nav2_gz) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_nav2_gz) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_nav2_gz) by extension 'ignore_ament_install'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_nav2_gz) by extensions ['colcon_pkg']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_nav2_gz) by extension 'colcon_pkg'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_nav2_gz) by extensions ['colcon_meta']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_nav2_gz) by extension 'colcon_meta'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_nav2_gz) by extensions ['ros']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(novamob_nav2_gz) by extension 'ros'
+[0.208s] DEBUG:colcon.colcon_core.package_identification:Package 'novamob_nav2_gz' with type 'ros.ament_cmake' and name 'novamob_nav2_gz'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_description) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_description) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_description) by extension 'ignore_ament_install'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_description) by extensions ['colcon_pkg']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_description) by extension 'colcon_pkg'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_description) by extensions ['colcon_meta']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_description) by extension 'colcon_meta'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_description) by extensions ['ros']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_description) by extension 'ros'
+[0.208s] DEBUG:colcon.colcon_core.package_identification:Package 'sam_bot_description' with type 'ros.ament_cmake' and name 'sam_bot_description'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_nav2_gz) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_nav2_gz) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_nav2_gz) by extension 'ignore_ament_install'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_nav2_gz) by extensions ['colcon_pkg']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_nav2_gz) by extension 'colcon_pkg'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_nav2_gz) by extensions ['colcon_meta']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_nav2_gz) by extension 'colcon_meta'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_nav2_gz) by extensions ['ros']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(sam_bot_nav2_gz) by extension 'ros'
+[0.209s] DEBUG:colcon.colcon_core.package_identification:Package 'sam_bot_nav2_gz' with type 'ros.ament_cmake' and name 'sam_bot_nav2_gz'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2) by extension 'ignore'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2) by extension 'ignore_ament_install'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2) by extensions ['colcon_pkg']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2) by extension 'colcon_pkg'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2) by extensions ['colcon_meta']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2) by extension 'colcon_meta'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2) by extensions ['ros']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2) by extension 'ros'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2) by extensions ['cmake', 'python']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2) by extension 'cmake'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2) by extension 'python'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2) by extensions ['python_setup_py']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2) by extension 'python_setup_py'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_base) by extensions ['ignore', 'ignore_ament_install']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_base) by extension 'ignore'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_base) by extension 'ignore_ament_install'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_base) by extensions ['colcon_pkg']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_base) by extension 'colcon_pkg'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_base) by extensions ['colcon_meta']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_base) by extension 'colcon_meta'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_base) by extensions ['ros']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_base) by extension 'ros'
+[0.211s] DEBUG:colcon.colcon_core.package_identification:Package 'scout_ros2/scout_base' with type 'ros.ament_cmake' and name 'scout_base'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_description) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_description) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_description) by extension 'ignore_ament_install'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_description) by extensions ['colcon_pkg']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_description) by extension 'colcon_pkg'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_description) by extensions ['colcon_meta']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_description) by extension 'colcon_meta'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_description) by extensions ['ros']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_description) by extension 'ros'
+[0.212s] DEBUG:colcon.colcon_core.package_identification:Package 'scout_ros2/scout_description' with type 'ros.ament_cmake' and name 'scout_description'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_msgs) by extension 'ignore'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_msgs) by extension 'ignore_ament_install'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_msgs) by extensions ['colcon_pkg']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_msgs) by extension 'colcon_pkg'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_msgs) by extensions ['colcon_meta']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_msgs) by extension 'colcon_meta'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_msgs) by extensions ['ros']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(scout_ros2/scout_msgs) by extension 'ros'
+[0.213s] DEBUG:colcon.colcon_core.package_identification:Package 'scout_ros2/scout_msgs' with type 'ros.ament_cmake' and name 'scout_msgs'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ugv_sdk) by extensions ['ignore', 'ignore_ament_install']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ugv_sdk) by extension 'ignore'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ugv_sdk) by extension 'ignore_ament_install'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ugv_sdk) by extensions ['colcon_pkg']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ugv_sdk) by extension 'colcon_pkg'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ugv_sdk) by extensions ['colcon_meta']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ugv_sdk) by extension 'colcon_meta'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ugv_sdk) by extensions ['ros']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ugv_sdk) by extension 'ros'
+[0.220s] DEBUG:colcon.colcon_core.package_identification:Package 'ugv_sdk' with type 'ros.catkin' and name 'ugv_sdk'
+[0.221s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.221s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.221s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.221s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.221s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.235s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 8 installed packages in /home/rafael/ros2_ws/install
+[0.236s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 406 installed packages in /opt/ros/humble
+[0.238s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.268s] Level 5:colcon.colcon_core.verb:set package 'novamob_description' build argument 'cmake_args' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'novamob_description' build argument 'cmake_target' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'novamob_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'novamob_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'novamob_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'novamob_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'novamob_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'novamob_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'novamob_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.269s] DEBUG:colcon.colcon_core.verb:Building package 'novamob_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rafael/ros2_ws/src/build/novamob_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rafael/ros2_ws/src/install/novamob_description', 'merge_install': False, 'path': '/home/rafael/ros2_ws/src/novamob_description', 'symlink_install': True, 'test_result_base': None}
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'novamob_nav2_gz' build argument 'cmake_args' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'novamob_nav2_gz' build argument 'cmake_target' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'novamob_nav2_gz' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'novamob_nav2_gz' build argument 'cmake_clean_cache' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'novamob_nav2_gz' build argument 'cmake_clean_first' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'novamob_nav2_gz' build argument 'cmake_force_configure' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'novamob_nav2_gz' build argument 'ament_cmake_args' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'novamob_nav2_gz' build argument 'catkin_cmake_args' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'novamob_nav2_gz' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.269s] DEBUG:colcon.colcon_core.verb:Building package 'novamob_nav2_gz' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rafael/ros2_ws/src/build/novamob_nav2_gz', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rafael/ros2_ws/src/install/novamob_nav2_gz', 'merge_install': False, 'path': '/home/rafael/ros2_ws/src/novamob_nav2_gz', 'symlink_install': True, 'test_result_base': None}
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_description' build argument 'cmake_args' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_description' build argument 'cmake_target' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.269s] DEBUG:colcon.colcon_core.verb:Building package 'sam_bot_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rafael/ros2_ws/src/build/sam_bot_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rafael/ros2_ws/src/install/sam_bot_description', 'merge_install': False, 'path': '/home/rafael/ros2_ws/src/sam_bot_description', 'symlink_install': True, 'test_result_base': None}
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_nav2_gz' build argument 'cmake_args' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_nav2_gz' build argument 'cmake_target' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_nav2_gz' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_nav2_gz' build argument 'cmake_clean_cache' from command line to 'False'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_nav2_gz' build argument 'cmake_clean_first' from command line to 'False'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_nav2_gz' build argument 'cmake_force_configure' from command line to 'False'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_nav2_gz' build argument 'ament_cmake_args' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_nav2_gz' build argument 'catkin_cmake_args' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'sam_bot_nav2_gz' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.270s] DEBUG:colcon.colcon_core.verb:Building package 'sam_bot_nav2_gz' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz', 'merge_install': False, 'path': '/home/rafael/ros2_ws/src/sam_bot_nav2_gz', 'symlink_install': True, 'test_result_base': None}
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'scout_description' build argument 'cmake_args' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'scout_description' build argument 'cmake_target' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'scout_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'scout_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'scout_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'scout_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'scout_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'scout_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'scout_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.270s] DEBUG:colcon.colcon_core.verb:Building package 'scout_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rafael/ros2_ws/src/build/scout_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rafael/ros2_ws/src/install/scout_description', 'merge_install': False, 'path': '/home/rafael/ros2_ws/src/scout_ros2/scout_description', 'symlink_install': True, 'test_result_base': None}
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'scout_msgs' build argument 'cmake_args' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'scout_msgs' build argument 'cmake_target' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'scout_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'scout_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'scout_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'scout_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'scout_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'scout_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'scout_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.271s] DEBUG:colcon.colcon_core.verb:Building package 'scout_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rafael/ros2_ws/src/build/scout_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rafael/ros2_ws/src/install/scout_msgs', 'merge_install': False, 'path': '/home/rafael/ros2_ws/src/scout_ros2/scout_msgs', 'symlink_install': True, 'test_result_base': None}
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'cmake_args' from command line to 'None'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'cmake_target' from command line to 'None'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'cmake_clean_cache' from command line to 'False'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'cmake_clean_first' from command line to 'False'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'cmake_force_configure' from command line to 'False'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'ament_cmake_args' from command line to 'None'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'catkin_cmake_args' from command line to 'None'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.271s] DEBUG:colcon.colcon_core.verb:Building package 'ugv_sdk' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rafael/ros2_ws/src/build/ugv_sdk', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rafael/ros2_ws/src/install/ugv_sdk', 'merge_install': False, 'path': '/home/rafael/ros2_ws/src/ugv_sdk', 'symlink_install': True, 'test_result_base': None}
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'scout_base' build argument 'cmake_args' from command line to 'None'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'scout_base' build argument 'cmake_target' from command line to 'None'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'scout_base' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'scout_base' build argument 'cmake_clean_cache' from command line to 'False'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'scout_base' build argument 'cmake_clean_first' from command line to 'False'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'scout_base' build argument 'cmake_force_configure' from command line to 'False'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'scout_base' build argument 'ament_cmake_args' from command line to 'None'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'scout_base' build argument 'catkin_cmake_args' from command line to 'None'
+[0.271s] Level 5:colcon.colcon_core.verb:set package 'scout_base' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.271s] DEBUG:colcon.colcon_core.verb:Building package 'scout_base' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rafael/ros2_ws/src/build/scout_base', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rafael/ros2_ws/src/install/scout_base', 'merge_install': False, 'path': '/home/rafael/ros2_ws/src/scout_ros2/scout_base', 'symlink_install': True, 'test_result_base': None}
+[0.271s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.272s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.273s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rafael/ros2_ws/src/scout_ros2/scout_msgs' with build type 'ament_cmake'
+[0.273s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rafael/ros2_ws/src/scout_ros2/scout_msgs'
+[0.274s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.275s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.275s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.277s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/rafael/ros2_ws/src/ugv_sdk' with build type 'catkin'
+[0.278s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rafael/ros2_ws/src/ugv_sdk'
+[0.278s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.278s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.281s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rafael/ros2_ws/src/novamob_description' with build type 'ament_cmake'
+[0.281s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rafael/ros2_ws/src/novamob_description'
+[0.281s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.281s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.284s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rafael/ros2_ws/src/novamob_nav2_gz' with build type 'ament_cmake'
+[0.284s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rafael/ros2_ws/src/novamob_nav2_gz'
+[0.284s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.284s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.288s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rafael/ros2_ws/src/sam_bot_description' with build type 'ament_cmake'
+[0.288s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rafael/ros2_ws/src/sam_bot_description'
+[0.288s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.288s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.291s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rafael/ros2_ws/src/sam_bot_nav2_gz' with build type 'ament_cmake'
+[0.291s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rafael/ros2_ws/src/sam_bot_nav2_gz'
+[0.292s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.292s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.295s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rafael/ros2_ws/src/scout_ros2/scout_description' with build type 'ament_cmake'
+[0.295s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rafael/ros2_ws/src/scout_ros2/scout_description'
+[0.295s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.295s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.303s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/scout_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/scout_ros2/scout_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/scout_msgs
+[0.305s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/ugv_sdk': /usr/bin/cmake /home/rafael/ros2_ws/src/ugv_sdk -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/ugv_sdk
+[0.308s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/novamob_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/novamob_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/novamob_description
+[0.312s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/novamob_nav2_gz': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/novamob_nav2_gz -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/novamob_nav2_gz
+[0.315s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/sam_bot_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/sam_bot_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/sam_bot_description
+[0.318s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/sam_bot_nav2_gz -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz
+[0.322s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/scout_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/scout_ros2/scout_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/scout_description
+[0.908s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/ugv_sdk' returned '0': /usr/bin/cmake /home/rafael/ros2_ws/src/ugv_sdk -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/ugv_sdk
+[0.910s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/ugv_sdk': /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/ugv_sdk -- -j12 -l12
+[1.230s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/sam_bot_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/sam_bot_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/sam_bot_description
+[1.230s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/sam_bot_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/sam_bot_description -- -j12 -l12
+[1.310s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/novamob_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/novamob_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/novamob_description
+[1.311s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/novamob_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/novamob_description -- -j12 -l12
+[1.358s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/scout_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/scout_ros2/scout_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/scout_description
+[1.358s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/scout_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/scout_description -- -j12 -l12
+[1.382s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/novamob_nav2_gz' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/novamob_nav2_gz -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/novamob_nav2_gz
+[1.382s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/novamob_nav2_gz': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/novamob_nav2_gz -- -j12 -l12
+[1.394s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/sam_bot_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/sam_bot_description -- -j12 -l12
+[1.428s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/sam_bot_nav2_gz -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz
+[1.428s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/sam_bot_nav2_gz -- -j12 -l12
+[1.438s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/novamob_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/novamob_description -- -j12 -l12
+[1.453s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/scout_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/scout_description -- -j12 -l12
+[1.480s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/novamob_nav2_gz' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/novamob_nav2_gz -- -j12 -l12
+[1.510s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/sam_bot_nav2_gz -- -j12 -l12
+[1.535s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/sam_bot_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/sam_bot_description
+[1.553s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/novamob_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/novamob_description
+[1.582s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/sam_bot_nav2_gz
+[1.635s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/scout_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/scout_description
+[1.652s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/novamob_nav2_gz': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/novamob_nav2_gz
+[2.151s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sam_bot_description)
+[2.154s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/sam_bot_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/sam_bot_description
+[2.156s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_description' for CMake module files
+[2.157s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_description' for CMake config files
+[2.157s] Level 1:colcon.colcon_core.shell:create_environment_hook('sam_bot_description', 'cmake_prefix_path')
+[2.158s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/hook/cmake_prefix_path.ps1'
+[2.160s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/hook/cmake_prefix_path.dsv'
+[2.161s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/hook/cmake_prefix_path.sh'
+[2.162s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_description/bin'
+[2.162s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_description/lib/pkgconfig/sam_bot_description.pc'
+[2.163s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_description/lib/python3.10/site-packages'
+[2.163s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_description/bin'
+[2.164s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/package.ps1'
+[2.165s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/package.dsv'
+[2.166s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/package.sh'
+[2.167s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/package.bash'
+[2.179s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/package.zsh'
+[2.180s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafael/ros2_ws/src/install/sam_bot_description/share/colcon-core/packages/sam_bot_description)
+[2.248s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sam_bot_description)
+[2.249s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_description' for CMake module files
+[2.250s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_description' for CMake config files
+[2.250s] Level 1:colcon.colcon_core.shell:create_environment_hook('sam_bot_description', 'cmake_prefix_path')
+[2.250s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/hook/cmake_prefix_path.ps1'
+[2.251s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/hook/cmake_prefix_path.dsv'
+[2.252s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/hook/cmake_prefix_path.sh'
+[2.253s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_description/bin'
+[2.253s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_description/lib/pkgconfig/sam_bot_description.pc'
+[2.254s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_description/lib/python3.10/site-packages'
+[2.254s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_description/bin'
+[2.259s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/package.ps1'
+[2.260s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/package.dsv'
+[2.262s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/package.sh'
+[2.262s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/package.bash'
+[2.263s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/package.zsh'
+[2.263s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafael/ros2_ws/src/install/sam_bot_description/share/colcon-core/packages/sam_bot_description)
+[2.308s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scout_description)
+[2.308s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_description' for CMake module files
+[2.309s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/scout_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/scout_description
+[2.310s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_description' for CMake config files
+[2.311s] Level 1:colcon.colcon_core.shell:create_environment_hook('scout_description', 'cmake_prefix_path')
+[2.311s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/scout_description/share/scout_description/hook/cmake_prefix_path.ps1'
+[2.312s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/scout_description/share/scout_description/hook/cmake_prefix_path.dsv'
+[2.312s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/scout_description/share/scout_description/hook/cmake_prefix_path.sh'
+[2.313s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_description/bin'
+[2.313s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_description/lib/pkgconfig/scout_description.pc'
+[2.314s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_description/lib/python3.10/site-packages'
+[2.314s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_description/bin'
+[2.314s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_description/share/scout_description/package.ps1'
+[2.315s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafael/ros2_ws/src/install/scout_description/share/scout_description/package.dsv'
+[2.316s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_description/share/scout_description/package.sh'
+[2.316s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_description/share/scout_description/package.bash'
+[2.317s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_description/share/scout_description/package.zsh'
+[2.317s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafael/ros2_ws/src/install/scout_description/share/colcon-core/packages/scout_description)
+[2.390s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sam_bot_nav2_gz)
+[2.391s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz' for CMake module files
+[2.392s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz' for CMake config files
+[2.393s] Level 1:colcon.colcon_core.shell:create_environment_hook('sam_bot_nav2_gz', 'cmake_prefix_path')
+[2.393s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/hook/cmake_prefix_path.ps1'
+[2.394s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/hook/cmake_prefix_path.dsv'
+[2.394s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/hook/cmake_prefix_path.sh'
+[2.395s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/lib'
+[2.395s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/bin'
+[2.396s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/lib/pkgconfig/sam_bot_nav2_gz.pc'
+[2.396s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/lib/python3.10/site-packages'
+[2.396s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/bin'
+[2.397s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/package.ps1'
+[2.398s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/package.dsv'
+[2.398s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/package.sh'
+[2.399s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/package.bash'
+[2.399s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/package.zsh'
+[2.400s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/colcon-core/packages/sam_bot_nav2_gz)
+[2.404s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/sam_bot_nav2_gz
+[2.484s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(novamob_description)
+[2.484s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_description' for CMake module files
+[2.485s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_description' for CMake config files
+[2.486s] Level 1:colcon.colcon_core.shell:create_environment_hook('novamob_description', 'cmake_prefix_path')
+[2.486s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/novamob_description/share/novamob_description/hook/cmake_prefix_path.ps1'
+[2.487s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/novamob_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/novamob_description
+[2.488s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/novamob_description/share/novamob_description/hook/cmake_prefix_path.dsv'
+[2.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/novamob_description/share/novamob_description/hook/cmake_prefix_path.sh'
+[2.490s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_description/bin'
+[2.491s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_description/lib/pkgconfig/novamob_description.pc'
+[2.491s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_description/lib/python3.10/site-packages'
+[2.491s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_description/bin'
+[2.492s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/novamob_description/share/novamob_description/package.ps1'
+[2.493s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafael/ros2_ws/src/install/novamob_description/share/novamob_description/package.dsv'
+[2.494s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/novamob_description/share/novamob_description/package.sh'
+[2.495s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/novamob_description/share/novamob_description/package.bash'
+[2.496s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/novamob_description/share/novamob_description/package.zsh'
+[2.497s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafael/ros2_ws/src/install/novamob_description/share/colcon-core/packages/novamob_description)
+[2.513s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scout_description)
+[2.513s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_description' for CMake module files
+[2.514s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_description' for CMake config files
+[2.514s] Level 1:colcon.colcon_core.shell:create_environment_hook('scout_description', 'cmake_prefix_path')
+[2.515s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/scout_description/share/scout_description/hook/cmake_prefix_path.ps1'
+[2.515s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/scout_description/share/scout_description/hook/cmake_prefix_path.dsv'
+[2.516s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/scout_description/share/scout_description/hook/cmake_prefix_path.sh'
+[2.517s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_description/bin'
+[2.517s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_description/lib/pkgconfig/scout_description.pc'
+[2.517s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_description/lib/python3.10/site-packages'
+[2.517s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_description/bin'
+[2.518s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_description/share/scout_description/package.ps1'
+[2.519s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafael/ros2_ws/src/install/scout_description/share/scout_description/package.dsv'
+[2.519s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_description/share/scout_description/package.sh'
+[2.520s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_description/share/scout_description/package.bash'
+[2.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_description/share/scout_description/package.zsh'
+[2.521s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafael/ros2_ws/src/install/scout_description/share/colcon-core/packages/scout_description)
+[2.522s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sam_bot_nav2_gz)
+[2.523s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz' for CMake module files
+[2.524s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz' for CMake config files
+[2.527s] Level 1:colcon.colcon_core.shell:create_environment_hook('sam_bot_nav2_gz', 'cmake_prefix_path')
+[2.527s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/hook/cmake_prefix_path.ps1'
+[2.528s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/hook/cmake_prefix_path.dsv'
+[2.528s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/hook/cmake_prefix_path.sh'
+[2.529s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/lib'
+[2.529s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/bin'
+[2.529s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/lib/pkgconfig/sam_bot_nav2_gz.pc'
+[2.530s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/lib/python3.10/site-packages'
+[2.530s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/bin'
+[2.531s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/package.ps1'
+[2.531s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/package.dsv'
+[2.532s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/package.sh'
+[2.532s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/package.bash'
+[2.533s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/package.zsh'
+[2.533s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/colcon-core/packages/sam_bot_nav2_gz)
+[2.546s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(novamob_description)
+[2.546s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_description' for CMake module files
+[2.547s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_description' for CMake config files
+[2.548s] Level 1:colcon.colcon_core.shell:create_environment_hook('novamob_description', 'cmake_prefix_path')
+[2.548s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/novamob_description/share/novamob_description/hook/cmake_prefix_path.ps1'
+[2.550s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/novamob_description/share/novamob_description/hook/cmake_prefix_path.dsv'
+[2.551s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/novamob_description/share/novamob_description/hook/cmake_prefix_path.sh'
+[2.552s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_description/bin'
+[2.552s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_description/lib/pkgconfig/novamob_description.pc'
+[2.553s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_description/lib/python3.10/site-packages'
+[2.553s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_description/bin'
+[2.554s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/novamob_description/share/novamob_description/package.ps1'
+[2.555s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafael/ros2_ws/src/install/novamob_description/share/novamob_description/package.dsv'
+[2.556s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/novamob_description/share/novamob_description/package.sh'
+[2.558s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/novamob_description/share/novamob_description/package.bash'
+[2.559s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/novamob_description/share/novamob_description/package.zsh'
+[2.560s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafael/ros2_ws/src/install/novamob_description/share/colcon-core/packages/novamob_description)
+[2.780s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(novamob_nav2_gz)
+[2.780s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_nav2_gz' for CMake module files
+[2.781s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/novamob_nav2_gz' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/novamob_nav2_gz
+[2.782s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_nav2_gz' for CMake config files
+[2.782s] Level 1:colcon.colcon_core.shell:create_environment_hook('novamob_nav2_gz', 'cmake_prefix_path')
+[2.783s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/hook/cmake_prefix_path.ps1'
+[2.783s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/hook/cmake_prefix_path.dsv'
+[2.784s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/hook/cmake_prefix_path.sh'
+[2.785s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/lib'
+[2.785s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/bin'
+[2.785s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/lib/pkgconfig/novamob_nav2_gz.pc'
+[2.785s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/lib/python3.10/site-packages'
+[2.786s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/bin'
+[2.786s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/package.ps1'
+[2.787s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/package.dsv'
+[2.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/package.sh'
+[2.788s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/package.bash'
+[2.788s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/package.zsh'
+[2.788s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/colcon-core/packages/novamob_nav2_gz)
+[2.822s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(novamob_nav2_gz)
+[2.823s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_nav2_gz' for CMake module files
+[2.824s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_nav2_gz' for CMake config files
+[2.824s] Level 1:colcon.colcon_core.shell:create_environment_hook('novamob_nav2_gz', 'cmake_prefix_path')
+[2.825s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/hook/cmake_prefix_path.ps1'
+[2.826s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/hook/cmake_prefix_path.dsv'
+[2.826s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/hook/cmake_prefix_path.sh'
+[2.827s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/lib'
+[2.827s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/bin'
+[2.827s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/lib/pkgconfig/novamob_nav2_gz.pc'
+[2.828s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/lib/python3.10/site-packages'
+[2.828s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/bin'
+[2.829s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/package.ps1'
+[2.830s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/package.dsv'
+[2.830s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/package.sh'
+[2.831s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/package.bash'
+[2.831s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/package.zsh'
+[2.832s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/colcon-core/packages/novamob_nav2_gz)
+[3.510s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/scout_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/scout_ros2/scout_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/scout_msgs
+[3.511s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/scout_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/scout_msgs -- -j12 -l12
+[9.530s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/ugv_sdk' returned '0': /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/ugv_sdk -- -j12 -l12
+[9.673s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/ugv_sdk': /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/ugv_sdk
+[9.689s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/ugv_sdk' returned '0': /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/ugv_sdk
+[9.742s] Level 1:colcon.colcon_core.shell:create_environment_hook('ugv_sdk', 'ros_package_path')
+[9.743s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/ugv_sdk/share/ugv_sdk/hook/ros_package_path.ps1'
+[9.743s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/ugv_sdk/share/ugv_sdk/hook/ros_package_path.dsv'
+[9.744s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/ugv_sdk/share/ugv_sdk/hook/ros_package_path.sh'
+[9.744s] Level 1:colcon.colcon_core.shell:create_environment_hook('ugv_sdk', 'pkg_config_path')
+[9.744s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/ugv_sdk/share/ugv_sdk/hook/pkg_config_path.ps1'
+[9.745s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/ugv_sdk/share/ugv_sdk/hook/pkg_config_path.dsv'
+[9.745s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/ugv_sdk/share/ugv_sdk/hook/pkg_config_path.sh'
+[9.747s] Level 1:colcon.colcon_core.shell:create_environment_hook('ugv_sdk', 'pkg_config_path_multiarch')
+[9.747s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/ugv_sdk/share/ugv_sdk/hook/pkg_config_path_multiarch.ps1'
+[9.747s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/ugv_sdk/share/ugv_sdk/hook/pkg_config_path_multiarch.dsv'
+[9.747s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/ugv_sdk/share/ugv_sdk/hook/pkg_config_path_multiarch.sh'
+[9.748s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ugv_sdk)
+[9.749s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/ugv_sdk' for CMake module files
+[9.749s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/ugv_sdk' for CMake config files
+[9.749s] Level 1:colcon.colcon_core.shell:create_environment_hook('ugv_sdk', 'cmake_prefix_path')
+[9.750s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/ugv_sdk/share/ugv_sdk/hook/cmake_prefix_path.ps1'
+[9.750s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/ugv_sdk/share/ugv_sdk/hook/cmake_prefix_path.dsv'
+[9.750s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/ugv_sdk/share/ugv_sdk/hook/cmake_prefix_path.sh'
+[9.751s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/ugv_sdk/lib'
+[9.751s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/ugv_sdk/bin'
+[9.751s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/ugv_sdk/lib/pkgconfig/ugv_sdk.pc'
+[9.751s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/ugv_sdk/lib/python3.10/site-packages'
+[9.751s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/ugv_sdk/bin'
+[9.752s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/ugv_sdk/share/ugv_sdk/package.ps1'
+[9.752s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafael/ros2_ws/src/install/ugv_sdk/share/ugv_sdk/package.dsv'
+[9.752s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/ugv_sdk/share/ugv_sdk/package.sh'
+[9.753s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/ugv_sdk/share/ugv_sdk/package.bash'
+[9.753s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/ugv_sdk/share/ugv_sdk/package.zsh'
+[9.753s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafael/ros2_ws/src/install/ugv_sdk/share/colcon-core/packages/ugv_sdk)
+[9.956s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/scout_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/scout_msgs -- -j12 -l12
+[10.108s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/scout_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/scout_msgs
+[11.215s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scout_msgs)
+[11.215s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_msgs' for CMake module files
+[11.216s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/scout_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/scout_msgs
+[11.217s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_msgs' for CMake config files
+[11.217s] Level 1:colcon.colcon_core.shell:create_environment_hook('scout_msgs', 'cmake_prefix_path')
+[11.218s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/hook/cmake_prefix_path.ps1'
+[11.218s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/hook/cmake_prefix_path.dsv'
+[11.218s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/hook/cmake_prefix_path.sh'
+[11.224s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_msgs/lib'
+[11.224s] Level 1:colcon.colcon_core.shell:create_environment_hook('scout_msgs', 'ld_library_path_lib')
+[11.224s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/hook/ld_library_path_lib.ps1'
+[11.225s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/hook/ld_library_path_lib.dsv'
+[11.225s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/hook/ld_library_path_lib.sh'
+[11.226s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_msgs/bin'
+[11.226s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_msgs/lib/pkgconfig/scout_msgs.pc'
+[11.226s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_msgs/lib/python3.10/site-packages'
+[11.226s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_msgs/bin'
+[11.226s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/package.ps1'
+[11.227s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/package.dsv'
+[11.227s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/package.sh'
+[11.227s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/package.bash'
+[11.227s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/package.zsh'
+[11.228s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafael/ros2_ws/src/install/scout_msgs/share/colcon-core/packages/scout_msgs)
+[11.357s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scout_msgs)
+[11.358s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_msgs' for CMake module files
+[11.358s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_msgs' for CMake config files
+[11.359s] Level 1:colcon.colcon_core.shell:create_environment_hook('scout_msgs', 'cmake_prefix_path')
+[11.359s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/hook/cmake_prefix_path.ps1'
+[11.359s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/hook/cmake_prefix_path.dsv'
+[11.360s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/hook/cmake_prefix_path.sh'
+[11.360s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_msgs/lib'
+[11.360s] Level 1:colcon.colcon_core.shell:create_environment_hook('scout_msgs', 'ld_library_path_lib')
+[11.360s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/hook/ld_library_path_lib.ps1'
+[11.361s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/hook/ld_library_path_lib.dsv'
+[11.361s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/hook/ld_library_path_lib.sh'
+[11.362s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_msgs/bin'
+[11.362s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_msgs/lib/pkgconfig/scout_msgs.pc'
+[11.362s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_msgs/lib/python3.10/site-packages'
+[11.362s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_msgs/bin'
+[11.362s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/package.ps1'
+[11.363s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/package.dsv'
+[11.363s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/package.sh'
+[11.364s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/package.bash'
+[11.364s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_msgs/share/scout_msgs/package.zsh'
+[11.364s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafael/ros2_ws/src/install/scout_msgs/share/colcon-core/packages/scout_msgs)
+[11.365s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rafael/ros2_ws/src/scout_ros2/scout_base' with build type 'ament_cmake'
+[11.365s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rafael/ros2_ws/src/scout_ros2/scout_base'
+[11.365s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[11.365s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[11.379s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/scout_base': AMENT_PREFIX_PATH=/home/rafael/ros2_ws/src/install/scout_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/rafael/ros2_ws/src/install/ugv_sdk:/home/rafael/ros2_ws/src/install/scout_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/rafael/ros2_ws/src/install/scout_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/rafael/ros2_ws/src/install/ugv_sdk/lib/x86_64-linux-gnu/pkgconfig:/home/rafael/ros2_ws/src/install/ugv_sdk/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/rafael/ros2_ws/src/install/scout_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/rafael/ros2_ws/src/install/ugv_sdk/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/scout_ros2/scout_base -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/scout_base
+[13.224s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/scout_base' returned '0': AMENT_PREFIX_PATH=/home/rafael/ros2_ws/src/install/scout_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/rafael/ros2_ws/src/install/ugv_sdk:/home/rafael/ros2_ws/src/install/scout_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/rafael/ros2_ws/src/install/scout_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/rafael/ros2_ws/src/install/ugv_sdk/lib/x86_64-linux-gnu/pkgconfig:/home/rafael/ros2_ws/src/install/ugv_sdk/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/rafael/ros2_ws/src/install/scout_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/rafael/ros2_ws/src/install/ugv_sdk/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/scout_ros2/scout_base -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/scout_base
+[13.225s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/scout_base': AMENT_PREFIX_PATH=/home/rafael/ros2_ws/src/install/scout_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/rafael/ros2_ws/src/install/ugv_sdk:/home/rafael/ros2_ws/src/install/scout_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/rafael/ros2_ws/src/install/scout_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/rafael/ros2_ws/src/install/ugv_sdk/lib/x86_64-linux-gnu/pkgconfig:/home/rafael/ros2_ws/src/install/ugv_sdk/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/rafael/ros2_ws/src/install/scout_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/rafael/ros2_ws/src/install/ugv_sdk/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/scout_base -- -j12 -l12
+[23.373s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/scout_base' returned '0': AMENT_PREFIX_PATH=/home/rafael/ros2_ws/src/install/scout_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/rafael/ros2_ws/src/install/ugv_sdk:/home/rafael/ros2_ws/src/install/scout_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/rafael/ros2_ws/src/install/scout_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/rafael/ros2_ws/src/install/ugv_sdk/lib/x86_64-linux-gnu/pkgconfig:/home/rafael/ros2_ws/src/install/ugv_sdk/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/rafael/ros2_ws/src/install/scout_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/rafael/ros2_ws/src/install/ugv_sdk/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/scout_base -- -j12 -l12
+[23.413s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rafael/ros2_ws/src/build/scout_base': AMENT_PREFIX_PATH=/home/rafael/ros2_ws/src/install/scout_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/rafael/ros2_ws/src/install/ugv_sdk:/home/rafael/ros2_ws/src/install/scout_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/rafael/ros2_ws/src/install/scout_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/rafael/ros2_ws/src/install/ugv_sdk/lib/x86_64-linux-gnu/pkgconfig:/home/rafael/ros2_ws/src/install/ugv_sdk/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/rafael/ros2_ws/src/install/scout_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/rafael/ros2_ws/src/install/ugv_sdk/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/scout_base
+[23.584s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scout_base)
+[23.585s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_base' for CMake module files
+[23.585s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rafael/ros2_ws/src/build/scout_base' returned '0': AMENT_PREFIX_PATH=/home/rafael/ros2_ws/src/install/scout_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/rafael/ros2_ws/src/install/ugv_sdk:/home/rafael/ros2_ws/src/install/scout_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/rafael/ros2_ws/src/install/scout_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/rafael/ros2_ws/src/install/ugv_sdk/lib/x86_64-linux-gnu/pkgconfig:/home/rafael/ros2_ws/src/install/ugv_sdk/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/rafael/ros2_ws/src/install/scout_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/rafael/ros2_ws/src/install/ugv_sdk/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/scout_base
+[23.586s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_base' for CMake config files
+[23.586s] Level 1:colcon.colcon_core.shell:create_environment_hook('scout_base', 'cmake_prefix_path')
+[23.586s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/scout_base/share/scout_base/hook/cmake_prefix_path.ps1'
+[23.586s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/scout_base/share/scout_base/hook/cmake_prefix_path.dsv'
+[23.587s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/scout_base/share/scout_base/hook/cmake_prefix_path.sh'
+[23.587s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_base/lib'
+[23.587s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_base/bin'
+[23.587s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_base/lib/pkgconfig/scout_base.pc'
+[23.588s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_base/lib/python3.10/site-packages'
+[23.588s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_base/bin'
+[23.588s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_base/share/scout_base/package.ps1'
+[23.588s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafael/ros2_ws/src/install/scout_base/share/scout_base/package.dsv'
+[23.589s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_base/share/scout_base/package.sh'
+[23.589s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_base/share/scout_base/package.bash'
+[23.589s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_base/share/scout_base/package.zsh'
+[23.589s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafael/ros2_ws/src/install/scout_base/share/colcon-core/packages/scout_base)
+[23.650s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scout_base)
+[23.651s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_base' for CMake module files
+[23.652s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_base' for CMake config files
+[23.653s] Level 1:colcon.colcon_core.shell:create_environment_hook('scout_base', 'cmake_prefix_path')
+[23.654s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/scout_base/share/scout_base/hook/cmake_prefix_path.ps1'
+[23.655s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rafael/ros2_ws/src/install/scout_base/share/scout_base/hook/cmake_prefix_path.dsv'
+[23.656s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rafael/ros2_ws/src/install/scout_base/share/scout_base/hook/cmake_prefix_path.sh'
+[23.657s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_base/lib'
+[23.658s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_base/bin'
+[23.658s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_base/lib/pkgconfig/scout_base.pc'
+[23.658s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_base/lib/python3.10/site-packages'
+[23.659s] Level 1:colcon.colcon_core.environment:checking '/home/rafael/ros2_ws/src/install/scout_base/bin'
+[23.660s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_base/share/scout_base/package.ps1'
+[23.661s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rafael/ros2_ws/src/install/scout_base/share/scout_base/package.dsv'
+[23.662s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_base/share/scout_base/package.sh'
+[23.663s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_base/share/scout_base/package.bash'
+[23.663s] INFO:colcon.colcon_core.shell:Creating package script '/home/rafael/ros2_ws/src/install/scout_base/share/scout_base/package.zsh'
+[23.664s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rafael/ros2_ws/src/install/scout_base/share/colcon-core/packages/scout_base)
+[23.664s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[23.665s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[23.665s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[23.665s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[23.671s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[23.671s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[23.671s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[23.683s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[23.683s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rafael/ros2_ws/src/install/local_setup.ps1'
+[23.684s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rafael/ros2_ws/src/install/_local_setup_util_ps1.py'
+[23.685s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rafael/ros2_ws/src/install/setup.ps1'
+[23.686s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rafael/ros2_ws/src/install/local_setup.sh'
+[23.686s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rafael/ros2_ws/src/install/_local_setup_util_sh.py'
+[23.687s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rafael/ros2_ws/src/install/setup.sh'
+[23.687s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rafael/ros2_ws/src/install/local_setup.bash'
+[23.688s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rafael/ros2_ws/src/install/setup.bash'
+[23.689s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rafael/ros2_ws/src/install/local_setup.zsh'
+[23.689s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rafael/ros2_ws/src/install/setup.zsh'

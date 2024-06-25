@@ -1,0 +1,39 @@
+[0.031s] Invoking command in '/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/sam_bot_nav2_gz -- -j12 -l12
+[0.066s] Invoked command in '/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/sam_bot_nav2_gz -- -j12 -l12
+[0.126s] Invoking command in '/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/sam_bot_nav2_gz
+[0.138s] -- Install configuration: ""
+[0.138s] -- Execute custom install script
+[0.143s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/src/description/sam_bot_description.urdf
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/scripts/__init__.py
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/scripts/follow_waypoints.py
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/scripts/reach_goal.py
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/launch/complete_navigation.launch.py
+[0.145s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/launch/display.launch.py
+[0.145s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/rviz/navigation_config.rviz
+[0.145s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/rviz/urdf_config.rviz
+[0.145s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/config/diff_drive_controller_velocity.yaml
+[0.145s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/config/ekf.yaml
+[0.145s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/config/nav2_params.yaml
+[0.145s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/world/empty.sdf
+[0.145s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/models/TurtlebotArena/meshes/hexagon.dae
+[0.145s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/models/TurtlebotArena/meshes/wall.dae
+[0.145s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/models/TurtlebotArena/model.config
+[0.146s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/models/TurtlebotArena/model.sdf
+[0.146s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/lib/sam_bot_nav2_gz/reach_goal.py
+[0.147s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/lib/sam_bot_nav2_gz/follow_waypoints.py
+[0.147s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/ament_index/resource_index/package_run_dependencies/sam_bot_nav2_gz
+[0.147s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/ament_index/resource_index/parent_prefix_path/sam_bot_nav2_gz
+[0.147s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/environment/ament_prefix_path.sh
+[0.147s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/environment/ament_prefix_path.dsv
+[0.147s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/environment/path.sh
+[0.147s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/environment/path.dsv
+[0.147s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/local_setup.bash
+[0.149s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/local_setup.sh
+[0.149s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/local_setup.zsh
+[0.149s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/local_setup.dsv
+[0.149s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/package.dsv
+[0.181s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/ament_index/resource_index/packages/sam_bot_nav2_gz
+[0.181s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/cmake/sam_bot_nav2_gzConfig.cmake
+[0.182s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/cmake/sam_bot_nav2_gzConfig-version.cmake
+[0.182s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/package.xml
+[0.220s] Invoked command in '/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/sam_bot_nav2_gz

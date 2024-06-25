@@ -1,0 +1,1 @@
+/home/rafael/ros2_ws/src/build/scout_msgs/rosidl_typesupport_fastrtps_cpp/scout_msgs/msg/detail/scout_light_cmd__rosidl_typesupport_fastrtps_cpp.hpp

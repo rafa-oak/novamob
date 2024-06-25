@@ -1,0 +1,12 @@
+setup.py
+scout_msgs/__init__.py
+scout_msgs.egg-info/PKG-INFO
+scout_msgs.egg-info/SOURCES.txt
+scout_msgs.egg-info/dependency_links.txt
+scout_msgs.egg-info/top_level.txt
+scout_msgs/msg/__init__.py
+scout_msgs/msg/_scout_actuator_state.py
+scout_msgs/msg/_scout_light_cmd.py
+scout_msgs/msg/_scout_light_state.py
+scout_msgs/msg/_scout_rc_state.py
+scout_msgs/msg/_scout_status.py

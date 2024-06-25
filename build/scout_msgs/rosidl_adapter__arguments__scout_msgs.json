@@ -1,0 +1,10 @@
+{
+  "package_name": "scout_msgs",
+  "non_idl_tuples": [
+    "/home/rafael/ros2_ws/src/scout_ros2/scout_msgs:msg/ScoutActuatorState.msg",
+    "/home/rafael/ros2_ws/src/scout_ros2/scout_msgs:msg/ScoutLightCmd.msg",
+    "/home/rafael/ros2_ws/src/scout_ros2/scout_msgs:msg/ScoutLightState.msg",
+    "/home/rafael/ros2_ws/src/scout_ros2/scout_msgs:msg/ScoutRCState.msg",
+    "/home/rafael/ros2_ws/src/scout_ros2/scout_msgs:msg/ScoutStatus.msg"
+  ]
+}

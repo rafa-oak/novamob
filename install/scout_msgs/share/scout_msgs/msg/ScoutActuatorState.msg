@@ -1,0 +1,1 @@
+/home/rafael/ros2_ws/src/scout_ros2/scout_msgs/msg/ScoutActuatorState.msg

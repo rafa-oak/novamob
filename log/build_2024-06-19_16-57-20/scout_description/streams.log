@@ -1,0 +1,57 @@
+[0.027s] Invoking command in '/home/rafael/ros2_ws/src/build/scout_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/scout_ros2/scout_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/scout_description
+[0.084s] -- The C compiler identification is GNU 11.4.0
+[0.164s] -- The CXX compiler identification is GNU 11.4.0
+[0.175s] -- Detecting C compiler ABI info
+[0.259s] -- Detecting C compiler ABI info - done
+[0.274s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.274s] -- Detecting C compile features
+[0.274s] -- Detecting C compile features - done
+[0.278s] -- Detecting CXX compiler ABI info
+[0.368s] -- Detecting CXX compiler ABI info - done
+[0.385s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.385s] -- Detecting CXX compile features
+[0.386s] -- Detecting CXX compile features - done
+[0.389s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.601s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.692s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.023s] -- Configuring done
+[1.027s] -- Generating done
+[1.029s] -- Build files have been written to: /home/rafael/ros2_ws/src/build/scout_description
+[1.062s] Invoked command in '/home/rafael/ros2_ws/src/build/scout_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/scout_ros2/scout_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/scout_description
+[1.063s] Invoking command in '/home/rafael/ros2_ws/src/build/scout_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/scout_description -- -j12 -l12
+[1.158s] Invoked command in '/home/rafael/ros2_ws/src/build/scout_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/scout_description -- -j12 -l12
+[1.339s] Invoking command in '/home/rafael/ros2_ws/src/build/scout_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/scout_description
+[1.357s] -- Install configuration: ""
+[1.357s] -- Execute custom install script
+[1.357s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description//launch/scout_base_description.launch.py
+[1.394s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description//urdf/generate_urdf.sh
+[1.412s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description//urdf/scout_mini/scout_mini.urdf
+[1.427s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description//urdf/scout_mini/scout_mini.xacro
+[1.452s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description//urdf/scout_mini/scout_mini_wheel.xacro
+[1.467s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description//urdf/scout_v2/scout_v2.urdf
+[1.482s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description//urdf/scout_v2/scout_v2.xacro
+[1.495s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description//urdf/scout_v2/scout_wheel_type1.xacro
+[1.510s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description//urdf/scout_v2/scout_wheel_type2.xacro
+[1.538s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description//meshes/scout_mini/mini_base_link.dae
+[1.555s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description//meshes/scout_mini/mini_wheel.dae
+[1.588s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description//meshes/scout_v2/base_link.dae
+[1.611s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description//meshes/scout_v2/base_link_full.dae
+[1.641s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description//meshes/scout_v2/hokuyo.dae
+[1.663s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description//meshes/scout_v2/wheel_type1.dae
+[1.686s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description//meshes/scout_v2/wheel_type2.dae
+[1.699s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/ament_index/resource_index/package_run_dependencies/scout_description
+[1.739s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/ament_index/resource_index/parent_prefix_path/scout_description
+[1.792s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description/environment/ament_prefix_path.sh
+[1.807s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description/environment/ament_prefix_path.dsv
+[1.821s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description/environment/path.sh
+[1.835s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description/environment/path.dsv
+[1.848s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description/local_setup.bash
+[1.863s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description/local_setup.sh
+[1.882s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description/local_setup.zsh
+[1.898s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description/local_setup.dsv
+[1.906s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description/package.dsv
+[1.921s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/ament_index/resource_index/packages/scout_description
+[1.951s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description/cmake/scout_descriptionConfig.cmake
+[1.972s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description/cmake/scout_descriptionConfig-version.cmake
+[1.997s] -- Symlinking: /home/rafael/ros2_ws/src/install/scout_description/share/scout_description/package.xml
+[2.014s] Invoked command in '/home/rafael/ros2_ws/src/build/scout_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/scout_description

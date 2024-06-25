@@ -1,0 +1,1 @@
+/home/rafael/ros2_ws/src/build/novamob_description/ament_cmake_core/novamob_descriptionConfig.cmake

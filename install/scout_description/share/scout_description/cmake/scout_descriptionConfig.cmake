@@ -1,0 +1,1 @@
+/home/rafael/ros2_ws/src/build/scout_description/ament_cmake_core/scout_descriptionConfig.cmake

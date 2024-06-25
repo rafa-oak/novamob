@@ -1,0 +1,30 @@
+[0.029s] Invoking command in '/home/rafael/ros2_ws/src/build/sam_bot_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/sam_bot_description -- -j12 -l12
+[0.072s] Invoked command in '/home/rafael/ros2_ws/src/build/sam_bot_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/sam_bot_description -- -j12 -l12
+[0.125s] Invoking command in '/home/rafael/ros2_ws/src/build/sam_bot_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/sam_bot_description
+[0.138s] -- Install configuration: ""
+[0.138s] -- Execute custom install script
+[0.138s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/src/description/sam_bot_description.urdf
+[0.139s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/launch/display.launch.py
+[0.140s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/rviz/urdf_config.rviz
+[0.140s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/config/ekf.yaml
+[0.143s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/config/nav2_params.yaml
+[0.143s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/world/bumps.world
+[0.143s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/world/indoor_2.world
+[0.143s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/world/my_world.sdf
+[0.143s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/world/outdoor.world
+[0.143s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/ament_index/resource_index/package_run_dependencies/sam_bot_description
+[0.143s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/ament_index/resource_index/parent_prefix_path/sam_bot_description
+[0.143s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/environment/ament_prefix_path.sh
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/environment/ament_prefix_path.dsv
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/environment/path.sh
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/environment/path.dsv
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/local_setup.bash
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/local_setup.sh
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/local_setup.zsh
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/local_setup.dsv
+[0.144s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/package.dsv
+[0.182s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/ament_index/resource_index/packages/sam_bot_description
+[0.184s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/cmake/sam_bot_descriptionConfig.cmake
+[0.184s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/cmake/sam_bot_descriptionConfig-version.cmake
+[0.185s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/sam_bot_description/share/sam_bot_description/package.xml
+[0.215s] Invoked command in '/home/rafael/ros2_ws/src/build/sam_bot_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/sam_bot_description

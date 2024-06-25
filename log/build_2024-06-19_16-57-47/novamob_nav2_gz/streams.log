@@ -1,0 +1,52 @@
+[0.031s] Invoking command in '/home/rafael/ros2_ws/src/build/novamob_nav2_gz': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/novamob_nav2_gz -- -j12 -l12
+[0.072s] Invoked command in '/home/rafael/ros2_ws/src/build/novamob_nav2_gz' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/novamob_nav2_gz -- -j12 -l12
+[0.125s] Invoking command in '/home/rafael/ros2_ws/src/build/novamob_nav2_gz': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/novamob_nav2_gz
+[0.136s] -- Install configuration: ""
+[0.136s] -- Execute custom install script
+[0.136s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/src/description/novamob_description.urdf
+[0.137s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/scripts/__init__.py
+[0.137s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/scripts/follow_waypoints.py
+[0.137s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/scripts/reach_goal.py
+[0.137s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/launch/complete_navigation.launch.py
+[0.138s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/launch/display.launch.py
+[0.138s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/rviz/navigation_config.rviz
+[0.138s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/rviz/urdf_config.rviz
+[0.139s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/config/diff_drive_controller_velocity.yaml
+[0.139s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/config/ekf.yaml
+[0.140s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/config/nav2_params.yaml
+[0.140s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/world/empty.sdf
+[0.140s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/models/TurtlebotArena/meshes/hexagon.dae
+[0.141s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/models/TurtlebotArena/meshes/wall.dae
+[0.141s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/models/TurtlebotArena/model.config
+[0.141s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/models/TurtlebotArena/model.sdf
+[0.142s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/meshes/novamob_mecanum_wheel.dae
+[0.142s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/meshes/novamob_mecanum_wheel.obj
+[0.143s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/meshes/novamob_mecanum_wheel.obj.mtl
+[0.143s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/meshes/novamob_mecanum_wheel.stl
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/meshes/novamob_mecanum_wheel_centered_left.mtl
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/meshes/novamob_mecanum_wheel_centered_left.obj
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/meshes/novamob_mecanum_wheel_centered_right.mtl
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/meshes/novamob_mecanum_wheel_centered_right.obj
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/meshes/novamob_no_wheels.mtl
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/meshes/novamob_no_wheels.obj
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/meshes/novamob_no_wheels.stl
+[0.144s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/meshes/novamob_no_wheels_centered.mtl
+[0.145s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/meshes/novamob_no_wheels_centered.obj
+[0.145s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/lib/novamob_nav2_gz/reach_goal.py
+[0.145s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/lib/novamob_nav2_gz/follow_waypoints.py
+[0.145s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/ament_index/resource_index/package_run_dependencies/novamob_nav2_gz
+[0.150s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/ament_index/resource_index/parent_prefix_path/novamob_nav2_gz
+[0.150s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/environment/ament_prefix_path.sh
+[0.150s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/environment/ament_prefix_path.dsv
+[0.150s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/environment/path.sh
+[0.150s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/environment/path.dsv
+[0.150s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/local_setup.bash
+[0.150s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/local_setup.sh
+[0.151s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/local_setup.zsh
+[0.151s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/local_setup.dsv
+[0.151s] -- Symlinking: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/package.dsv
+[0.158s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/ament_index/resource_index/packages/novamob_nav2_gz
+[0.158s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/cmake/novamob_nav2_gzConfig.cmake
+[0.158s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/cmake/novamob_nav2_gzConfig-version.cmake
+[0.159s] -- Up-to-date symlink: /home/rafael/ros2_ws/src/install/novamob_nav2_gz/share/novamob_nav2_gz/package.xml
+[0.184s] Invoked command in '/home/rafael/ros2_ws/src/build/novamob_nav2_gz' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/novamob_nav2_gz

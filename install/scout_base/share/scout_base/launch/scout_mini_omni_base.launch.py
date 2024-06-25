@@ -1,0 +1,1 @@
+/home/rafael/ros2_ws/src/scout_ros2/scout_base/launch/scout_mini_omni_base.launch.py

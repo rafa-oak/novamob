@@ -1,0 +1,1 @@
+/home/rafael/ros2_ws/src/sam_bot_nav2_gz/launch/complete_navigation.launch.py

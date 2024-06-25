@@ -1,0 +1,10 @@
+msg/ScoutActuatorState.idl
+msg/ScoutActuatorState.msg
+msg/ScoutLightCmd.idl
+msg/ScoutLightCmd.msg
+msg/ScoutLightState.idl
+msg/ScoutLightState.msg
+msg/ScoutRCState.idl
+msg/ScoutRCState.msg
+msg/ScoutStatus.idl
+msg/ScoutStatus.msg

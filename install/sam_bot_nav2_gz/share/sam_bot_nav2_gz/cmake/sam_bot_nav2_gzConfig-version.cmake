@@ -1,0 +1,1 @@
+/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz/ament_cmake_core/sam_bot_nav2_gzConfig-version.cmake

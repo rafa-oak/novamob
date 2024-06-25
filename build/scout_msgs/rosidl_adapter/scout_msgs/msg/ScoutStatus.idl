@@ -1,0 +1,53 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from scout_msgs/msg/ScoutStatus.msg
+// generated code does not contain a copyright notice
+
+#include "scout_msgs/msg/ScoutActuatorState.idl"
+#include "scout_msgs/msg/ScoutLightState.idl"
+#include "std_msgs/msg/Header.idl"
+
+module scout_msgs {
+  module msg {
+    typedef scout_msgs::msg::ScoutActuatorState scout_msgs__msg__ScoutActuatorState;
+    typedef scout_msgs__msg__ScoutActuatorState scout_msgs__msg__ScoutActuatorState__4[4];
+    module ScoutStatus_Constants {
+      const int8 MOTOR_ID_FRONT_RIGHT = 0;
+      const int8 MOTOR_ID_FRONT_LEFT = 1;
+      const int8 MOTOR_ID_REAR_RIGHT = 2;
+      const int8 MOTOR_ID_REAR_LEFT = 3;
+      const int8 LIGHT_ID_FRONT = 0;
+      const int8 LIGHT_ID_REAR = 1;
+    };
+    struct ScoutStatus {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "motion state")
+      double linear_velocity;
+
+      double angular_velocity;
+
+      @verbatim (language="comment", text=
+        "base state")
+      uint8 vehicle_state;
+
+      uint8 control_mode;
+
+      uint16 error_code;
+
+      double battery_voltage;
+
+      @verbatim (language="comment", text=
+        "motor state")
+      scout_msgs__msg__ScoutActuatorState__4 actuator_states;
+
+      @verbatim (language="comment", text=
+        "light state")
+      boolean light_control_enabled;
+
+      scout_msgs::msg::ScoutLightState front_light_state;
+
+      scout_msgs::msg::ScoutLightState rear_light_state;
+    };
+  };
+};

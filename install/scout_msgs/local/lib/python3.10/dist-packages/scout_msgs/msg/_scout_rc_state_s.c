@@ -1,0 +1,1 @@
+/home/rafael/ros2_ws/src/build/scout_msgs/rosidl_generator_py/scout_msgs/msg/_scout_rc_state_s.c

@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from scout_msgs/msg/ScoutLightCmd.msg
+// generated code does not contain a copyright notice
+
+
+module scout_msgs {
+  module msg {
+    module ScoutLightCmd_Constants {
+      const uint8 LIGHT_CONST_OFF = 0;
+      const uint8 LIGHT_CONST_ON = 1;
+      const uint8 LIGHT_BREATH = 2;
+      const uint8 LIGHT_CUSTOM = 3;
+    };
+    struct ScoutLightCmd {
+      boolean cmd_ctrl_allowed;
+
+      uint8 front_mode;
+
+      uint8 front_custom_value;
+
+      uint8 rear_mode;
+
+      uint8 rear_custom_value;
+    };
+  };
+};

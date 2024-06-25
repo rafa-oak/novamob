@@ -1,0 +1,1 @@
+/home/rafael/ros2_ws/src/build/sam_bot_description/ament_cmake_core/sam_bot_descriptionConfig-version.cmake

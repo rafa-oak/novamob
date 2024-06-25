@@ -1,0 +1,1 @@
+/home/rafael/ros2_ws/src/build/scout_msgs/ament_cmake_environment_hooks/local_setup.sh

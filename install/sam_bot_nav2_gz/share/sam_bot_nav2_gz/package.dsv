@@ -1,0 +1,8 @@
+source;share/sam_bot_nav2_gz/hook/cmake_prefix_path.ps1
+source;share/sam_bot_nav2_gz/hook/cmake_prefix_path.dsv
+source;share/sam_bot_nav2_gz/hook/cmake_prefix_path.sh
+source;share/sam_bot_nav2_gz/local_setup.bash
+source;share/sam_bot_nav2_gz/local_setup.dsv
+source;share/sam_bot_nav2_gz/local_setup.ps1
+source;share/sam_bot_nav2_gz/local_setup.sh
+source;share/sam_bot_nav2_gz/local_setup.zsh

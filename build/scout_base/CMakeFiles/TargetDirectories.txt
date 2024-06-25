@@ -1,0 +1,10 @@
+/home/rafael/ros2_ws/src/build/scout_base/CMakeFiles/uninstall.dir
+/home/rafael/ros2_ws/src/build/scout_base/CMakeFiles/scout_base_uninstall.dir
+/home/rafael/ros2_ws/src/build/scout_base/CMakeFiles/scout_base_node.dir
+/home/rafael/ros2_ws/src/build/scout_base/CMakeFiles/test.dir
+/home/rafael/ros2_ws/src/build/scout_base/CMakeFiles/edit_cache.dir
+/home/rafael/ros2_ws/src/build/scout_base/CMakeFiles/rebuild_cache.dir
+/home/rafael/ros2_ws/src/build/scout_base/CMakeFiles/list_install_components.dir
+/home/rafael/ros2_ws/src/build/scout_base/CMakeFiles/install.dir
+/home/rafael/ros2_ws/src/build/scout_base/CMakeFiles/install/local.dir
+/home/rafael/ros2_ws/src/build/scout_base/CMakeFiles/install/strip.dir

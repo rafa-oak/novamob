@@ -1,0 +1,1 @@
+/home/rafael/ros2_ws/src/build/scout_msgs/rosidl_typesupport_introspection_c/scout_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h

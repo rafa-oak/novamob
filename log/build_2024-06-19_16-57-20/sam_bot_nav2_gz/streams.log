@@ -1,0 +1,67 @@
+[0.026s] Invoking command in '/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/sam_bot_nav2_gz -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz
+[0.087s] -- The C compiler identification is GNU 11.4.0
+[0.154s] -- The CXX compiler identification is GNU 11.4.0
+[0.163s] -- Detecting C compiler ABI info
+[0.247s] -- Detecting C compiler ABI info - done
+[0.260s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.260s] -- Detecting C compile features
+[0.261s] -- Detecting C compile features - done
+[0.265s] -- Detecting CXX compiler ABI info
+[0.370s] -- Detecting CXX compiler ABI info - done
+[0.379s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.380s] -- Detecting CXX compile features
+[0.381s] -- Detecting CXX compile features - done
+[0.388s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.624s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.729s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.841s] -- Found xacro: 2.0.8 (/opt/ros/humble/share/xacro/cmake)
+[0.845s] -- Found rclpy: 3.3.12 (/opt/ros/humble/share/rclpy/cmake)
+[0.865s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.094s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.123s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.123s] -- Added test 'lint_cmake' to check CMake code style
+[1.123s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.123s] -- Added test 'xmllint' to check XML markup files
+[1.124s] -- Configuring done
+[1.124s] -- Generating done
+[1.124s] -- Build files have been written to: /home/rafael/ros2_ws/src/build/sam_bot_nav2_gz
+[1.136s] Invoked command in '/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/rafael/ros2_ws/src/sam_bot_nav2_gz -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rafael/ros2_ws/src/install/sam_bot_nav2_gz
+[1.136s] Invoking command in '/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/sam_bot_nav2_gz -- -j12 -l12
+[1.218s] Invoked command in '/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/rafael/ros2_ws/src/build/sam_bot_nav2_gz -- -j12 -l12
+[1.290s] Invoking command in '/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/sam_bot_nav2_gz
+[1.302s] -- Install configuration: ""
+[1.303s] -- Execute custom install script
+[1.303s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/src/description/sam_bot_description.urdf
+[1.333s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/scripts/__init__.py
+[1.345s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/scripts/follow_waypoints.py
+[1.392s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/scripts/reach_goal.py
+[1.421s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/launch/complete_navigation.launch.py
+[1.443s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/launch/display.launch.py
+[1.466s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/rviz/navigation_config.rviz
+[1.526s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/rviz/urdf_config.rviz
+[1.554s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/config/diff_drive_controller_velocity.yaml
+[1.583s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/config/ekf.yaml
+[1.603s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/config/nav2_params.yaml
+[1.630s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/world/empty.sdf
+[1.658s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/models/TurtlebotArena/meshes/hexagon.dae
+[1.678s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/models/TurtlebotArena/meshes/wall.dae
+[1.716s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/models/TurtlebotArena/model.config
+[1.731s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/models/TurtlebotArena/model.sdf
+[1.756s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/lib/sam_bot_nav2_gz/reach_goal.py
+[1.797s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/lib/sam_bot_nav2_gz/follow_waypoints.py
+[1.824s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/ament_index/resource_index/package_run_dependencies/sam_bot_nav2_gz
+[1.850s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/ament_index/resource_index/parent_prefix_path/sam_bot_nav2_gz
+[1.871s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/environment/ament_prefix_path.sh
+[1.885s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/environment/ament_prefix_path.dsv
+[1.901s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/environment/path.sh
+[1.912s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/environment/path.dsv
+[1.929s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/local_setup.bash
+[1.960s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/local_setup.sh
+[1.975s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/local_setup.zsh
+[1.988s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/local_setup.dsv
+[2.003s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/package.dsv
+[2.018s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/ament_index/resource_index/packages/sam_bot_nav2_gz
+[2.038s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/cmake/sam_bot_nav2_gzConfig.cmake
+[2.047s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/cmake/sam_bot_nav2_gzConfig-version.cmake
+[2.068s] -- Symlinking: /home/rafael/ros2_ws/src/install/sam_bot_nav2_gz/share/sam_bot_nav2_gz/package.xml
+[2.112s] Invoked command in '/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/rafael/ros2_ws/src/build/sam_bot_nav2_gz
