@@ -33,9 +33,7 @@ def on_matching_output(matcher: str, result: launch.SomeActionsType):
 
 def generate_launch_description():
     # Messages are from: https://navigation.ros.org/setup_guides/sensors/setup_sensors.html#launching-nav2
-    diff_drive_loaded_message = (
-        "Sucessfully loaded controller diff_drive_base_controller into state active"
-    )
+    diff_drive_loaded_message = "Successfully loaded controller diff_drive_base_controller into state active"
     toolbox_ready_message = "Registering sensor"
     navigation_ready_message = "Creating bond timer"
 
@@ -54,7 +52,7 @@ def generate_launch_description():
                     "display.launch.py",
                 ]
             ),
-            "use_rviz:=true",
+            "use_rviz:=false",
             ["run_headless:=", run_headless],
             "use_localization:=false",
         ],
