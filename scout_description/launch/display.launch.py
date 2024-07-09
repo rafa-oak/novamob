@@ -7,7 +7,7 @@ def generate_launch_description():
     pkg_share = launch_ros.substitutions.FindPackageShare(package='scout_description').find('scout_description')
     default_model_path = os.path.join(pkg_share, 'urdf/scout_v2/scout_v2.xacro')
     default_rviz_config_path = os.path.join(pkg_share, 'rviz/urdf_config.rviz')
-    world_path=os.path.join(pkg_share, 'world/my_world.sdf')
+    world_path=os.path.join(pkg_share, 'world/indoor_2.world')
     
     
     robot_state_publisher_node = launch_ros.actions.Node(
