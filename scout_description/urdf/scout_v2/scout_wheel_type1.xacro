@@ -37,7 +37,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                    <mesh filename="package://scout_description/meshes/scout_v2/wheel_type1.dae" />
+                    <mesh filename="file://$(find scout_description)/meshes/scout_v2/wheel_type1.dae" />
                 </geometry>
             </visual>
             <collision>
@@ -47,6 +47,11 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                 </geometry>
             </collision>
         </link>
+
+        <gazebo reference="${wheel_prefix}_wheel_link">
+            <mu1>0.1</mu1>
+            <mu2>0.1</mu2>
+        </gazebo>
 
         <joint name="${wheel_prefix}_wheel" type="continuous">
             <parent link="base_link"/>
