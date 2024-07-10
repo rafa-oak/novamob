@@ -1,1 +1,0 @@
-/home/rafael/ros2_ws/src/build/scout_msgs/rosidl_typesupport_fastrtps_cpp/scout_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h

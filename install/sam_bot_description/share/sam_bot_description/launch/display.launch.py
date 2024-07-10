@@ -1,1 +1,0 @@
-/home/rafael/ros2_ws/src/sam_bot_description/launch/display.launch.py

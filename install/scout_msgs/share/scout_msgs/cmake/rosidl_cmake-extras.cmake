@@ -1,1 +1,0 @@
-/home/rafael/ros2_ws/src/build/scout_msgs/rosidl_cmake/rosidl_cmake-extras.cmake

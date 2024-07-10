@@ -57,7 +57,7 @@
   <link name="base_link">
     <visual>
       <geometry>
-        <mesh filename="file://$(find novamob_description)/meshes/novamob_no_wheels_centered.obj" scale="0.001 0.001 0.001"/>
+        <mesh filename="file://$(find novamob_nav2_gz)/meshes/novamob_no_wheels_centered.obj" scale="0.001 0.001 0.001"/>
 
       </geometry>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
@@ -125,10 +125,10 @@
     </joint>
   </xacro:macro>
 
-  <xacro:wheel prefix="drivewhl_l" x_reflect="-1" y_reflect="1" wheel_set="${wheel_xoff_back}" mesh_filename="file://$(find novamob_description)/meshes/novamob_mecanum_wheel_centered_left.obj" />
-  <xacro:wheel prefix="drivewhl2_l" x_reflect="1" y_reflect="1" wheel_set="${wheel_xoff_front}"  mesh_filename="file://$(find novamob_description)/meshes/novamob_mecanum_wheel_centered_left.obj"/>
-  <xacro:wheel prefix="drivewhl_r" x_reflect="-1" y_reflect="-1" wheel_set="${wheel_xoff_back}"  mesh_filename="file://$(find novamob_description)/meshes/novamob_mecanum_wheel_centered_right.obj"/> 
-  <xacro:wheel prefix="drivewhl2_r" x_reflect="1" y_reflect="-1" wheel_set="${wheel_xoff_front}" mesh_filename="file://$(find novamob_description)/meshes/novamob_mecanum_wheel_centered_right.obj"/>
+  <xacro:wheel prefix="drivewhl_l" x_reflect="-1" y_reflect="1" wheel_set="${wheel_xoff_back}" mesh_filename="file://$(find novamob_nav2_gz)/meshes/novamob_mecanum_wheel_centered_left.obj" />
+  <xacro:wheel prefix="drivewhl2_l" x_reflect="1" y_reflect="1" wheel_set="${wheel_xoff_front}"  mesh_filename="file://$(find novamob_nav2_gz)/meshes/novamob_mecanum_wheel_centered_left.obj"/>
+  <xacro:wheel prefix="drivewhl_r" x_reflect="-1" y_reflect="-1" wheel_set="${wheel_xoff_back}"  mesh_filename="file://$(find novamob_nav2_gz)/meshes/novamob_mecanum_wheel_centered_right.obj"/> 
+  <xacro:wheel prefix="drivewhl2_r" x_reflect="1" y_reflect="-1" wheel_set="${wheel_xoff_front}" mesh_filename="file://$(find novamob_nav2_gz)/meshes/novamob_mecanum_wheel_centered_right.obj"/>
 
   <!-- IMU -->
 

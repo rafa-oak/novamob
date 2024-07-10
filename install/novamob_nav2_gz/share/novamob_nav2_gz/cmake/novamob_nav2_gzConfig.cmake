@@ -1,1 +1,0 @@
-/home/rafael/ros2_ws/src/build/novamob_nav2_gz/ament_cmake_core/novamob_nav2_gzConfig.cmake

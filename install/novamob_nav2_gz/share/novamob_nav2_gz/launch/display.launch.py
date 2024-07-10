@@ -1,1 +1,0 @@
-/home/rafael/ros2_ws/src/novamob_nav2_gz/launch/display.launch.py

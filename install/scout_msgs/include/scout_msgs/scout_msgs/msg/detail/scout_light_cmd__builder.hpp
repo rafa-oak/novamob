@@ -1,1 +1,0 @@
-/home/rafael/ros2_ws/src/build/scout_msgs/rosidl_generator_cpp/scout_msgs/msg/detail/scout_light_cmd__builder.hpp

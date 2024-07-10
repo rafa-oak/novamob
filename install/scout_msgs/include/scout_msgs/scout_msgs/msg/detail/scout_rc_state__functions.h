@@ -1,1 +1,0 @@
-/home/rafael/ros2_ws/src/build/scout_msgs/rosidl_generator_c/scout_msgs/msg/detail/scout_rc_state__functions.h

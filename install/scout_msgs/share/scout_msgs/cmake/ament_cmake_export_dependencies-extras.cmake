@@ -1,1 +1,0 @@
-/home/rafael/ros2_ws/src/build/scout_msgs/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake

@@ -1,1 +1,0 @@
-/home/rafael/ros2_ws/src/novamob_nav2_gz/scripts/reach_goal.py

@@ -1,1 +1,0 @@
-/home/rafael/ros2_ws/src/scout_ros2/scout_description/launch/scout_base_description.launch.py

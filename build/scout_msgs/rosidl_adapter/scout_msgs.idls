@@ -1,5 +1,0 @@
-/home/rafael/ros2_ws/src/build/scout_msgs/rosidl_adapter/scout_msgs:msg/ScoutActuatorState.idl
-/home/rafael/ros2_ws/src/build/scout_msgs/rosidl_adapter/scout_msgs:msg/ScoutLightCmd.idl
-/home/rafael/ros2_ws/src/build/scout_msgs/rosidl_adapter/scout_msgs:msg/ScoutLightState.idl
-/home/rafael/ros2_ws/src/build/scout_msgs/rosidl_adapter/scout_msgs:msg/ScoutRCState.idl
-/home/rafael/ros2_ws/src/build/scout_msgs/rosidl_adapter/scout_msgs:msg/ScoutStatus.idl

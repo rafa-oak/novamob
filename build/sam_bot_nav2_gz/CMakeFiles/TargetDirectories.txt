@@ -1,9 +1,0 @@
-/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz/CMakeFiles/uninstall.dir
-/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz/CMakeFiles/sam_bot_nav2_gz_uninstall.dir
-/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz/CMakeFiles/test.dir
-/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz/CMakeFiles/edit_cache.dir
-/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz/CMakeFiles/rebuild_cache.dir
-/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz/CMakeFiles/list_install_components.dir
-/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz/CMakeFiles/install.dir
-/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz/CMakeFiles/install/local.dir
-/home/rafael/ros2_ws/src/build/sam_bot_nav2_gz/CMakeFiles/install/strip.dir
