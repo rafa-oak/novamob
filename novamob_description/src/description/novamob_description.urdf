@@ -318,8 +318,8 @@
           </horizontal>
         </scan>
         <range>
-          <min>0.120000</min>
-          <max>3.5</max>
+          <min>0.150000</min>
+          <max>12</max>
           <resolution>0.015000</resolution>
         </range>
         <noise>
@@ -400,7 +400,7 @@
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
         <frame_name>camera_depth_frame</frame_name>
-        <pointCloudCutoff>0.5</pointCloudCutoff>
+        <pointCloudCutoff>0.3</pointCloudCutoff>
         <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
         <distortionK1>0</distortionK1>
         <distortionK2>0</distortionK2>
