@@ -29,7 +29,7 @@ def generate_launch_description():
         pkg_share, "urdf/scout_v2/scout_v2.xacro"
     )
     default_rviz_config_path = os.path.join(pkg_share, "rviz/urdf_config.rviz")
-    world_path = os.path.join(pkg_share, "world/empty.sdf")
+    world_path = os.path.join(pkg_share, "world/ign_indoor/ign_indoor.sdf")
     gz_models_path = os.path.join(pkg_share, "models")
 
     use_sim_time = LaunchConfiguration("use_sim_time")
