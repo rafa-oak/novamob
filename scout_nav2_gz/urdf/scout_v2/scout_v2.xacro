@@ -292,7 +292,7 @@
       <always_on>true</always_on>
       <visualize>true</visualize>
       <update_rate>5</update_rate>
-      <ray>
+      <lidar>
         <scan>
           <horizontal>
             <samples>360</samples>
@@ -311,7 +311,7 @@
           <mean>0.0</mean>
           <stddev>0.01</stddev>
         </noise>
-      </ray>
+      </lidar>
     </sensor>
   </gazebo>
 

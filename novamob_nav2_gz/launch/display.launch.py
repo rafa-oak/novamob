@@ -30,6 +30,10 @@ def generate_launch_description():
     )
     default_rviz_config_path = os.path.join(pkg_share, "rviz/urdf_config.rviz")
     world_path = os.path.join(pkg_share, "world/ign_indoor/ign_indoor.sdf")
+    # world_path = os.path.join(pkg_share, "world/depth_camera_sensor.sdf")
+    # world_path = os.path.join(pkg_share, "world/empty.sdf")
+
+
     gz_models_path = os.path.join(pkg_share, "models")
 
     use_sim_time = LaunchConfiguration("use_sim_time")
@@ -124,6 +128,7 @@ def generate_launch_description():
             "/scan@sensor_msgs/msg/LaserScan[ignition.msgs.LaserScan",
             "/imu@sensor_msgs/msg/Imu[ignition.msgs.IMU",
             "/sky_cam@sensor_msgs/msg/Image@ignition.msgs.Image",
+            "/depth_camera@sensor_msgs/msg/Image@ignition.msgs.Image",
             "/robot_cam@sensor_msgs/msg/Image@ignition.msgs.Image",
             "/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo",
             # Clock message is necessary for the diff_drive_controller to accept commands https://github.com/ros-controls/gz_ros2_control/issues/106
