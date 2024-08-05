@@ -2748,272 +2748,6 @@
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
-    <model name='Bookshelf'>
-      <static>true</static>
-      <link name='link'>
-        <inertial>
-          <mass>1</mass>
-          <pose>0 0 0 0 -0 0</pose>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <collision name='back'>
-          <pose>0 0.005 0.6 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.9 0.01 1.2</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual1'>
-          <pose>0 0.005 0.6 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.9 0.01 1.2</size>
-            </box>
-          </geometry>
-          <material>
-            <diffuse>1 1 1 1</diffuse>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <pbr>
-              <metal>
-                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
-              </metal>
-            </pbr>
-          </material>
-        </visual>
-        <collision name='left_side'>
-          <pose>0.45 -0.195 0.6 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.02 0.4 1.2</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual2'>
-          <pose>0.45 -0.195 0.6 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.02 0.4 1.2</size>
-            </box>
-          </geometry>
-          <material>
-            <diffuse>1 1 1 1</diffuse>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <pbr>
-              <metal>
-                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
-              </metal>
-            </pbr>
-          </material>
-        </visual>
-        <collision name='right_side'>
-          <pose>-0.45 -0.195 0.6 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.02 0.4 1.2</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual3'>
-          <pose>-0.45 -0.195 0.6 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.02 0.4 1.2</size>
-            </box>
-          </geometry>
-          <material>
-            <diffuse>1 1 1 1</diffuse>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <pbr>
-              <metal>
-                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
-              </metal>
-            </pbr>
-          </material>
-        </visual>
-        <collision name='bottom'>
-          <pose>0 -0.195 0.03 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.88 0.4 0.06</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual4'>
-          <pose>0 -0.195 0.03 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.88 0.4 0.06</size>
-            </box>
-          </geometry>
-          <material>
-            <diffuse>1 1 1 1</diffuse>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <pbr>
-              <metal>
-                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
-              </metal>
-            </pbr>
-          </material>
-        </visual>
-        <collision name='top'>
-          <pose>0 -0.195 1.19 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.88 0.4 0.02</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual5'>
-          <pose>0 -0.195 1.19 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.88 0.4 0.02</size>
-            </box>
-          </geometry>
-          <material>
-            <diffuse>1 1 1 1</diffuse>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <pbr>
-              <metal>
-                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
-              </metal>
-            </pbr>
-          </material>
-        </visual>
-        <collision name='low_shelf'>
-          <pose>0 -0.195 0.43 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.88 0.4 0.02</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual6'>
-          <pose>0 -0.195 0.43 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.88 0.4 0.02</size>
-            </box>
-          </geometry>
-          <material>
-            <diffuse>1 1 1 1</diffuse>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <pbr>
-              <metal>
-                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
-              </metal>
-            </pbr>
-          </material>
-        </visual>
-        <collision name='high_shelf'>
-          <pose>0 -0.195 0.8 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.88 0.4 0.02</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual7'>
-          <pose>0 -0.195 0.8 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.88 0.4 0.02</size>
-            </box>
-          </geometry>
-          <material>
-            <diffuse>1 1 1 1</diffuse>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <pbr>
-              <metal>
-                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
-              </metal>
-            </pbr>
-          </material>
-        </visual>
-        <pose>0 0 0 0 -0 0</pose>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>-6.91551 8.68257 0 0 -0 0</pose>
-      <self_collide>false</self_collide>
-    </model>
     <model name='cafe_table'>
       <static>true</static>
       <link name='link'>
@@ -3557,241 +3291,7 @@
         </inertial>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>16.3394 -1.20437 0 0 -0 0</pose>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='Desk'>
-      <static>true</static>
-      <link name='base_link'>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/office desk/1/meshes/desk.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <diffuse>1 1 1 1</diffuse>
-            <specular>1 1 1 1</specular>
-            <pbr>
-              <metal>
-                <albedo_map>materials/textures/Desk_Albedo.png</albedo_map>
-                <normal_map>materials/textures/Desk_Normal.png</normal_map>
-                <roughness_map>materials/textures/Desk_Roughness.png</roughness_map>
-              </metal>
-            </pbr>
-          </material>
-        </visual>
-        <collision name='Box001'>
-          <pose>0.0 0.0 0.750208 0.0 0.0 0.0</pose>
-          <geometry>
-            <box>
-              <size>0.8325 2.24977 0.033646</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <collision name='Box002'>
-          <pose>0.331174 -1.05803 0.372493 0.0 0.0 0.0</pose>
-          <geometry>
-            <box>
-              <size>0.035625 0.035625 0.744987</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <collision name='Box003'>
-          <pose>0.331174 1.05803 0.372493 0.0 0.0 0.0</pose>
-          <geometry>
-            <box>
-              <size>0.035625 0.035625 0.744987</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <collision name='Box004'>
-          <pose>-0.331174 1.05803 0.372493 0.0 0.0 0.0</pose>
-          <geometry>
-            <box>
-              <size>0.035625 0.035625 0.744987</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <collision name='Box005'>
-          <pose>-0.331174 -1.05803 0.372493 0.0 0.0 0.0</pose>
-          <geometry>
-            <box>
-              <size>0.035625 0.035625 0.744987</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <collision name='Box006'>
-          <pose>0.000344962 -1.05803 0.485212 0.0 1.5708 0.0</pose>
-          <geometry>
-            <box>
-              <size>0.035625 0.035625 0.663038</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <collision name='Box007'>
-          <pose>0.000344962 1.05803 0.485212 0.0 1.5708 0.0</pose>
-          <geometry>
-            <box>
-              <size>0.035625 0.035625 0.663038</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <collision name='Box008'>
-          <pose>0.0 -0.00048697 0.485212 -1.5708 1.5708 0.0</pose>
-          <geometry>
-            <box>
-              <size>0.035625 0.035625 2.11509</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <collision name='Box009'>
-          <pose>0.331174 -0.000626326 0.715061 -1.5708 0.0 0.0</pose>
-          <geometry>
-            <box>
-              <size>0.035625 0.035625 2.11481</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <collision name='Box010'>
-          <pose>-0.331174 -0.000626326 0.715061 -1.5708 0.0 0.0</pose>
-          <geometry>
-            <box>
-              <size>0.035625 0.035625 2.11481</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <collision name='Box011'>
-          <pose>0.0726977 -0.102337 0.768498 0.0 0.0872665 0.0</pose>
-          <geometry>
-            <box>
-              <size>0.129877 0.447191 0.05018</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <collision name='Box012'>
-          <pose>-0.222452 -0.0605589 0.979005 0.0 0.0 0.0</pose>
-          <geometry>
-            <box>
-              <size>0.029518 0.63758 0.470188</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <collision name='Box013'>
-          <pose>0.0989945 0.276996 0.782739 0.0 0.0 -0.174533</pose>
-          <geometry>
-            <box>
-              <size>0.116594 0.05708 0.036897</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <pose>0 0 0 0 -0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>17.3412 -1.22786 0 0 -0 0</pose>
+      <pose>16.8684 -2.64176 0 0 -0 0</pose>
       <self_collide>false</self_collide>
     </model>
     <model name='TrashBin'>
@@ -3827,6 +3327,1593 @@
         <enable_wind>false</enable_wind>
       </link>
       <pose>-7.58996 4.96176 0 0 -0 1.57</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Desk'>
+      <link name='link'>
+        <pose>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/desk/2/files/meshes/desk.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/desk/2/files/meshes/desk.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>17.5711 -2.61875 0 0 -0 3.14</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Desk_1'>
+      <link name='link'>
+        <pose>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/desk/2/files/meshes/desk.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/desk/2/files/meshes/desk.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>17.5557 -1.15978 0 0 -0 3.14</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Desk_1_1'>
+      <link name='link'>
+        <pose>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/desk/2/files/meshes/desk.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/desk/2/files/meshes/desk.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>17.5675 0.477738 0 0 -0 3.14</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='DeskChair_1'>
+      <static>true</static>
+      <link name='link'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <collision name='collision'>
+          <pose>0.001581 0.000308 0.612847 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.33000000000000002</radius>
+              <length>1.23</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/deskchair/2/files/meshes/DeskChair.obj</uri>
+              <scale>0.01 0.01 0.01</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>16.9572 -1.19108 0 0 -0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='DeskChair_2'>
+      <static>true</static>
+      <link name='link'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <collision name='collision'>
+          <pose>0.001581 0.000308 0.612847 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.33000000000000002</radius>
+              <length>1.23</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/deskchair/2/files/meshes/DeskChair.obj</uri>
+              <scale>0.01 0.01 0.01</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>16.9413 0.470179 0 0 -0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Bookshelf_1'>
+      <static>true</static>
+      <link name='link'>
+        <inertial>
+          <mass>1</mass>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='back'>
+          <pose>0 0.005 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.9 0.01 1.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual1'>
+          <pose>0 0.005 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.9 0.01 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='left_side'>
+          <pose>0.45 -0.195 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.02 0.4 1.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual2'>
+          <pose>0.45 -0.195 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.02 0.4 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='right_side'>
+          <pose>-0.45 -0.195 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.02 0.4 1.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual3'>
+          <pose>-0.45 -0.195 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.02 0.4 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='bottom'>
+          <pose>0 -0.195 0.03 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.06</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual4'>
+          <pose>0 -0.195 0.03 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.06</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='top'>
+          <pose>0 -0.195 1.19 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual5'>
+          <pose>0 -0.195 1.19 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='low_shelf'>
+          <pose>0 -0.195 0.43 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual6'>
+          <pose>0 -0.195 0.43 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='high_shelf'>
+          <pose>0 -0.195 0.8 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual7'>
+          <pose>0 -0.195 0.8 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>14.0217 1.17534 0 0 -0 1.57</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Bookshelf_1_1'>
+      <static>true</static>
+      <link name='link'>
+        <inertial>
+          <mass>1</mass>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='back'>
+          <pose>0 0.005 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.9 0.01 1.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual1'>
+          <pose>0 0.005 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.9 0.01 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='left_side'>
+          <pose>0.45 -0.195 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.02 0.4 1.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual2'>
+          <pose>0.45 -0.195 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.02 0.4 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='right_side'>
+          <pose>-0.45 -0.195 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.02 0.4 1.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual3'>
+          <pose>-0.45 -0.195 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.02 0.4 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='bottom'>
+          <pose>0 -0.195 0.03 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.06</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual4'>
+          <pose>0 -0.195 0.03 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.06</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='top'>
+          <pose>0 -0.195 1.19 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual5'>
+          <pose>0 -0.195 1.19 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='low_shelf'>
+          <pose>0 -0.195 0.43 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual6'>
+          <pose>0 -0.195 0.43 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='high_shelf'>
+          <pose>0 -0.195 0.8 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual7'>
+          <pose>0 -0.195 0.8 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>14.009 2.2189 0 0 -0 1.57</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Bookshelf_1_1_1'>
+      <static>true</static>
+      <link name='link'>
+        <inertial>
+          <mass>1</mass>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='back'>
+          <pose>0 0.005 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.9 0.01 1.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual1'>
+          <pose>0 0.005 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.9 0.01 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='left_side'>
+          <pose>0.45 -0.195 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.02 0.4 1.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual2'>
+          <pose>0.45 -0.195 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.02 0.4 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='right_side'>
+          <pose>-0.45 -0.195 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.02 0.4 1.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual3'>
+          <pose>-0.45 -0.195 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.02 0.4 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='bottom'>
+          <pose>0 -0.195 0.03 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.06</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual4'>
+          <pose>0 -0.195 0.03 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.06</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='top'>
+          <pose>0 -0.195 1.19 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual5'>
+          <pose>0 -0.195 1.19 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='low_shelf'>
+          <pose>0 -0.195 0.43 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual6'>
+          <pose>0 -0.195 0.43 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='high_shelf'>
+          <pose>0 -0.195 0.8 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual7'>
+          <pose>0 -0.195 0.8 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>14.0126 3.3057 0 0 -0 1.57</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Bookshelf_1_1_2'>
+      <static>true</static>
+      <link name='link'>
+        <inertial>
+          <mass>1</mass>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='back'>
+          <pose>0 0.005 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.9 0.01 1.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual1'>
+          <pose>0 0.005 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.9 0.01 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='left_side'>
+          <pose>0.45 -0.195 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.02 0.4 1.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual2'>
+          <pose>0.45 -0.195 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.02 0.4 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='right_side'>
+          <pose>-0.45 -0.195 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.02 0.4 1.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual3'>
+          <pose>-0.45 -0.195 0.6 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.02 0.4 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='bottom'>
+          <pose>0 -0.195 0.03 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.06</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual4'>
+          <pose>0 -0.195 0.03 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.06</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='top'>
+          <pose>0 -0.195 1.19 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual5'>
+          <pose>0 -0.195 1.19 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='low_shelf'>
+          <pose>0 -0.195 0.43 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual6'>
+          <pose>0 -0.195 0.43 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='high_shelf'>
+          <pose>0 -0.195 0.8 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual7'>
+          <pose>0 -0.195 0.8 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.88 0.4 0.02</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/bookshelf/4/files/bookshelf_diffuse.jpg</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>14.0011 4.37035 0 0 -0 1.57</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='cafe_table_1'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='surface'>
+          <pose>0 0 0.755 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.913 0.913 0.04</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='column'>
+          <pose>0 0 0.37 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.042 0.042 0.74</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='base'>
+          <pose>0 0 0.02 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.56 0.56 0.04</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cafe table/3/files/meshes/cafe_table.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-9.21225 5.34385 0 0 -0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='WoodenChair_1'>
+      <static>true</static>
+      <link name='body'>
+        <pose>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/woodenchair/1/files/meshes/WoodenChair.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/woodenchair/1/files/meshes/WoodenChair_Col.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-9.95306 5.33466 0 0 -0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='WoodenChair_0_1'>
+      <static>true</static>
+      <link name='body'>
+        <pose>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/woodenchair/1/files/meshes/WoodenChair.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/woodenchair/1/files/meshes/WoodenChair_Col.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-8.60165 5.38145 0 0 -0 3.14</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Construction Cone_1'>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>10 10 10</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction cone/3/files/meshes/construction_cone.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>10 10 10</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction cone/3/files/meshes/construction_cone.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-0.05526 15.7067 0 0 -0 0</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Construction Cone_2'>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>10 10 10</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction cone/3/files/meshes/construction_cone.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>10 10 10</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction cone/3/files/meshes/construction_cone.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-0.081431 15.0175 0 0 -0 0</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Construction Cone_3'>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>10 10 10</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction cone/3/files/meshes/construction_cone.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>10 10 10</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction cone/3/files/meshes/construction_cone.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.10412 12.2455 0 0 -0 0</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Construction Cone_4'>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>10 10 10</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction cone/3/files/meshes/construction_cone.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>10 10 10</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction cone/3/files/meshes/construction_cone.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.049394 12.8099 0 0 -0 0</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Construction Cone_5'>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>10 10 10</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction cone/3/files/meshes/construction_cone.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>10 10 10</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction cone/3/files/meshes/construction_cone.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0.015489 13.3706 0 0 -0 0</pose>
+      <static>false</static>
       <self_collide>false</self_collide>
     </model>
     <light name='sun' type='directional'>
