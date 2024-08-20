@@ -29,7 +29,7 @@ def generate_launch_description():
         pkg_share, "urdf/scout_v2/scout_v2.xacro"
     )
     default_rviz_config_path = os.path.join(pkg_share, "rviz/urdf_config.rviz")
-    world_path = os.path.join(pkg_share, "world/ign_indoor/ign_indoor.sdf")
+    default_world_path = os.path.join(pkg_share, "world/ign_indoor/ign_indoor.sdf")
     gz_models_path = os.path.join(pkg_share, "models")
 
     use_sim_time = LaunchConfiguration("use_sim_time")
@@ -38,6 +38,8 @@ def generate_launch_description():
     log_level = LaunchConfiguration("log_level")
     gz_verbosity = LaunchConfiguration("gz_verbosity")
     run_headless = LaunchConfiguration("run_headless")
+    world_path = LaunchConfiguration("world")  
+
 
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
@@ -240,6 +242,11 @@ def generate_launch_description():
                 name="log_level",
                 default_value="warn",
                 description="The level of logging that is applied to all ROS 2 nodes launched by this script.",
+            ),
+            DeclareLaunchArgument(
+                name="world",
+                default_value=default_world_path,  
+                description="Absolute path to the world file to load in Ignition Gazebo",
             ),
             bridge,
             robot_state_publisher_node,

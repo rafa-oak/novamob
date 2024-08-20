@@ -29,10 +29,8 @@ def generate_launch_description():
         pkg_share, "src/description/novamob_description.urdf"
     )
     default_rviz_config_path = os.path.join(pkg_share, "rviz/urdf_config.rviz")
-    world_path = os.path.join(pkg_share, "world/ign_indoor/ign_indoor.sdf")
-    # world_path = os.path.join(pkg_share, "world/depth_camera_sensor.sdf")
-    # world_path = os.path.join(pkg_share, "world/empty.sdf")
 
+    default_world_path = os.path.join(pkg_share, "world/ign_indoor/ign_indoor.sdf")
 
     gz_models_path = os.path.join(pkg_share, "models")
 
@@ -42,6 +40,7 @@ def generate_launch_description():
     log_level = LaunchConfiguration("log_level")
     gz_verbosity = LaunchConfiguration("gz_verbosity")
     run_headless = LaunchConfiguration("run_headless")
+    world_path = LaunchConfiguration("world")  
 
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
@@ -60,8 +59,6 @@ def generate_launch_description():
         arguments=["-d", LaunchConfiguration("rvizconfig")],
     )
 
-    # Localize using odometry and IMU data. 
-    # It can be turned off because the navigation stack uses AMCL with lidar data for localization
     robot_localization_node = Node(
         condition=launch.conditions.IfCondition(use_localization),
         package="robot_localization",
@@ -74,14 +71,10 @@ def generate_launch_description():
         ],
     )
 
-    # gazebo have to be executed with shell=False, or test_launch won't terminate it
-    #   see: https://github.com/ros2/launch/issues/545
-    # This code is form taken ros_gz_sim and modified to work with shell=False
-    #   see: https://github.com/gazebosim/ros_gz/blob/ros2/ros_gz_sim/launch/gz_sim.launch.py.in
     gz_env = {'GZ_SIM_SYSTEM_PLUGIN_PATH':
            ':'.join([os.environ.get('GZ_SIM_SYSTEM_PLUGIN_PATH', default=''),
                      os.environ.get('LD_LIBRARY_PATH', default='')]),
-           'IGN_GAZEBO_SYSTEM_PLUGIN_PATH':  # TODO(CH3): To support pre-garden. Deprecated.
+           'IGN_GAZEBO_SYSTEM_PLUGIN_PATH':
                       ':'.join([os.environ.get('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', default=''),
                                 os.environ.get('LD_LIBRARY_PATH', default='')])}
     gazebo = [
@@ -89,14 +82,14 @@ def generate_launch_description():
             condition=launch.conditions.IfCondition(run_headless),
             cmd=['ruby', FindExecutable(name="ign"), 'gazebo',  '-r', '-v', gz_verbosity, '-s', '--headless-rendering', world_path],
             output='screen',
-            additional_env=gz_env, # type: ignore
+            additional_env=gz_env,  # type: ignore
             shell=False,
         ),
         ExecuteProcess(
             condition=launch.conditions.UnlessCondition(run_headless),
             cmd=['ruby', FindExecutable(name="ign"), 'gazebo',  '-r', '-v', gz_verbosity, world_path],
             output='screen',
-            additional_env=gz_env, # type: ignore
+            additional_env=gz_env,  # type: ignore
             shell=False,
         )
     ]
@@ -131,7 +124,6 @@ def generate_launch_description():
             "/depth_camera@sensor_msgs/msg/Image@ignition.msgs.Image",
             "/robot_cam@sensor_msgs/msg/Image@ignition.msgs.Image",
             "/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo",
-            # Clock message is necessary for the diff_drive_controller to accept commands https://github.com/ros-controls/gz_ros2_control/issues/106
             "/clock@rosgraph_msgs/msg/Clock[ignition.msgs.Clock",
         ],
         output="screen",
@@ -245,6 +237,11 @@ def generate_launch_description():
                 name="log_level",
                 default_value="warn",
                 description="The level of logging that is applied to all ROS 2 nodes launched by this script.",
+            ),
+            DeclareLaunchArgument(
+                name="world",
+                default_value=default_world_path, 
+                description="Absolute path to the world file to load in Ignition Gazebo",
             ),
             bridge,
             robot_state_publisher_node,

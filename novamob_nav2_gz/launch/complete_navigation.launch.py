@@ -38,8 +38,9 @@ def generate_launch_description():
     navigation_ready_message = "Creating bond timer"
 
     run_headless = LaunchConfiguration("run_headless")
+    world = LaunchConfiguration("world")  
 
-    # Including launchfiles with execute process because i didn't find another way to wait for a certain messages befor starting the next launchfile
+    # Including launch files with execute process
     bringup = ExecuteProcess(
         name="launch_bringup",
         cmd=[
@@ -55,10 +56,12 @@ def generate_launch_description():
             "use_rviz:=false",
             ["run_headless:=", run_headless],
             "use_localization:=false",
+            ["world:=", world],
         ],
         shell=False,
         output="screen",
     )
+
     toolbox = ExecuteProcess(
         name="launch_slam_toolbox",
         cmd=[
@@ -75,6 +78,7 @@ def generate_launch_description():
         shell=False,
         output="screen",
     )
+
     waiting_toolbox = RegisterEventHandler(
         OnProcessIO(
             target_action=bringup,
@@ -108,6 +112,7 @@ def generate_launch_description():
         shell=False,
         output="screen",
     )
+
     rviz_node = Node(
         condition=IfCondition(NotSubstitution(run_headless)),
         package="rviz2",
@@ -116,6 +121,7 @@ def generate_launch_description():
         output="screen",
         arguments=["-d", LaunchConfiguration("rvizconfig")],
     )
+
     waiting_navigation = RegisterEventHandler(
         OnProcessIO(
             target_action=toolbox,
@@ -165,7 +171,15 @@ def generate_launch_description():
             DeclareLaunchArgument(
                 name="run_headless",
                 default_value="False",
-                description="Start GZ in hedless mode and don't start RViz (overrides use_rviz)",
+                description="Start GZ in headless mode and don't start RViz (overrides use_rviz)",
+            ),
+            DeclareLaunchArgument(
+                name="world",
+                default_value=[
+                    FindPackageShare("novamob_nav2_gz"),
+                    "/world/ign_indoor/ign_indoor.sdf",
+                ],
+                description="Absolute path to the world file",
             ),
             bringup,
             waiting_toolbox,
