@@ -26,7 +26,7 @@ def generate_launch_description():
         package="novamob_nav2_gz"
     ).find("novamob_nav2_gz")
     default_model_path = os.path.join(
-        pkg_share, "src/description/novamob_description.urdf"
+        pkg_share, "src/description/novamob_trailer_description.urdf"
     )
     default_rviz_config_path = os.path.join(pkg_share, "rviz/urdf_config.rviz")
 

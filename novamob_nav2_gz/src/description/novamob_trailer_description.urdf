@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<robot name="novamob"
+  xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Define robot constants -->
+  <xacro:property name="base_width" value="0.225"/>
+  <xacro:property name="base_length" value="0.251"/>
+  <xacro:property name="base_height" value="0.135"/>
+
+  <xacro:property name="platform_1_height" value="0.07"/>
+  <xacro:property name="platform_distance" value="0.0650"/>
+
+  <xacro:property name="wheel_screw" value="0.006"/>
+  <xacro:property name="wheel_radius" value="0.03"/>
+  <xacro:property name="wheel_width" value="0.03"/>
+  <xacro:property name="wheel_ygap" value="0.065"/>
+  <xacro:property name="wheel_zoff" value="-0.015"/>
+  <xacro:property name="wheel_xoff_front" value="0.045"/>
+  <xacro:property name="wheel_xoff_back" value="0.055"/>
+  <xacro:property name="wheel_mass" value="0.6"/>
+
+
+  <!-- Define some commonly used intertial properties  -->
+  <xacro:macro name="box_inertia" params="m w h d">
+    <inertial>
+      <origin xyz="0 0 0" rpy="${pi/2} 0 ${pi/2}"/>
+      <mass value="${m}"/>
+      <inertia ixx="${(m/12) * (h*h + d*d)}" ixy="0.0" ixz="0.0" iyy="${(m/12) * (w*w + d*d)}" iyz="0.0" izz="${(m/12) * (w*w + h*h)}"/>
+    </inertial>
+  </xacro:macro>
+
+  <xacro:macro name="cylinder_inertia" params="m r h">
+    <inertial>
+      <origin xyz="0 0 0" rpy="${pi/2} 0 0" />
+      <mass value="${m}"/>
+      <inertia ixx="${(m/12) * (3*r*r + h*h)}" ixy = "0" ixz = "0" iyy="${(m/12) * (3*r*r + h*h)}" iyz = "0" izz="${(m/2) * (r*r)}"/>
+    </inertial>
+  </xacro:macro>
+
+  <xacro:macro name="sphere_inertia" params="m r">
+    <inertial>
+      <mass value="${m}"/>
+      <inertia ixx="${(2/5) * m * (r*r)}" ixy="0.0" ixz="0.0" iyy="${(2/5) * m * (r*r)}" iyz="0.0" izz="${(2/5) * m * (r*r)}"/>
+    </inertial>
+  </xacro:macro>
+
+  <xacro:macro name="wheel_inertia" params="mass radius">
+    <inertial>
+      <mass value="${mass}"/>
+      <inertia ixx="${(2/5) * mass * (radius * radius)}" ixy="0" ixz="0"
+                iyy="${(2/5) * mass * (radius * radius)}" iyz="0"
+                izz="${(2/5) * mass * (radius * radius)}" />
+    </inertial>
+  </xacro:macro>
+
+  <!-- Robot Base -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="file://$(find novamob_nav2_gz)/meshes/novamob_no_wheels_centered.obj" scale="0.001 0.001 0.001"/>
+
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <material name="Cyan">
+        <color rgba="0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <geometry>
+        <box size="${base_length} ${base_width} ${base_height}"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 ${base_height/2}"/>
+    </collision>
+
+    <xacro:box_inertia m="15" w="${base_width}" d="${base_length}" h="${base_height}"/>
+
+  </link>
+
+  <!-- Robot Footprint -->
+  <link name="base_footprint">
+    <xacro:box_inertia m="0" w="0" d="0" h="0"/>
+  </link>
+
+  <joint name="base_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="base_footprint"/>
+    <origin xyz="0.0 0.0 ${-(wheel_radius+wheel_zoff)}" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Wheels -->
+  <xacro:macro name="wheel" params="prefix x_reflect y_reflect wheel_set mesh_filename">
+    <link name="${prefix}_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="${mesh_filename}" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="Gray">
+          <color rgba="0.5 0.5 0.5 1.0"/>
+        </material>
+      </visual>
+
+      <collision>
+        <origin xyz="0 ${((wheel_radius/2)+wheel_screw)*y_reflect} 0" rpy="${pi/2} 0 0"/>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
+        </geometry>
+      </collision>
+
+      <xacro:wheel_inertia mass="${wheel_mass}" radius="${wheel_radius}"/>
+    </link>
+
+    <gazebo reference="${prefix}_link">
+        <mu1>0.1</mu1>
+        <mu2>0.1</mu2>
+    </gazebo>
+
+    <joint name="${prefix}_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="${prefix}_link"/>
+      <origin xyz="${x_reflect*wheel_set} ${y_reflect*wheel_ygap} ${-wheel_zoff}" rpy="0 0 0"/>
+      <axis xyz="0 1 0"/>
+
+    </joint>
+  </xacro:macro>
+
+  <xacro:wheel prefix="drivewhl_l" x_reflect="-1" y_reflect="1" wheel_set="${wheel_xoff_back}" mesh_filename="file://$(find novamob_nav2_gz)/meshes/novamob_mecanum_wheel_centered_left.obj" />
+  <xacro:wheel prefix="drivewhl2_l" x_reflect="1" y_reflect="1" wheel_set="${wheel_xoff_front}"  mesh_filename="file://$(find novamob_nav2_gz)/meshes/novamob_mecanum_wheel_centered_left.obj"/>
+  <xacro:wheel prefix="drivewhl_r" x_reflect="-1" y_reflect="-1" wheel_set="${wheel_xoff_back}"  mesh_filename="file://$(find novamob_nav2_gz)/meshes/novamob_mecanum_wheel_centered_right.obj"/> 
+  <xacro:wheel prefix="drivewhl2_r" x_reflect="1" y_reflect="-1" wheel_set="${wheel_xoff_front}" mesh_filename="file://$(find novamob_nav2_gz)/meshes/novamob_mecanum_wheel_centered_right.obj"/>
+
+
+
+  <!--                TRAILER             -->
+
+
+  <xacro:macro name="trailer_wheel" params="name parent_link origin_xyz origin_rpy axis_xyz">
+    <link name="${name}">
+      <visual>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
+        </geometry>
+        <material name="black">
+          <color rgba="0 0 0 1"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="1"/>
+        <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+      </inertial>
+    </link>
+
+    <joint name="${name}_joint" type="continuous">
+      <parent link="${parent_link}"/>
+      <child link="${name}"/>
+      <origin xyz="${origin_xyz}" rpy="${origin_rpy}"/>
+      <axis xyz="${axis_xyz}"/>
+    </joint>
+  </xacro:macro>
+
+
+
+  <!-- Trailer Base Link -->
+  <!-- <link name="trailer_base">
+    <visual>
+      <geometry>
+        <box size="${base_length} ${base_width} ${base_height}"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${base_length} ${base_width} ${base_height}"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="15"/>
+      <inertia ixx="0.15" ixy="0" ixz="0" iyy="0.15" iyz="0" izz="0.15"/>
+    </inertial>
+  </link> -->
+
+  <!-- Trailer Connector Link -->
+  <link name="trailer_connector_base">
+    <visual>
+      <geometry>
+        <box size="0.01 0.1 0.01"/>
+      </geometry>
+      <material name="cyan">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.01 0.1 0.01"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
+  </link>
+
+  <!-- Trailer Wheels -->
+  <!-- <xacro:trailer_wheel name="trailer_wheel_fl" parent_link="trailer_base" origin_xyz="-0.1 0.1 -0.1" origin_rpy="0 -1.57070 0" axis_xyz="0 0 -1"/>
+  <xacro:trailer_wheel name="trailer_wheel_fr" parent_link="trailer_base" origin_xyz="0.1 0.1 -0.1" origin_rpy="0 1.5707 0" axis_xyz="0 0 1"/>
+  <xacro:trailer_wheel name="trailer_wheel_rl" parent_link="trailer_base" origin_xyz="-0.1 -0.1 -0.1" origin_rpy="0 -1.57070 0" axis_xyz="0 0 -1"/>
+  <xacro:trailer_wheel name="trailer_wheel_rr" parent_link="trailer_base" origin_xyz="0.1 -0.1 -0.1" origin_rpy="0 1.5707 0" axis_xyz="0 0 1"/> -->
+
+  <!-- Joint between Car base and Trailer connector -->
+  <joint name="car_trailer_connector_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="trailer_connector_base"/>
+    <origin xyz="${-base_length/2} 0 ${platform_1_height + (0.022 / 2)}" rpy="0 0 0"/>
+    <axis xyz="0 1 1"/>
+    <limit effort="1000" lower="-1.1" upper="1.1" velocity="1"/>
+  </joint>
+
+  <!-- Joint between Trailer connector and Trailer -->
+  <!-- <joint name="car_trailer_joint" type="fixed">
+    <parent link="trailer_connector_base"/>
+    <child link="trailer_base"/>
+    <origin xyz="0 -1.8 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000" lower="-3.14159" upper="3.14159" velocity="1"/>
+  </joint> -->
+
+
+</robot>
