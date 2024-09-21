@@ -1,14 +1,17 @@
 <?xml version="1.0"?>
-<robot name="novamob"
-  xmlns:xacro="http://ros.org/wiki/xacro">
 
+<robot name="novamob" xmlns:xacro="http://ros.org/wiki/xacro">
   <!-- Define robot constants -->
   <xacro:property name="base_width" value="0.225"/>
   <xacro:property name="base_length" value="0.251"/>
   <xacro:property name="base_height" value="0.135"/>
 
+
   <xacro:property name="platform_1_height" value="0.07"/>
   <xacro:property name="platform_distance" value="0.0650"/>
+
+
+  <!-- POR EDITAR<< -->
 
   <xacro:property name="wheel_screw" value="0.006"/>
   <xacro:property name="wheel_radius" value="0.03"/>
@@ -19,6 +22,7 @@
   <xacro:property name="wheel_xoff_back" value="0.055"/>
   <xacro:property name="wheel_mass" value="0.6"/>
 
+
   <xacro:property name="connector_length" value="0.15"/>
   <xacro:property name="connector_width" value="0.015"/>
   <xacro:property name="connector_height" value="0.015"/>
@@ -28,7 +32,8 @@
   <xacro:property name="trailer_height" value="${base_height}"/>
 
 
-  <!-- Define some commonly used intertial properties  -->
+
+  <!-- Define intertial property macros  -->
   <xacro:macro name="box_inertia" params="m w h d">
     <inertial>
       <origin xyz="0 0 0" rpy="${pi/2} 0 ${pi/2}"/>
@@ -52,7 +57,7 @@
     </inertial>
   </xacro:macro>
 
-  <xacro:macro name="wheel_inertia" params="mass radius">
+   <xacro:macro name="wheel_inertia" params="mass radius">
     <inertial>
       <mass value="${mass}"/>
       <inertia ixx="${(2/5) * mass * (radius * radius)}" ixy="0" ixz="0"
@@ -60,12 +65,13 @@
                 izz="${(2/5) * mass * (radius * radius)}" />
     </inertial>
   </xacro:macro>
+ 
 
   <!-- Robot Base -->
   <link name="base_link">
     <visual>
       <geometry>
-        <mesh filename="file://$(find novamob_nav2_gz)/meshes/novamob_no_wheels_centered.obj" scale="0.001 0.001 0.001"/>
+        <mesh filename="file://$(find novamob_description)/meshes/novamob_no_wheels_centered.obj" scale="0.001 0.001 0.001"/>
 
       </geometry>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
@@ -85,16 +91,19 @@
 
   </link>
 
+
   <!-- Robot Footprint -->
-  <link name="base_footprint">
-    <xacro:box_inertia m="0" w="0" d="0" h="0"/>
-  </link>
+  <link name="base_footprint"/>
 
   <joint name="base_joint" type="fixed">
     <parent link="base_link"/>
     <child link="base_footprint"/>
     <origin xyz="0.0 0.0 ${-(wheel_radius+wheel_zoff)}" rpy="0 0 0"/>
   </joint>
+
+
+
+
 
   <!-- Wheels -->
   <xacro:macro name="wheel" params="prefix x_reflect y_reflect wheel_set mesh_filename">
@@ -129,14 +138,14 @@
       <child link="${prefix}_link"/>
       <origin xyz="${x_reflect*wheel_set} ${y_reflect*wheel_ygap} ${-wheel_zoff}" rpy="0 0 0"/>
       <axis xyz="0 1 0"/>
-
     </joint>
   </xacro:macro>
 
-  <xacro:wheel prefix="drivewhl_l" x_reflect="-1" y_reflect="1" wheel_set="${wheel_xoff_back}" mesh_filename="file://$(find novamob_nav2_gz)/meshes/novamob_mecanum_wheel_centered_left.obj" />
-  <xacro:wheel prefix="drivewhl2_l" x_reflect="1" y_reflect="1" wheel_set="${wheel_xoff_front}"  mesh_filename="file://$(find novamob_nav2_gz)/meshes/novamob_mecanum_wheel_centered_left.obj"/>
-  <xacro:wheel prefix="drivewhl_r" x_reflect="-1" y_reflect="-1" wheel_set="${wheel_xoff_back}"  mesh_filename="file://$(find novamob_nav2_gz)/meshes/novamob_mecanum_wheel_centered_right.obj"/> 
-  <xacro:wheel prefix="drivewhl2_r" x_reflect="1" y_reflect="-1" wheel_set="${wheel_xoff_front}" mesh_filename="file://$(find novamob_nav2_gz)/meshes/novamob_mecanum_wheel_centered_right.obj"/>
+  <xacro:wheel prefix="drivewhl_l" x_reflect="-1" y_reflect="1" wheel_set="${wheel_xoff_back}" mesh_filename="file://$(find novamob_description)/meshes/novamob_mecanum_wheel_centered_left.obj" />
+  <xacro:wheel prefix="drivewhl2_l" x_reflect="1" y_reflect="1" wheel_set="${wheel_xoff_front}"  mesh_filename="file://$(find novamob_description)/meshes/novamob_mecanum_wheel_centered_left.obj"/>
+  <xacro:wheel prefix="drivewhl_r" x_reflect="-1" y_reflect="-1" wheel_set="${wheel_xoff_back}"  mesh_filename="file://$(find novamob_description)/meshes/novamob_mecanum_wheel_centered_right.obj"/> 
+  <xacro:wheel prefix="drivewhl2_r" x_reflect="1" y_reflect="-1" wheel_set="${wheel_xoff_front}" mesh_filename="file://$(find novamob_description)/meshes/novamob_mecanum_wheel_centered_right.obj"/>
+
 
 
 
@@ -176,27 +185,27 @@
 
 
 
-<!-- Trailer Connector Link -->
-<link name="trailer_connector_link">
-  <visual>
-    <geometry>
-      <box size="${connector_width} ${connector_length} ${connector_height}"/>
-    </geometry>
-    <origin xyz="-${connector_length/2} 0 0" rpy="0 0 ${pi/2}"/> 
-    <material name="cyan">
-      <color rgba="1 1 1 1"/>
-    </material>
-  </visual>
+  <!-- Trailer Connector Link -->
+  <link name="trailer_connector_link">
+    <visual>
+      <geometry>
+        <box size="${connector_width} ${connector_length} ${connector_height}"/>
+      </geometry>
+      <origin xyz="-${connector_length/2} 0 0" rpy="0 0 ${pi/2}"/> 
+      <material name="cyan">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
 
-  <collision>
-    <geometry>
-      <box size="${connector_width} ${connector_length} ${connector_height}"/>
-    </geometry>
-    <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/> 
-  </collision>
+    <collision>
+      <geometry>
+        <box size="${connector_width} ${connector_length} ${connector_height}"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/> 
+    </collision>
 
-  <xacro:box_inertia m="0.1" w="${connector_width}" d="${connector_length}" h="${connector_height}"/>
-</link>
+    <xacro:box_inertia m="0.1" w="${connector_width}" d="${connector_length}" h="${connector_height}"/>
+  </link>
 
 
 
@@ -208,7 +217,6 @@
     <axis xyz="0 0 1"/> 
     <limit effort="1000" velocity="2.0" lower="${-pi/4}" upper="${pi/4}"/> 
   </joint>
-
 
   <!-- Trailer Link -->
   <link name="trailer_link">
@@ -249,7 +257,10 @@
 
 
 
+
   <!-- IMU -->
+
+
 
   <link name="imu_link">
     <visual>
@@ -275,13 +286,15 @@
 
   <gazebo reference="imu_link">
     <sensor name="imu_sensor" type="imu">
-      <gz_frame_id>imu_link</gz_frame_id>
-      <plugin filename="ignition-gazebo-imu-system" name="ignition::gazebo::systems::Imu">
+    <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <ros>
+          <!-- <namespace>/demo</namespace> -->
+          <remapping>~/out:=imu</remapping>
+        </ros>
+        <initial_orientation_as_reference>false</initial_orientation_as_reference>
       </plugin>
-
-      <topic>imu</topic>
       <always_on>true</always_on>
-      <update_rate>20</update_rate>
+      <update_rate>100</update_rate>
       <visualize>true</visualize>
       <imu>
         <angular_velocity>
@@ -338,55 +351,52 @@
         </linear_acceleration>
       </imu>
     </sensor>
+  
   </gazebo>
 
-  <ros2_control name="IgnitionSystem" type="system">
-    <hardware>
-      <plugin>ign_ros2_control/IgnitionSystem</plugin>
-    </hardware>
-    <joint name="drivewhl_l_joint">
-      <command_interface name="velocity">
-        <param name="min">-1</param>
-        <param name="max">1</param>
-      </command_interface>
-      <state_interface name="position"/>
-      <state_interface name="velocity"/>
-    </joint>
-    <joint name="drivewhl_r_joint">
-      <command_interface name="velocity">
-        <param name="min">-1</param>
-        <param name="max">1</param>
-      </command_interface>
-      <state_interface name="position"/>
-      <state_interface name="velocity"/>
-    </joint>
-    <joint name="drivewhl2_l_joint">
-      <command_interface name="velocity">
-        <param name="min">-1</param>
-        <param name="max">1</param>
-      </command_interface>
-      <state_interface name="position"/>
-      <state_interface name="velocity"/>
-    </joint>
-    <joint name="drivewhl2_r_joint">
-      <command_interface name="velocity">
-        <param name="min">-1</param>
-        <param name="max">1</param>
-      </command_interface>
-      <state_interface name="position"/>
-      <state_interface name="velocity"/>
-    </joint>
-  </ros2_control>
 
+  <!-- Diff Drive -->
 
   <gazebo>
-    <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
-      <parameters>$(find novamob_nav2_gz)/config/diff_drive_controller_velocity.yaml</parameters>
+    <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
+      <!-- <ros>
+        <namespace>/demo</namespace>
+      </ros> -->
+
+        <num_wheel_pairs>2</num_wheel_pairs>
+
+        <!--back wheels -->
+        <left_joint>drivewhl_l_joint</left_joint>
+        <right_joint>drivewhl_r_joint</right_joint>
+
+        <!-- front wheels -->
+        <left_joint>drivewhl2_l_joint</left_joint>
+        <right_joint>drivewhl2_r_joint</right_joint>
+
+      <!-- kinematics -->
+      <wheel_separation>${wheel_ygap*2}</wheel_separation>
+      <wheel_diameter>${wheel_radius*2}</wheel_diameter>
+      <wheel_separation>${wheel_ygap*2}</wheel_separation>
+      <wheel_diameter>${wheel_radius*2}</wheel_diameter>
+      <!-- limits -->
+      <max_wheel_torque>20</max_wheel_torque>
+      <max_wheel_acceleration>1.0</max_wheel_acceleration>
+      <updateRate>100</updateRate>
+
+
+      <!-- output -->
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>false</publish_odom_tf>
+      <publish_wheel_tf>true</publish_wheel_tf>
+
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_link</robot_base_frame>
     </plugin>
   </gazebo>
 
 
   <!-- LIDAR -->
+
 
   <link name="lidar_link">
     <inertial>
@@ -417,13 +427,11 @@
   </joint>
 
   <gazebo reference="lidar_link">
-    <sensor name="lidar" type="gpu_lidar">
-      <gz_frame_id>lidar_link</gz_frame_id>
-      <topic>scan</topic>
+    <sensor name="lidar" type="ray">
       <always_on>true</always_on>
-      <visualize>true</visualize>
-      <update_rate>10</update_rate>
-      <lidar>
+      <visualize>false</visualize>
+      <update_rate>5</update_rate>
+      <ray>
         <scan>
           <horizontal>
             <samples>360</samples>
@@ -442,36 +450,43 @@
           <mean>0.0</mean>
           <stddev>0.01</stddev>
         </noise>
-      </lidar>
+      </ray>
+      <plugin name="scan" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+          <remapping>~/out:=scan</remapping>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <frame_name>lidar_link</frame_name>
+      </plugin>
     </sensor>
   </gazebo>
 
+  <!-- Camera/Depth Sensor -->
+
 
   <link name="camera_link">
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="0.030 0.124 0.030"/>
-      </geometry>
-    </visual>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.030 0.124 0.030"/>
+    </geometry>
+  </visual>
 
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.030 0.124 0.030"/>
+    </geometry>
+  </collision>
 
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="0.030 0.124 0.030"/>
-      </geometry>
-    </collision>
-
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.135"/>
-      <inertia ixx="${(1/12) * 0.135 * ((0.124  * 0.124)  + (0.030 * 0.030))}" ixy="0.0" ixz="0.0"
-                iyy="${(1/12) * 0.135 * ((0.030 * 0.030) + (0.030 * 0.030))}" iyz="0.0"
-                izz="${(1/12) * 0.135 * ((0.030 * 0.030) + (0.124  * 0.124))}"/>
-    </inertial>
-  </link>
-
+  <inertial>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <mass value="0.135"/>
+    <inertia ixx="${(1/12) * 0.135 * ((0.124  * 0.124)  + (0.030 * 0.030))}" ixy="0.0" ixz="0.0"
+              iyy="${(1/12) * 0.135 * ((0.030 * 0.030) + (0.030 * 0.030))}" iyz="0.0"
+              izz="${(1/12) * 0.135 * ((0.030 * 0.030) + (0.124  * 0.124))}"/>
+  </inertial>
+</link>
 
   <joint name="camera_joint" type="fixed">
     <parent link="base_link"/>
@@ -479,50 +494,52 @@
     <origin xyz="0.09 0 ${platform_1_height + (0.022 / 2)}" rpy="0 0 0"/>
   </joint>
 
-  <link name="camera_frame"/>
+  <link name="camera_depth_frame"/>
 
-  <joint name="camera_frame_joint" type="fixed">
+  <joint name="camera_depth_joint" type="fixed">
     <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
     <parent link="camera_link"/>
-    <child link="camera_frame"/>
+    <child link="camera_depth_frame"/>
   </joint>
 
   <gazebo reference="camera_link">
-    <sensor name="robot_cam" type="camera">
-      <camera>
-        <horizontal_fov>1.047</horizontal_fov>
-        <image>
-          <width>320</width>
-          <height>240</height>
-        </image>
-        <clip>
-          <near>0.1</near>
-          <far>100</far>
-        </clip>
-      </camera>
-      <always_on>1</always_on>
-      <update_rate>30</update_rate>
+    <sensor name="depth_camera" type="depth">
       <visualize>true</visualize>
-      <topic>robot_cam</topic>
-      <enable_metrics>true</enable_metrics>
-    </sensor>
-    <sensor name="depth_camera1" type="depth_camera">
-      <update_rate>30</update_rate>
-      <topic>depth_camera</topic>
-      <visualize>true</visualize>
-      <alwaysOn>true</alwaysOn>
-      <camera>
+      <update_rate>30.0</update_rate>
+      <camera name="camera">
         <horizontal_fov>1.50098</horizontal_fov>
         <image>
           <width>640</width>
           <height>480</height>
-          <format>R_FLOAT32</format>
+          <format>R8G8B8</format>
         </image>
         <clip>
-          <near>0.1</near>
-          <far>10</far>
+          <near>0.05</near>
+          <far>3</far>
         </clip>
       </camera>
+      <plugin name="depth_camera_controller" filename="libgazebo_ros_camera.so">
+        <baseline>0.2</baseline>
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <frame_name>camera_depth_frame</frame_name>
+        <pointCloudCutoff>0.3</pointCloudCutoff>
+        <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+        <distortionK1>0</distortionK1>
+        <distortionK2>0</distortionK2>
+        <distortionK3>0</distortionK3>
+        <distortionT1>0</distortionT1>
+        <distortionT2>0</distortionT2>
+        <CxPrime>0</CxPrime>
+        <Cx>0</Cx>
+        <Cy>0</Cy>
+        <focalLength>0</focalLength>
+        <hackBaseline>0</hackBaseline>
+      </plugin>
     </sensor>
   </gazebo>
+
+
 </robot>
+
+ 

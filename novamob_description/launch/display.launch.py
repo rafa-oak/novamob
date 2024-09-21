@@ -5,7 +5,7 @@ import os
 
 def generate_launch_description():
     pkg_share = launch_ros.substitutions.FindPackageShare(package='novamob_description').find('novamob_description')
-    default_model_path = os.path.join(pkg_share, 'src/description/novamob_description.urdf')
+    default_model_path = os.path.join(pkg_share, 'src/description/novamob_trailer_description.urdf')
     default_rviz_config_path = os.path.join(pkg_share, 'rviz/urdf_config.rviz')
     world_path=os.path.join(pkg_share, 'world/indoor_2.world')
 

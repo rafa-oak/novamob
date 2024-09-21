@@ -157,6 +157,12 @@ def generate_launch_description():
         output="screen",
     )
 
+    joint_state_publisher_gui_node = launch_ros.actions.Node(
+        package='joint_state_publisher_gui',
+        executable='joint_state_publisher_gui',
+        name='joint_state_publisher_gui',
+    )
+
     relay_odom = Node(
         name="relay_odom",
         package="topic_tools",
@@ -260,6 +266,7 @@ def generate_launch_description():
                     on_exit=[load_joint_trajectory_controller],
                 )
             ),
+            joint_state_publisher_gui_node,
             relay_odom,
             relay_cmd_vel,
         ] + gazebo
