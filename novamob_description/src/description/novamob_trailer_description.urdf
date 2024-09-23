@@ -215,7 +215,7 @@
     <child link="trailer_connector_link"/>
     <origin xyz="${(-base_length/2)} 0.0 ${platform_1_height} " rpy="0 0 0"/> 
     <axis xyz="0 0 1"/> 
-    <limit effort="1000" velocity="2.0" lower="${-pi/4}" upper="${pi/4}"/> 
+    <limit effort="100" velocity="2.0" lower="${-pi/4}" upper="${pi/4}"/> 
   </joint>
 
   <!-- Trailer Link -->
@@ -245,7 +245,7 @@
     <child link="trailer_link"/>
     <origin xyz="${-((base_length/2) + connector_length)} 0 0" rpy="0 0 0"/> <!-- Adjust if needed -->
     <axis xyz="0 0 1"/>
-    <limit effort="1000" lower="-3.14159" upper="3.14159" velocity="1"/>
+    <limit effort="100" lower="-3.14159" upper="3.14159" velocity="1"/>
   </joint>
 
 
