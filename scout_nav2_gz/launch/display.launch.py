@@ -26,7 +26,7 @@ def generate_launch_description():
         package="scout_nav2_gz"
     ).find("scout_nav2_gz")
     default_model_path = os.path.join(
-        pkg_share, "urdf/scout_v2/scout_v2.xacro"
+        pkg_share, "urdf/scout_v2/scout_v2_trailer.xacro"
     )
     default_rviz_config_path = os.path.join(pkg_share, "rviz/urdf_config.rviz")
     default_world_path = os.path.join(pkg_share, "world/ign_indoor/ign_indoor.sdf")
