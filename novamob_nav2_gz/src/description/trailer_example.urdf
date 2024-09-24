@@ -1,24 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="car_trailer_robot">
 
-  <!-- Define robot constants -->
-  <xacro:property name="base_width" value="0.225"/>
-  <xacro:property name="base_length" value="0.251"/>
-  <xacro:property name="base_height" value="0.135"/>
-
-  <xacro:property name="platform_1_height" value="0.07"/>
-  <xacro:property name="platform_distance" value="0.0650"/>
-
-  <xacro:property name="wheel_screw" value="0.006"/>
-  <xacro:property name="wheel_radius" value="0.03"/>
-  <xacro:property name="wheel_width" value="0.03"/>
-  <xacro:property name="wheel_ygap" value="0.065"/>
-  <xacro:property name="wheel_zoff" value="-0.015"/>
-  <xacro:property name="wheel_xoff_front" value="0.045"/>
-  <xacro:property name="wheel_xoff_back" value="0.055"/>
-  <xacro:property name="wheel_mass" value="0.6"/>
-
-
   <xacro:macro name="wheel" params="name parent_link origin_xyz origin_rpy axis_xyz">
     <link name="${name}">
       <visual>
@@ -52,7 +34,7 @@
   <link name="car_base">
     <visual>
       <geometry>
-        <box size="${base_length} ${base_width} ${base_height}"/>
+        <box size="1.3 2 1"/>
       </geometry>
       <material name="blue">
         <color rgba="0 0 1 1"/>
@@ -70,7 +52,7 @@
   </link>
 
   <!-- Car Wheels -->
-  <xacro:wheel name="car_wheel_fl" parent_link="car_base" origin_xyz="${-base_length/2} ${base_width/2} -0.5" origin_rpy="0 -1.57070 0" axis_xyz="0 0 -1"/>
+  <xacro:wheel name="car_wheel_fl" parent_link="car_base" origin_xyz="-0.65 0.6 -0.5" origin_rpy="0 -1.57070 0" axis_xyz="0 0 -1"/>
   <xacro:wheel name="car_wheel_fr" parent_link="car_base" origin_xyz="0.65 0.6 -0.5" origin_rpy="0 1.5707 0" axis_xyz="0 0 1"/>
   <xacro:wheel name="car_wheel_rl" parent_link="car_base" origin_xyz="-0.65 -0.6 -0.5" origin_rpy="0 -1.57070 0" axis_xyz="0 0 -1"/>
   <xacro:wheel name="car_wheel_rr" parent_link="car_base" origin_xyz="0.65 -0.6 -0.5" origin_rpy="0 1.5707 0" axis_xyz="0 0 1"/>
