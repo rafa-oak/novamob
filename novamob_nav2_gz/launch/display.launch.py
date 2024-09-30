@@ -26,6 +26,7 @@ def generate_launch_description():
     pkg_share = launch_ros.substitutions.FindPackageShare(
         package="novamob_nav2_gz"
     ).find("novamob_nav2_gz")
+
     # Paths to URDF files
     default_model_path = os.path.join(pkg_share, "src/description/novamob_description.urdf")
     trailer_model_path = os.path.join(pkg_share, "src/description/novamob_trailer_description.urdf")
@@ -33,7 +34,6 @@ def generate_launch_description():
     # RViz and world file paths
     default_rviz_config_path = os.path.join(pkg_share, "rviz/urdf_config.rviz")
     default_world_path = os.path.join(pkg_share, "world/ign_indoor/ign_indoor.sdf")
-    
     gz_models_path = os.path.join(pkg_share, "models")
 
     # Launch configurations
