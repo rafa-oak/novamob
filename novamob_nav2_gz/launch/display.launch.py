@@ -27,7 +27,7 @@ def generate_launch_description():
         package="novamob_nav2_gz"
     ).find("novamob_nav2_gz")
     # Paths to URDF files
-    default_model_path = os.path.join(pkg_share, "src/description/novamob_trailer_description.urdf")
+    default_model_path = os.path.join(pkg_share, "src/description/novamob_description.urdf")
     trailer_model_path = os.path.join(pkg_share, "src/description/novamob_trailer_description.urdf")
     
     # RViz and world file paths
@@ -46,15 +46,39 @@ def generate_launch_description():
     run_headless = LaunchConfiguration("run_headless")
     world_path = LaunchConfiguration("world")  
 
-    model_path = trailer_model_path if use_trailer == 'True' else default_model_path
+    # robot_state_publisher_node = Node(
+    #     condition=IfCondition(PythonExpression(["'", use_trailer, "' == 'False'"])),
+    #     package="robot_state_publisher",
+    #     executable="robot_state_publisher",
+    #     parameters=[
+    #         {"robot_description": Command(["xacro ", LaunchConfiguration("model")])}
+    #     ],
+    # )
+
+    # robot_state_publisher_node_trailer = Node(
+    #     condition=IfCondition(PythonExpression(["'", use_trailer, "' == 'True'"])),
+    #     package="robot_state_publisher",
+    #     executable="robot_state_publisher",
+    #     parameters=[
+    #         {"robot_description": Command(["xacro ", trailer_model_path])}
+    #     ],
+    # )
 
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
         parameters=[
-            {"robot_description": Command(["xacro ", model_path])}
+            {
+                "robot_description": Command([
+                    "xacro ",
+                    PythonExpression([
+                        "'", trailer_model_path, "' if '", LaunchConfiguration("use_trailer"), "' == 'True' else '", LaunchConfiguration("model"), "'"
+                    ])
+                ])
+            }
         ],
     )
+
 
     rviz_node = Node(
         condition=IfCondition(AndSubstitution(NotSubstitution(run_headless), use_rviz)),
@@ -208,6 +232,11 @@ def generate_launch_description():
                 value=gz_models_path,
             ),
             DeclareLaunchArgument(
+                name="model",
+                default_value=default_model_path,
+                description="Absolute path to robot urdf file",
+            ),
+            DeclareLaunchArgument(
                 name="use_trailer", 
                 default_value="False",
                 description="Use the robot model with a trailer",
@@ -259,6 +288,7 @@ def generate_launch_description():
             ),
             bridge,
             robot_state_publisher_node,
+            # robot_state_publisher_node_trailer,
             spawn_entity,
             robot_localization_node,
             rviz_node,
