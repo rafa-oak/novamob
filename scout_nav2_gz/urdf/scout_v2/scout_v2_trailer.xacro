@@ -229,7 +229,7 @@
   <joint name="trailer_joint" type="fixed">
     <parent link="trailer_connector_link"/>
     <child link="trailer_link"/>
-    <origin xyz="${-((base_x_size/2) + connector_length)} 0 0" rpy="0 0 0"/> 
+    <origin xyz="${-((trailer_length/2) + connector_length)} 0 0" rpy="0 0 0"/> 
     <axis xyz="0 0 1"/>
     <limit effort="100" lower="-3.14159" upper="3.14159" velocity="1"/>
   </joint>
