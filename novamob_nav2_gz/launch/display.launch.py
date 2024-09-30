@@ -13,6 +13,7 @@ from launch.substitutions import (
     LaunchConfiguration,
     NotSubstitution,
     AndSubstitution,
+    PythonExpression,
 )
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
@@ -25,28 +26,33 @@ def generate_launch_description():
     pkg_share = launch_ros.substitutions.FindPackageShare(
         package="novamob_nav2_gz"
     ).find("novamob_nav2_gz")
-    default_model_path = os.path.join(
-        pkg_share, "src/description/novamob_trailer_description.urdf"
-    )
+    # Paths to URDF files
+    default_model_path = os.path.join(pkg_share, "src/description/novamob_trailer_description.urdf")
+    trailer_model_path = os.path.join(pkg_share, "src/description/novamob_trailer_description.urdf")
+    
+    # RViz and world file paths
     default_rviz_config_path = os.path.join(pkg_share, "rviz/urdf_config.rviz")
-
     default_world_path = os.path.join(pkg_share, "world/ign_indoor/ign_indoor.sdf")
-
+    
     gz_models_path = os.path.join(pkg_share, "models")
 
+    # Launch configurations
     use_sim_time = LaunchConfiguration("use_sim_time")
     use_localization = LaunchConfiguration("use_localization")
     use_rviz = LaunchConfiguration("use_rviz")
+    use_trailer = LaunchConfiguration("use_trailer")
     log_level = LaunchConfiguration("log_level")
     gz_verbosity = LaunchConfiguration("gz_verbosity")
     run_headless = LaunchConfiguration("run_headless")
     world_path = LaunchConfiguration("world")  
 
+    model_path = trailer_model_path if use_trailer == 'True' else default_model_path
+
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
         parameters=[
-            {"robot_description": Command(["xacro ", LaunchConfiguration("model")])}
+            {"robot_description": Command(["xacro ", model_path])}
         ],
     )
 
@@ -157,7 +163,9 @@ def generate_launch_description():
         output="screen",
     )
 
+    # Only launch joint_state_publisher_gui if 'use_trailer' is True
     joint_state_publisher_gui_node = launch_ros.actions.Node(
+        condition=IfCondition(use_trailer),
         package='joint_state_publisher_gui',
         executable='joint_state_publisher_gui',
         name='joint_state_publisher_gui',
@@ -200,9 +208,9 @@ def generate_launch_description():
                 value=gz_models_path,
             ),
             DeclareLaunchArgument(
-                name="model",
-                default_value=default_model_path,
-                description="Absolute path to robot urdf file",
+                name="use_trailer", 
+                default_value="False",
+                description="Use the robot model with a trailer",
             ),
             DeclareLaunchArgument(
                 name="use_rviz",

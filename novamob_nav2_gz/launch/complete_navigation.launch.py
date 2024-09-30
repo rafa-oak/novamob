@@ -39,6 +39,8 @@ def generate_launch_description():
 
     run_headless = LaunchConfiguration("run_headless")
     world = LaunchConfiguration("world")  
+    use_trailer = LaunchConfiguration("use_trailer")  
+
 
     # Including launch files with execute process
     bringup = ExecuteProcess(
@@ -57,6 +59,7 @@ def generate_launch_description():
             ["run_headless:=", run_headless],
             "use_localization:=false",
             ["world:=", world],
+            ["use_trailer:=", use_trailer],
         ],
         shell=False,
         output="screen",
@@ -180,6 +183,11 @@ def generate_launch_description():
                     "/world/ign_indoor/ign_indoor.sdf",
                 ],
                 description="Absolute path to the world file",
+            ),
+            DeclareLaunchArgument(
+                name="use_trailer", 
+                default_value="False",
+                description="Use the robot model with a trailer",
             ),
             bringup,
             waiting_toolbox,
