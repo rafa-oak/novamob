@@ -162,7 +162,7 @@
     <joint name="${prefix}_joint" type="continuous">
       <parent link="trailer_link"/>
       <child link="${prefix}_link"/>
-      <origin xyz="${x_reflect * wheel_offset} ${y_reflect * (trailer_width / 2 + trailer_wheel_length / 2)} ${-trailer_height / 2}" rpy="0 0 0"/>
+      <origin xyz="${(x_reflect * wheel_offset) - (trailer_length/2)} ${y_reflect * (trailer_width / 2 + trailer_wheel_length / 2)} ${-trailer_height / 2}" rpy="0 0 0"/>
       <axis xyz="0 1 0"/>
     </joint>
   </xacro:macro>
@@ -210,7 +210,7 @@
       <geometry>
         <box size="${trailer_length} ${trailer_width} ${trailer_height}"/>
       </geometry>
-      <origin xyz="0 0 0"/>
+      <origin xyz="${-(trailer_length/2)} 0 0"/>
       <material name="Blue">
         <color rgba="0 0 1 1"/>
       </material>
@@ -219,7 +219,7 @@
       <geometry>
         <box size="${trailer_length} ${trailer_width} ${trailer_height}"/>
       </geometry>
-      <origin xyz="0 0 0"/>
+      <origin xyz="${-(trailer_length/2)} 0 0"/>
     </collision>
 
     <xacro:box_inertia m="1" w="${trailer_width}" d="${trailer_length}" h="${trailer_height}"/>
@@ -229,7 +229,7 @@
   <joint name="trailer_joint" type="fixed">
     <parent link="trailer_connector_link"/>
     <child link="trailer_link"/>
-    <origin xyz="${-((trailer_length/2) + connector_length)} 0 0" rpy="0 0 0"/> 
+    <origin xyz="${-(connector_length)} 0 0" rpy="0 0 0"/> 
     <axis xyz="0 0 1"/>
     <limit effort="100" lower="-3.14159" upper="3.14159" velocity="1"/>
   </joint>
