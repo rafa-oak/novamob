@@ -162,7 +162,7 @@
     <joint name="${prefix}_joint" type="continuous">
       <parent link="trailer_link"/>
       <child link="${prefix}_link"/>
-      <origin xyz="${x_reflect * wheel_offset} ${y_reflect * (trailer_width / 2 + trailer_wheel_length / 2)} ${-trailer_height / 2}" rpy="0 0 0"/>
+      <origin xyz="${(x_reflect * wheel_offset) - (trailer_length/2)} ${y_reflect * (trailer_width / 2 + trailer_wheel_length / 2)} ${-trailer_height / 2}" rpy="0 0 0"/>
       <axis xyz="0 1 0"/>
     </joint>
   </xacro:macro>
@@ -210,7 +210,7 @@
       <geometry>
         <box size="${trailer_length} ${trailer_width} ${trailer_height}"/>
       </geometry>
-      <origin xyz="0 0 0"/>
+      <origin xyz="${-(trailer_length/2)} 0 0"/>
       <material name="Blue">
         <color rgba="0 0 1 1"/>
       </material>
@@ -219,7 +219,7 @@
       <geometry>
         <box size="${trailer_length} ${trailer_width} ${trailer_height}"/>
       </geometry>
-      <origin xyz="0 0 0"/>
+      <origin xyz="${-(trailer_length/2)} 0 0"/>
     </collision>
 
     <xacro:box_inertia m="1" w="${trailer_width}" d="${trailer_length}" h="${trailer_height}"/>
@@ -229,7 +229,7 @@
   <joint name="trailer_joint" type="fixed">
     <parent link="trailer_connector_link"/>
     <child link="trailer_link"/>
-    <origin xyz="${-((trailer_length/2) + connector_length)} 0 0" rpy="0 0 0"/> 
+    <origin xyz="${-(connector_length)} 0 0" rpy="0 0 0"/> 
     <axis xyz="0 0 1"/>
     <limit effort="100" lower="-3.14159" upper="3.14159" velocity="1"/>
   </joint>
@@ -243,7 +243,7 @@
 
 
 
-  <!-- IMU -->
+    <!-- IMU -->
 
   <link name="imu_link">
     <visual>
@@ -392,14 +392,14 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <cylinder radius="0.0254" length="0.0275"/>
+        <cylinder radius="0.06" length="0.086"/>
       </geometry>
     </collision>
 
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <cylinder radius="0.0254" length="0.0275"/>
+        <cylinder radius="0.06" length="0.086"/>
       </geometry>
     </visual>
   </link>
@@ -407,29 +407,35 @@
   <joint name="lidar_joint" type="fixed">
         <parent link="base_link"/>
         <child link="lidar_link"/>
-        <origin xyz="0.25 0 ${(base_z_size/2) + 0.02 + 0.0275}" rpy="0 0 0"/>
+        <origin xyz="0.25 0 ${(base_z_size/2) + 0.02 + 0.086}" rpy="0 0 0"/>
   </joint>
 
+  <!-- Based on the VLP 16 Lidar -->
   <gazebo reference="lidar_link">
     <sensor name="lidar" type="gpu_lidar">
       <gz_frame_id>lidar_link</gz_frame_id>
       <topic>scan</topic>
       <always_on>true</always_on>
       <visualize>true</visualize>
-      <update_rate>5</update_rate>
+      <update_rate>20</update_rate>
       <lidar>
         <scan>
           <horizontal>
             <samples>360</samples>
-            <resolution>1.000000</resolution>
+            <resolution>0.1</resolution>
             <min_angle>0.000000</min_angle>
             <max_angle>6.280000</max_angle>
           </horizontal>
+          <vertical>
+            <samples>16</samples> <!-- VLP-16 specific -->
+            <min_angle>-0.261799</min_angle> <!-- -15° in radians -->
+            <max_angle>0.261799</max_angle> <!-- 15° in radians -->
+          </vertical>
         </scan>
         <range>
           <min>0.150000</min>
-          <max>12</max>
-          <resolution>0.015000</resolution>
+          <max>100</max>
+          <resolution>0.01</resolution>
         </range>
         <noise>
           <type>gaussian</type>
@@ -484,14 +490,15 @@
   <gazebo reference="camera_link">
     <sensor name="robot_cam" type="camera">
       <camera>
-        <horizontal_fov>1.047</horizontal_fov>
+        <horizontal_fov>1.204</horizontal_fov>  <!-- Horizontal FOV 69° -->
+        <vertical_fov>0.73</vertical_fov> <!-- Vertical FOV 42° -->
         <image>
-          <width>320</width>
-          <height>240</height>
+          <width>1920</width>
+          <height>1080</height>
         </image>
         <clip>
-          <near>0.1</near>
-          <far>100</far>
+          <near>0.2</near>
+          <far>10</far>
         </clip>
       </camera>
       <always_on>1</always_on>
@@ -499,6 +506,25 @@
       <visualize>true</visualize>
       <topic>robot_cam</topic>
       <enable_metrics>true</enable_metrics>
+    </sensor>
+    <sensor name="depth_camera1" type="depth_camera">
+      <update_rate>90</update_rate>
+      <topic>depth_camera</topic>
+      <visualize>true</visualize>
+      <alwaysOn>true</alwaysOn>
+      <camera>
+        <horizontal_fov>1.518</horizontal_fov>  <!-- Horizontal FOV 87° -->
+        <vertical_fov>1.01</vertical_fov> <!-- Vertical FOV 58° -->
+        <image>
+          <width>1280</width>
+          <height>720</height>
+          <format>R_FLOAT32</format>
+        </image>
+        <clip>
+          <near>0.2</near>
+          <far>10</far>
+        </clip>
+      </camera>
     </sensor>
   </gazebo>
 </robot>
