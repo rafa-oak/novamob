@@ -284,7 +284,6 @@
         <child link="lidar_link"/>
         <origin xyz="0.25 0 ${(base_z_size/2) + 0.02 + 0.086}" rpy="0 0 0"/>
   </joint>
-
   <!-- Based on the VLP 16 Lidar -->
   <gazebo reference="lidar_link">
     <sensor name="lidar" type="gpu_lidar">
@@ -297,7 +296,7 @@
         <scan>
           <horizontal>
             <samples>360</samples>
-            <resolution>0.1</resolution>
+            <resolution>1.000000</resolution>
             <min_angle>0.000000</min_angle>
             <max_angle>6.280000</max_angle>
           </horizontal>
