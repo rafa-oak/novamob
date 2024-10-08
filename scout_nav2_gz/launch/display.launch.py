@@ -158,6 +158,7 @@ def generate_launch_description():
             "/scan@sensor_msgs/msg/LaserScan[ignition.msgs.LaserScan",
             "/imu@sensor_msgs/msg/Imu[ignition.msgs.IMU",
             "/sky_cam@sensor_msgs/msg/Image@ignition.msgs.Image",
+            "/depth_camera@sensor_msgs/msg/Image@ignition.msgs.Image",
             "/robot_cam@sensor_msgs/msg/Image@ignition.msgs.Image",
             "/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo",
             # Clock message is necessary for the diff_drive_controller to accept commands https://github.com/ros-controls/gz_ros2_control/issues/106
