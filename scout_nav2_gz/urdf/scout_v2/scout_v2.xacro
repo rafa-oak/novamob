@@ -118,6 +118,66 @@
     </xacro:scout_wheel_type2>
 
 
+
+  <!-- Camera stand box -->
+  <link name="camera_stand_link">
+      <visual>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+          <geometry>
+              <box size="0.15 0.15 0.01"/> <!-- Adjust size as needed -->
+          </geometry>
+          <material name="Gray">
+              <color rgba="0.5 0.5 0.5 1.0"/>
+          </material>
+      </visual>
+      <collision>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+          <geometry>
+              <box size="0.15 0.15 0.01"/> <!-- Same size for collision -->
+          </geometry>
+      </collision>
+
+      <xacro:box_inertia m="0.1" w="0.1" d="0.1" h="0.1"/>
+
+  </link>
+
+  <joint name="camera_stand_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="camera_stand_link"/>
+      <origin xyz="0.24 0 ${(base_z_size/2) + 0.0127}" rpy="0 0 0"/> 
+  </joint>
+
+
+  <!-- Lidar stand box -->
+  <link name="lidar_stand_link">
+      <visual>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+          <geometry>
+              <box size="0.1 0.15 0.04"/> <!-- Adjust size as needed -->
+          </geometry>
+          <material name="Gray">
+              <color rgba="0.5 0.5 0.5 1.0"/>
+          </material>
+      </visual>
+      <collision>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+          <geometry>
+              <box size="0.1 0.15 0.04"/> <!-- Same size for collision -->
+          </geometry>
+      </collision>
+
+      <xacro:box_inertia m="0.1" w="0.1" d="0.1" h="0.1"/>
+
+  </link>
+
+  <joint name="lidar_stand_joint" type="fixed">
+      <parent link="camera_stand_link"/>
+      <child link="lidar_stand_link"/>
+      <origin xyz="-0.01 0 0.025" rpy="0 0 0"/> 
+  </joint>
+
+
+
     <!-- IMU -->
 
   <link name="imu_link">
@@ -284,6 +344,7 @@
         <child link="lidar_link"/>
         <origin xyz="0.25 0 ${(base_z_size/2) + 0.02 + 0.086}" rpy="0 0 0"/>
   </joint>
+
   <!-- Based on the VLP 16 Lidar -->
   <gazebo reference="lidar_link">
     <sensor name="lidar" type="gpu_lidar">
@@ -348,9 +409,9 @@
 
 
   <joint name="camera_joint" type="fixed">
-    <parent link="base_link"/>
+    <parent link="camera_stand_link"/>
     <child link="camera_link"/>
-    <origin xyz="0.25 0 ${(base_z_size/2) + 0.02}" rpy="0 0 0"/>
+    <origin xyz="0.06 0 0.02" rpy="0 0 0"/>
   </joint>
 
   <link name="camera_frame"/>
