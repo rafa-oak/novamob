@@ -1,26 +1,39 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.5)
 project(virtual_maize_field)
 
-find_package(catkin REQUIRED COMPONENTS
-  rospy
-  roslaunch
+# Default to C++14
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
+find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_python REQUIRED)
+
+ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/hooks/resource_paths.dsv.in")
+ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/hooks/resource_paths.sh")
+
+ament_python_install_package(${PROJECT_NAME})
+
+#============================================================================
+# Nodes
+
+install(
+  PROGRAMS virtual_maize_field/generate_world.py 
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME generate_world
 )
 
-# Generate the python library
-catkin_python_setup()
-
-###################################
-## catkin specific configuration ##
-###################################
-
-catkin_package(
- CATKIN_DEPENDS rospy roslaunch
+#============================================================================
+# Resources
+install(
+  DIRECTORY
+    config 
+    models 
+    launch
+  DESTINATION share/${PROJECT_NAME}
 )
 
-###########
-## Build ##
-###########
-
-install(DIRECTORY launch models config
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-)
+ament_package()
