@@ -462,5 +462,43 @@
       </camera>
     </sensor>
   </gazebo>
+
+
+
+<!-- GPS Link -->
+<link name="gps_link">
+  <visual>
+    <geometry>
+      <box size="0.01 0.01 0.01"/>
+    </geometry>
+  </visual>
+
+  <collision>
+    <geometry>
+      <box size="0.01 0.01 0.01"/>
+    </geometry>
+  </collision>
+
+  <xacro:box_inertia m="0.1" w="0.1" d="0.1" h="0.1"/>
+</link>
+
+<!-- Joint for GPS -->
+<joint name="gps_joint" type="fixed">
+  <parent link="base_link"/>
+  <child link="gps_link"/>
+  <origin xyz="0.0 0 0.1"/> <!-- Adjust position as needed -->
+</joint>
+
+<gazebo reference="gps_link">
+  <sensor name="gps_sensor" type="navsat">
+    <plugin filename="ignition-gazebo-navsat-system" name="ignition::gazebo::systems::NavSat">
+    </plugin>
+
+    <topic>navsat</topic>
+    <always_on>true</always_on>
+    <update_rate>1</update_rate>
+  </sensor>
+</gazebo>
+
 </robot>
 
