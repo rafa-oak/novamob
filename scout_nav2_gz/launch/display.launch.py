@@ -165,6 +165,9 @@ def generate_launch_description():
             # Clock message is necessary for the diff_drive_controller to accept commands https://github.com/ros-controls/gz_ros2_control/issues/106
             "/clock@rosgraph_msgs/msg/Clock[ignition.msgs.Clock",
         ],
+        remappings=[
+            ("/navsat", "/gps/fix")  # Remapping the Ignition GPS topic to the ROS /gps/fix topic
+        ],
         output="screen",
     )
 
