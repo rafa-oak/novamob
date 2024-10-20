@@ -23,6 +23,13 @@
   <exec_depend>ign_ros2_control</exec_depend>
   <exec_depend>topic_tools</exec_depend>
   
+  <!-- For the GPS capabilities -->
+  <depend>navigation2</depend>
+  <!-- <depend>robot_localization</depend> -->
+  <depend>mapviz</depend>
+  <depend>mapviz_plugins</depend>
+  <depend>tile_map</depend>
+
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
   <test_depend>launch_testing</test_depend>
