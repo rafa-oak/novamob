@@ -39,32 +39,12 @@ def generate_launch_description():
 
     # Launch configurations
     use_sim_time = LaunchConfiguration("use_sim_time")
-    use_localization = LaunchConfiguration("use_localization")
-    use_rviz = LaunchConfiguration("use_rviz")
     use_trailer = LaunchConfiguration("use_trailer")
     log_level = LaunchConfiguration("log_level")
     gz_verbosity = LaunchConfiguration("gz_verbosity")
     run_headless = LaunchConfiguration("run_headless")
     world_path = LaunchConfiguration("world")  
 
-
-    # robot_state_publisher_node = Node(
-    #     condition=IfCondition(PythonExpression(["'", use_trailer, "' == 'False'"])),
-    #     package="robot_state_publisher",
-    #     executable="robot_state_publisher",
-    #     parameters=[
-    #         {"robot_description": Command(["xacro ", LaunchConfiguration("model")])}
-    #     ],
-    # )
-
-    # robot_state_publisher_node_trailer = Node(
-    #     condition=IfCondition(PythonExpression(["'", use_trailer, "' == 'True'"])),
-    #     package="robot_state_publisher",
-    #     executable="robot_state_publisher",
-    #     parameters=[
-    #         {"robot_description": Command(["xacro ", trailer_model_path])}
-    #     ],
-    # )
 
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
@@ -78,29 +58,6 @@ def generate_launch_description():
                     ])
                 ])
             }
-        ],
-    )
-
-    rviz_node = Node(
-        condition=IfCondition(AndSubstitution(NotSubstitution(run_headless), use_rviz)),
-        package="rviz2",
-        executable="rviz2",
-        name="rviz2",
-        output="screen",
-        arguments=["-d", LaunchConfiguration("rvizconfig")],
-    )
-
-    # Localize using odometry and IMU data. 
-    # It can be turned off because the navigation stack uses AMCL with lidar data for localization
-    robot_localization_node = Node(
-        condition=launch.conditions.IfCondition(use_localization),
-        package="robot_localization",
-        executable="ekf_node",
-        name="ekf_filter_node",
-        output="screen",
-        parameters=[
-            os.path.join(pkg_share, "config/ekf.yaml"),
-            {"use_sim_time": use_sim_time},
         ],
     )
 
@@ -313,6 +270,7 @@ def generate_launch_description():
                     on_exit=[load_joint_trajectory_controller],
                 )
             ),
+            joint_state_publisher_gui_node,
             relay_odom,
             relay_cmd_vel,
         ] + gazebo
