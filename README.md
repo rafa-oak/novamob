@@ -48,16 +48,21 @@ This repository provides simulation environments for the **NovaMob** and **Agile
 
 ### Novamob
 Novamob is a small 4 wheel drive custom robot designed for indoor environments...
+
 It is equipped with the following sensors:
-    .RPLIDAR A1
-    .IMU mpu6050
-    .Intel Realsense D435if
+- **RPLIDAR A1**
+- **MPU6050**
+- **Intel RealSense D435i**
     
 ### Agilex Scout
 The Scout is a bigger 4 wheel drive custom robot more suited for outdoor environments...
+
 It is equipped with the following sensors:
-    .VLP16 LIDAR
-    .IMU mpu6050
-    .Intel Realsense D435if
-    .GPS sensor
+- **VLP16 LIDAR**
+- **IMU mpu6050**
+- **Intel Realsense D435if**
+- **GPS sensor**
+
+## Launch files
+
 
