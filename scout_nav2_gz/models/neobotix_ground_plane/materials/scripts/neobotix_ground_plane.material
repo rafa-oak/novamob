@@ -1,0 +1,15 @@
+material NeobotixGroundPlane/Image
+    {
+      technique
+      {
+        pass
+        {
+          texture_unit
+          {
+            texture MyImage.jpg
+          }
+        }
+      }
+    }
+
+
