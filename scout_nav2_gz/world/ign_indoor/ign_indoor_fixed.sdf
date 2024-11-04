@@ -3597,6 +3597,36 @@
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
+    <!-- <include>
+      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>Construction Cone_0</name>
+      <pose>-7.98937 12.3887 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>Construction Cone_6</name>
+      <pose>-7.99286 12.9871 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>Construction Cone_7</name>
+      <pose>-8.02054 15.5369 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>Construction Cone_8</name>
+      <pose>-8.01391 14.9813 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>Construction Cone_9</name>
+      <pose>-6.70143 14.3541 -0.00557 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>Construction Cone_10</name>
+      <pose>-6.71282 13.7819 0 0 -0 0</pose>
+    </include> -->
     <light name='sun' type='directional'>
       <pose>0 0 10 0 -0 0</pose>
       <cast_shadows>true</cast_shadows>

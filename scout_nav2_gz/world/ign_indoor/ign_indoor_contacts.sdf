@@ -432,6 +432,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -479,6 +480,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -526,6 +528,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -573,6 +576,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -620,6 +624,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -667,6 +672,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -714,6 +720,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -761,6 +768,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -825,6 +833,7 @@
             </box>
           </geometry>
           <pose>-2.55487 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -856,6 +865,7 @@
             </box>
           </geometry>
           <pose>2.57013 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -887,6 +897,7 @@
             </box>
           </geometry>
           <pose>0.015256 0 2.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -917,6 +928,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -964,6 +976,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1011,6 +1024,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1058,6 +1072,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1105,6 +1120,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1152,6 +1168,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1199,6 +1216,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1246,6 +1264,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1293,6 +1312,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1340,6 +1360,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1387,6 +1408,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1434,6 +1456,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1481,6 +1504,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1528,6 +1552,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1575,6 +1600,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1622,6 +1648,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1669,6 +1696,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1716,6 +1744,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1763,6 +1792,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1827,6 +1857,7 @@
             </box>
           </geometry>
           <pose>-2.57115 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1858,6 +1889,7 @@
             </box>
           </geometry>
           <pose>1.55385 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1889,6 +1921,7 @@
             </box>
           </geometry>
           <pose>-1.0173 0 2.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1919,6 +1952,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -1966,6 +2000,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -2013,6 +2048,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -2060,6 +2096,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -2107,6 +2144,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -2154,6 +2192,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -2201,6 +2240,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -2248,6 +2288,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -2295,6 +2336,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -2342,6 +2384,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -2389,6 +2432,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -2436,6 +2480,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -2483,6 +2528,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -2530,6 +2576,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -2577,6 +2624,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -2624,6 +2672,7 @@
             </box>
           </geometry>
           <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
           <surface>
             <friction>
               <ode/>
@@ -2920,6 +2969,7 @@
               <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction barrel/4/files/meshes/construction_barrel.dae</uri>
             </mesh>
           </geometry>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name='visual'>
           <geometry>
@@ -2955,6 +3005,7 @@
               <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction barrel/4/files/meshes/construction_barrel.dae</uri>
             </mesh>
           </geometry>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name='visual'>
           <geometry>
@@ -2990,6 +3041,7 @@
               <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction barrel/4/files/meshes/construction_barrel.dae</uri>
             </mesh>
           </geometry>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name='visual'>
           <geometry>
@@ -3354,6 +3406,7 @@
               <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/desk/2/files/meshes/desk.obj</uri>
             </mesh>
           </geometry>
+          <max_contacts>10</max_contacts>
         </collision>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
@@ -3389,6 +3442,7 @@
               <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/desk/2/files/meshes/desk.obj</uri>
             </mesh>
           </geometry>
+          <max_contacts>10</max_contacts>
         </collision>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
@@ -3424,6 +3478,7 @@
               <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/desk/2/files/meshes/desk.obj</uri>
             </mesh>
           </geometry>
+          <max_contacts>10</max_contacts>
         </collision>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
