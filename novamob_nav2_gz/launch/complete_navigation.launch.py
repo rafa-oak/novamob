@@ -1,4 +1,6 @@
 import launch
+import os
+import launch_ros
 from launch_ros.actions import Node
 from launch.actions import (
     ExecuteProcess,
@@ -32,14 +34,20 @@ def on_matching_output(matcher: str, result: launch.SomeActionsType):
 
 
 def generate_launch_description():
+    pkg_share = launch_ros.substitutions.FindPackageShare(
+        package="novamob_nav2_gz"
+    ).find("novamob_nav2_gz")
     # Messages are from: https://navigation.ros.org/setup_guides/sensors/setup_sensors.html#launching-nav2
     diff_drive_loaded_message = "Successfully loaded controller diff_drive_base_controller into state active"
     toolbox_ready_message = "Registering sensor"
     navigation_ready_message = "Creating bond timer"
+    default_model_path = os.path.join(pkg_share, "src/description/novamob_description.urdf")
+
 
     run_headless = LaunchConfiguration("run_headless")
     world = LaunchConfiguration("world")  
-    use_trailer = LaunchConfiguration("use_trailer")  
+    use_trailer = LaunchConfiguration("use_trailer")
+    model = LaunchConfiguration("model")
 
 
     # Including launch files with execute process
@@ -57,9 +65,11 @@ def generate_launch_description():
             ),
             "use_rviz:=false",
             ["run_headless:=", run_headless],
-            "use_localization:=false",
             ["world:=", world],
+            "use_localization:=false",
             ["use_trailer:=", use_trailer],
+            ["model:=", model],
+
         ],
         shell=False,
         output="screen",
@@ -188,6 +198,11 @@ def generate_launch_description():
                 name="use_trailer", 
                 default_value="False",
                 description="Use the robot model with a trailer",
+            ),
+            DeclareLaunchArgument(
+                name="model",
+                default_value=default_model_path,
+                description="Absolute path to robot urdf file",
             ),
             bringup,
             waiting_toolbox,
