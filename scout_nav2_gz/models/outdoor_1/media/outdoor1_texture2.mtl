@@ -1,0 +1,12 @@
+# Blender 4.1.1 MTL File: 'outdoor1_texture.blend'
+# www.blender.org
+
+newmtl grass
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/rafa/Downloads/forrest_ground_01_4k.blend/textures/forrest_ground_01_diff_4k.jpg
+map_Ns C:/Users/rafa/Downloads/forrest_ground_01_4k.blend/textures/forrest_ground_01_rough_4k.jpg
