@@ -41,7 +41,7 @@ def generate_launch_description():
     diff_drive_loaded_message = "Successfully loaded controller diff_drive_base_controller into state active"
     toolbox_ready_message = "Registering sensor"
     navigation_ready_message = "Creating bond timer"
-    default_model_path = os.path.join(pkg_share, "src/description/scout_description.urdf")
+    default_model_path = os.path.join(pkg_share, "urdf/scout_v2/scout_v2.xacro")
 
 
     run_headless = LaunchConfiguration("run_headless")
