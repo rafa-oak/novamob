@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <sdf version='1.9'>
   <world name='virtual_maize_field'>
     <physics name='10ms' type='ignored'>
@@ -17,6 +18,14 @@
       <background>0.8 0.8 0.8 1</background>
       <shadows>true</shadows>
     </scene>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>-22.9</latitude_deg>
+      <longitude_deg>-43.2</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
     <gravity>0 0 -9.8</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
     <atmosphere type='adiabatic'/>
@@ -9414,117 +9423,6 @@
       <pose>-13.9744 -2.92868 0 0 -0 0</pose>
       <self_collide>false</self_collide>
     </model>
-    <model name='Construction Cone'>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <scale>10 10 10</scale>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction cone/3/files/meshes/construction_cone.dae</uri>
-            </mesh>
-          </geometry>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <scale>10 10 10</scale>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction cone/3/files/meshes/construction_cone.dae</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <pose>0 0 0 0 -0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>-21.4766 1.49929 0 0 -0 0</pose>
-      <static>false</static>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='Construction Cone_0'>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <scale>10 10 10</scale>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction cone/3/files/meshes/construction_cone.dae</uri>
-            </mesh>
-          </geometry>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <scale>10 10 10</scale>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction cone/3/files/meshes/construction_cone.dae</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <pose>0 0 0 0 -0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>-20.0785 -2.39333 0 0 -0 0</pose>
-      <static>false</static>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='Construction Cone_1'>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <scale>10 10 10</scale>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction cone/3/files/meshes/construction_cone.dae</uri>
-            </mesh>
-          </geometry>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <scale>10 10 10</scale>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction cone/3/files/meshes/construction_cone.dae</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <pose>0 0 0 0 -0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>-22.7437 -6.00638 0 0 -0 0</pose>
-      <static>false</static>
-      <self_collide>false</self_collide>
-    </model>
     <model name='drc_practice_organge_jersey_barrier_1_1'>
       <static>true</static>
       <link name='link'>
@@ -12375,6 +12273,26 @@
       <pose>-6.11261 3.76487 0 0 0 -2.3906</pose>
       <self_collide>false</self_collide>
     </model>
+    <include>
+      <uri>file:///home/rafael/ros2_ws/src/scout_nav2_gz/models/puddle_small</uri>
+      <name>puddle_small</name>
+      <pose>-22.699600 -5.928740 0.026846 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/rafael/ros2_ws/src/scout_nav2_gz/models/puddle_small</uri>
+      <name>puddle_small_1</name>
+      <pose>-21.459900 1.334770 0.026846 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/rafael/ros2_ws/src/scout_nav2_gz/models/puddle_medium</uri>
+      <name>puddle_medium</name>
+      <pose>-20.001900 -2.501290 0 0 0 0.617175</pose>
+    </include>
+    <include>
+      <uri>file:///home/rafael/ros2_ws/src/scout_nav2_gz/models/puddle_lake</uri>
+      <name>puddle_lake</name>
+      <pose>11.838400 -15.360900 -0.029739 0 0 0.145610</pose>
+    </include>
     <light name='sun' type='directional'>
       <pose>0 0 10 0 -0 0</pose>
       <cast_shadows>true</cast_shadows>
