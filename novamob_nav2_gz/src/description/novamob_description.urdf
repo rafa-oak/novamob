@@ -303,7 +303,7 @@
       <topic>scan</topic>
       <always_on>true</always_on>
       <visualize>true</visualize>
-      <update_rate>10</update_rate>
+      <update_rate>20</update_rate>
       <lidar>
         <scan>
           <horizontal>
