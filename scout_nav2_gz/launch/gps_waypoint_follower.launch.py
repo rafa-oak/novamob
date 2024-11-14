@@ -40,17 +40,15 @@ def generate_launch_description():
     # Launch configurations
     use_rviz = LaunchConfiguration('use_rviz')
     use_mapviz = LaunchConfiguration('use_mapviz')
-    use_sim_time = LaunchConfiguration("use_sim_time")
-    use_trailer = LaunchConfiguration("use_trailer")
-    log_level = LaunchConfiguration("log_level")
-    gz_verbosity = LaunchConfiguration("gz_verbosity")
-    run_headless = LaunchConfiguration("run_headless")
-    world_path = LaunchConfiguration("world")  
-    spawn_x = LaunchConfiguration("spawn_x")
-    spawn_y = LaunchConfiguration("spawn_y")
-    spawn_z = LaunchConfiguration("spawn_z")
+    spawn_x = LaunchConfiguration('spawn_x')
+    spawn_y = LaunchConfiguration('spawn_y')
+    spawn_z = LaunchConfiguration('spawn_z')
+    world_path = LaunchConfiguration('world')
+    use_sim_time = LaunchConfiguration('use_sim_time')
+    use_trailer = LaunchConfiguration('use_trailer')
+    log_level = LaunchConfiguration('log_level')
+    gz_verbosity = LaunchConfiguration('gz_verbosity')
     
-
     # Declare launch arguments
     declare_use_rviz_cmd = DeclareLaunchArgument(
         'use_rviz',
@@ -61,49 +59,22 @@ def generate_launch_description():
         'use_mapviz',
         default_value='False',
         description='Whether to start mapviz')
-
-    declare_use_sim_time_cmd = DeclareLaunchArgument(
-        'use_sim_time',
-        default_value='True',
-        description='Use simulation (Gazebo) clock if true')
-    
-    declare_use_trailer_cmd = DeclareLaunchArgument(
-        'use_trailer',
-        default_value='False',
-        description='Whether to spawn the trailer')
-    
-    declare_log_level_cmd = DeclareLaunchArgument(
-        'log_level',
-        default_value='warn',
-        description='The level of logging that is applied to all ROS 2 nodes launched by this script.')
-    
-    declare_gz_verbosity_cmd = DeclareLaunchArgument(
-        'gz_verbosity',
-        default_value='3',
-        description='Verbosity level for Ignition Gazebo (0~4).')
-
-    declare_world_path_cmd = DeclareLaunchArgument(
-        'world',
-        default_value=os.path.join(gps_wpf_dir, 'worlds', default_world_path),
-        description='Full path to world model file to load')
-    
-
     declare_spawn_x_cmd = DeclareLaunchArgument(
-        'spawn_x',
-        default_value='-20.0',
-        description='X-axis spawn location')
-
+        'spawn_x', default_value='0.0', description='X-coordinate for robot spawn position')
     declare_spawn_y_cmd = DeclareLaunchArgument(
-        'spawn_y',
-        default_value='10.0',
-        description='Y-axis spawn location')
-
+        'spawn_y', default_value='0.0', description='Y-coordinate for robot spawn position')
     declare_spawn_z_cmd = DeclareLaunchArgument(
-        'spawn_z',
-        default_value='1.0',
-        description='Z-axis spawn location')
-    
-
+        'spawn_z', default_value='1.0', description='Z-coordinate for robot spawn position')
+    declare_world_path_cmd = DeclareLaunchArgument(
+        'world', default_value=os.path.join(launch_dir, 'default_world.sdf'), description='World file path for Gazebo')
+    declare_use_sim_time_cmd = DeclareLaunchArgument(
+        'use_sim_time', default_value='True', description='Use simulation time')
+    declare_use_trailer_cmd = DeclareLaunchArgument(
+        'use_trailer', default_value='False', description='Use trailer')    
+    declare_log_level_cmd = DeclareLaunchArgument(
+        'log_level', default_value='warn', description='Log level for ROS nodes')
+    declare_gz_verbosity_cmd = DeclareLaunchArgument(
+        'gz_verbosity', default_value='3', description='Gazebo verbosity level (0-4)')
 
     gazebo_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -173,6 +144,13 @@ def generate_launch_description():
     ld.add_action(declare_use_mapviz_cmd)
     ld.add_action(mapviz_cmd)
 
-
+    ld.add_action(declare_spawn_x_cmd)
+    ld.add_action(declare_spawn_y_cmd)
+    ld.add_action(declare_spawn_z_cmd)
+    ld.add_action(declare_world_path_cmd)
+    ld.add_action(declare_use_sim_time_cmd)    
+    ld.add_action(declare_use_trailer_cmd)
+    ld.add_action(declare_log_level_cmd)
+    ld.add_action(declare_gz_verbosity_cmd)
 
     return ld
