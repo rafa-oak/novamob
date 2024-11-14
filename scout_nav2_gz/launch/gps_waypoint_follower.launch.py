@@ -60,9 +60,9 @@ def generate_launch_description():
         default_value='False',
         description='Whether to start mapviz')
     declare_spawn_x_cmd = DeclareLaunchArgument(
-        'spawn_x', default_value='0.0', description='X-coordinate for robot spawn position')
+        'spawn_x', default_value='-20.0', description='X-coordinate for robot spawn position')
     declare_spawn_y_cmd = DeclareLaunchArgument(
-        'spawn_y', default_value='0.0', description='Y-coordinate for robot spawn position')
+        'spawn_y', default_value='10.0', description='Y-coordinate for robot spawn position')
     declare_spawn_z_cmd = DeclareLaunchArgument(
         'spawn_z', default_value='1.0', description='Z-coordinate for robot spawn position')
     declare_world_path_cmd = DeclareLaunchArgument(
