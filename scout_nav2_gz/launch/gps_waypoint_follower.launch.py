@@ -36,9 +36,21 @@ def generate_launch_description():
         source_file=nav2_params, root_key="", param_rewrites="", convert_types=True
     )
 
+    # Launch configurations
     use_rviz = LaunchConfiguration('use_rviz')
     use_mapviz = LaunchConfiguration('use_mapviz')
-
+    use_rviz = LaunchConfiguration('use_rviz')
+    use_mapviz = LaunchConfiguration('use_mapviz')
+    spawn_x = LaunchConfiguration('spawn_x')
+    spawn_y = LaunchConfiguration('spawn_y')
+    spawn_z = LaunchConfiguration('spawn_z')
+    world_path = LaunchConfiguration('world')
+    use_sim_time = LaunchConfiguration('use_sim_time')
+    use_trailer = LaunchConfiguration('use_trailer')
+    log_level = LaunchConfiguration('log_level')
+    gz_verbosity = LaunchConfiguration('gz_verbosity')
+    
+    # Declare launch arguments
     declare_use_rviz_cmd = DeclareLaunchArgument(
         'use_rviz',
         default_value='False',
@@ -48,12 +60,37 @@ def generate_launch_description():
         'use_mapviz',
         default_value='False',
         description='Whether to start mapviz')
+    declare_spawn_x_cmd = DeclareLaunchArgument(
+        'spawn_x', default_value='0.0', description='X-coordinate for robot spawn position')
+    declare_spawn_y_cmd = DeclareLaunchArgument(
+        'spawn_y', default_value='0.0', description='Y-coordinate for robot spawn position')
+    declare_spawn_z_cmd = DeclareLaunchArgument(
+        'spawn_z', default_value='1.0', description='Z-coordinate for robot spawn position')
+    declare_world_path_cmd = DeclareLaunchArgument(
+        'world', default_value=os.path.join(launch_dir, 'default_world.sdf'), description='World file path for Gazebo')
+    declare_use_sim_time_cmd = DeclareLaunchArgument(
+        'use_sim_time', default_value='True', description='Use simulation time')
+    declare_use_trailer_cmd = DeclareLaunchArgument(
+        'use_trailer', default_value='False', description='Use trailer')    
+    declare_log_level_cmd = DeclareLaunchArgument(
+        'log_level', default_value='warn', description='Log level for ROS nodes')
+    declare_gz_verbosity_cmd = DeclareLaunchArgument(
+        'gz_verbosity', default_value='3', description='Gazebo verbosity level (0-4)')
 
     gazebo_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(launch_dir, 'gazebo_gps_world.launch.py'))
+            os.path.join(launch_dir, 'gazebo_gps_world.launch.py')),
+        launch_arguments={
+            'spawn_x': spawn_x,
+            'spawn_y': spawn_y,
+            'spawn_z': spawn_z,
+            'use_sim_time': use_sim_time,
+            'use_trailer': use_trailer,
+            'log_level': log_level,
+            'gz_verbosity': gz_verbosity,
+            'world': world_path
+        }.items()
     )
-
     robot_localization_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(launch_dir, 'dual_ekf_navsat.launch.py'))
@@ -99,5 +136,14 @@ def generate_launch_description():
     ld.add_action(rviz_cmd)
     ld.add_action(declare_use_mapviz_cmd)
     ld.add_action(mapviz_cmd)
+
+    ld.add_action(declare_spawn_x_cmd)
+    ld.add_action(declare_spawn_y_cmd)
+    ld.add_action(declare_spawn_z_cmd)
+    ld.add_action(declare_world_path_cmd)
+    ld.add_action(declare_use_sim_time_cmd)    
+    ld.add_action(declare_use_trailer_cmd)
+    ld.add_action(declare_log_level_cmd)
+    ld.add_action(declare_gz_verbosity_cmd)
 
     return ld
