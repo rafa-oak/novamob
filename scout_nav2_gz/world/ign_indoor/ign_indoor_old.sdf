@@ -988,7 +988,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>0.512027 -2.32022 0 0 -0 -3.13071</pose>
+        <pose>0.512027 -2.32022 0 0 0 -3.13071</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>1</mass>
@@ -2666,6 +2666,60 @@
       <static>true</static>
       <self_collide>false</self_collide>
     </model>
+    <model name='cardboard_box'>
+      <pose>-4.37416 6.83322 0.15 0 -0 0</pose>
+      <link name='link'>
+        <inertial>
+          <mass>2</mass>
+          <inertia>
+            <ixx>0.041666700000000001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0566667</iyy>
+            <iyz>0</iyz>
+            <izz>0.0683333</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.5 0.4 0.3</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+            <contact>
+              <ode>
+                <kp>10000000</kp>
+                <kd>1</kd>
+                <min_depth>0.001</min_depth>
+                <max_vel>0.10000000000000001</max_vel>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 -0.15 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cardboard box/3/files/meshes/cardboard_box.dae</uri>
+              <scale>1.25932 1.00745 0.755591</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
     <model name='Construction Cone'>
       <link name='link'>
         <collision name='collision'>
@@ -2699,7 +2753,7 @@
         </inertial>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>1.53345 8.46847 -0 0 -0 -0</pose>
+      <pose>1.53345 8.46847 0 0 -0 0</pose>
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
@@ -2846,6 +2900,111 @@
       <pose>-6.55286 5.34203 0 0 -0 0</pose>
       <self_collide>false</self_collide>
     </model>
+    <model name='Construction Barrel'>
+      <link name='link'>
+        <inertial>
+          <pose>0 0 0.4 0 -0 0</pose>
+          <mass>500</mass>
+          <inertia>
+            <ixx>51.209600000000002</ixx>
+            <iyy>51.209600000000002</iyy>
+            <izz>25</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction barrel/4/files/meshes/construction_barrel.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction barrel/4/files/meshes/construction_barrel.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-5.33353 12.5537 0 0 -0 0</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Construction Barrel_0'>
+      <link name='link'>
+        <inertial>
+          <pose>0 0 0.4 0 -0 0</pose>
+          <mass>500</mass>
+          <inertia>
+            <ixx>51.209600000000002</ixx>
+            <iyy>51.209600000000002</iyy>
+            <izz>25</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction barrel/4/files/meshes/construction_barrel.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction barrel/4/files/meshes/construction_barrel.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-5.49639 15.4437 0 0 -0 0</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Construction Barrel_1'>
+      <link name='link'>
+        <inertial>
+          <pose>0 0 0.4 0 -0 0</pose>
+          <mass>500</mass>
+          <inertia>
+            <ixx>51.209600000000002</ixx>
+            <iyy>51.209600000000002</iyy>
+            <izz>25</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction barrel/4/files/meshes/construction_barrel.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/construction barrel/4/files/meshes/construction_barrel.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-3.85769 14.0572 0 0 -0 0</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
     <model name='casual_female'>
       <static>true</static>
       <link name='link'>
@@ -2990,7 +3149,7 @@
         <pose>0 0 0 0 -0 0</pose>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>16.3132 6.01265 -0 -0 0 -0</pose>
+      <pose>16.3132 6.01265 0 0 -0 0</pose>
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
@@ -3177,6 +3336,111 @@
         <enable_wind>false</enable_wind>
       </link>
       <pose>-7.58996 4.96176 0 0 -0 1.57</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Desk'>
+      <link name='link'>
+        <pose>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/desk/2/files/meshes/desk.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/desk/2/files/meshes/desk.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>17.5711 -2.61875 0 0 -0 3.14</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Desk_1'>
+      <link name='link'>
+        <pose>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/desk/2/files/meshes/desk.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/desk/2/files/meshes/desk.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>17.5557 -1.15978 0 0 -0 3.14</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Desk_1_1'>
+      <link name='link'>
+        <pose>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/desk/2/files/meshes/desk.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/desk/2/files/meshes/desk.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>17.5675 0.477738 0 0 -0 3.14</pose>
+      <static>false</static>
       <self_collide>false</self_collide>
     </model>
     <model name='DeskChair_1'>
@@ -3445,7 +3709,7 @@
         </inertial>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>-0.05526 15.7067 -0 0 -0 -0</pose>
+      <pose>-0.05526 15.7067 0 0 -0 0</pose>
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
@@ -3482,7 +3746,7 @@
         </inertial>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>-0.081431 15.0175 -0 0 0 0</pose>
+      <pose>-0.081431 15.0175 0 0 -0 0</pose>
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
@@ -3556,7 +3820,7 @@
         </inertial>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>0.049394 12.8099 -0 0 -0 -0</pose>
+      <pose>0.049394 12.8099 0 0 -0 0</pose>
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
@@ -3593,7 +3857,7 @@
         </inertial>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>0.015489 13.3706 -0 0 -0 -0</pose>
+      <pose>0.015489 13.3706 0 0 -0 0</pose>
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
