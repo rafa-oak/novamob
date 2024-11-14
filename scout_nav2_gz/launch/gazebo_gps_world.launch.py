@@ -34,7 +34,7 @@ def generate_launch_description():
 
     # RViz and world file paths
     default_rviz_config_path = os.path.join(pkg_share, "rviz/urdf_config.rviz")
-    default_world_path = os.path.join(pkg_share, "world/ign_indoor/ign_indoor.sdf")
+    default_world_path = os.path.join(pkg_share, "world/outdoor.sdf")
     gz_models_path = os.path.join(pkg_share, "models")
 
     # Launch configurations
@@ -100,7 +100,9 @@ def generate_launch_description():
             "-z",
             "1.0",
             "-x",
-            "-2.0",
+            "-20.0",
+            "-y",
+            "10",            
             "--ros-args",
             "--log-level",
             log_level,
