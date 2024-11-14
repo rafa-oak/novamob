@@ -66,7 +66,7 @@ def generate_launch_description():
     declare_spawn_z_cmd = DeclareLaunchArgument(
         'spawn_z', default_value='1.0', description='Z-coordinate for robot spawn position')
     declare_world_path_cmd = DeclareLaunchArgument(
-        'world', default_value=os.path.join(launch_dir, 'default_world.sdf'), description='World file path for Gazebo')
+        'world', default_value=os.path.join(launch_dir, default_world_path), description='World file path for Gazebo')
     declare_use_sim_time_cmd = DeclareLaunchArgument(
         'use_sim_time', default_value='True', description='Use simulation time')
     declare_use_trailer_cmd = DeclareLaunchArgument(
@@ -144,13 +144,5 @@ def generate_launch_description():
     ld.add_action(declare_use_mapviz_cmd)
     ld.add_action(mapviz_cmd)
 
-    ld.add_action(declare_spawn_x_cmd)
-    ld.add_action(declare_spawn_y_cmd)
-    ld.add_action(declare_spawn_z_cmd)
-    ld.add_action(declare_world_path_cmd)
-    ld.add_action(declare_use_sim_time_cmd)    
-    ld.add_action(declare_use_trailer_cmd)
-    ld.add_action(declare_log_level_cmd)
-    ld.add_action(declare_gz_verbosity_cmd)
 
     return ld
