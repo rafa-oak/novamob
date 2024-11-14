@@ -32,13 +32,26 @@ def generate_launch_description():
     launch_dir = os.path.join(gps_wpf_dir, 'launch')
     params_dir = os.path.join(gps_wpf_dir, "config")
     nav2_params = os.path.join(params_dir, "nav2_no_map_params.yaml")
+    default_world_path = os.path.join(gps_wpf_dir, "world/outdoor.sdf")
     configured_params = RewrittenYaml(
         source_file=nav2_params, root_key="", param_rewrites="", convert_types=True
     )
 
+    # Launch configurations
     use_rviz = LaunchConfiguration('use_rviz')
     use_mapviz = LaunchConfiguration('use_mapviz')
+    use_sim_time = LaunchConfiguration("use_sim_time")
+    use_trailer = LaunchConfiguration("use_trailer")
+    log_level = LaunchConfiguration("log_level")
+    gz_verbosity = LaunchConfiguration("gz_verbosity")
+    run_headless = LaunchConfiguration("run_headless")
+    world_path = LaunchConfiguration("world")  
+    spawn_x = LaunchConfiguration("spawn_x")
+    spawn_y = LaunchConfiguration("spawn_y")
+    spawn_z = LaunchConfiguration("spawn_z")
+    
 
+    # Declare launch arguments
     declare_use_rviz_cmd = DeclareLaunchArgument(
         'use_rviz',
         default_value='False',
@@ -49,11 +62,63 @@ def generate_launch_description():
         default_value='False',
         description='Whether to start mapviz')
 
+    declare_use_sim_time_cmd = DeclareLaunchArgument(
+        'use_sim_time',
+        default_value='True',
+        description='Use simulation (Gazebo) clock if true')
+    
+    declare_use_trailer_cmd = DeclareLaunchArgument(
+        'use_trailer',
+        default_value='False',
+        description='Whether to spawn the trailer')
+    
+    declare_log_level_cmd = DeclareLaunchArgument(
+        'log_level',
+        default_value='warn',
+        description='The level of logging that is applied to all ROS 2 nodes launched by this script.')
+    
+    declare_gz_verbosity_cmd = DeclareLaunchArgument(
+        'gz_verbosity',
+        default_value='3',
+        description='Verbosity level for Ignition Gazebo (0~4).')
+
+    declare_world_path_cmd = DeclareLaunchArgument(
+        'world',
+        default_value=os.path.join(gps_wpf_dir, 'worlds', default_world_path),
+        description='Full path to world model file to load')
+    
+
+    declare_spawn_x_cmd = DeclareLaunchArgument(
+        'spawn_x',
+        default_value='-20.0',
+        description='X-axis spawn location')
+
+    declare_spawn_y_cmd = DeclareLaunchArgument(
+        'spawn_y',
+        default_value='10.0',
+        description='Y-axis spawn location')
+
+    declare_spawn_z_cmd = DeclareLaunchArgument(
+        'spawn_z',
+        default_value='1.0',
+        description='Z-axis spawn location')
+    
+
+
     gazebo_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(launch_dir, 'gazebo_gps_world.launch.py'))
+            os.path.join(launch_dir, 'gazebo_gps_world.launch.py')),
+        launch_arguments={
+            'spawn_x': spawn_x,
+            'spawn_y': spawn_y,
+            'spawn_z': spawn_z,
+            'use_sim_time': use_sim_time,
+            'use_trailer': use_trailer,
+            'log_level': log_level,
+            'gz_verbosity': gz_verbosity,
+            'world': world_path
+        }.items()
     )
-
     robot_localization_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(launch_dir, 'dual_ekf_navsat.launch.py'))
@@ -85,6 +150,14 @@ def generate_launch_description():
     # Create the launch description and populate
     ld = LaunchDescription()
 
+    ld.add_action(declare_spawn_x_cmd)
+    ld.add_action(declare_spawn_y_cmd)
+    ld.add_action(declare_spawn_z_cmd)
+    ld.add_action(declare_world_path_cmd)
+    ld.add_action(declare_use_sim_time_cmd)    
+    ld.add_action(declare_use_trailer_cmd)
+    ld.add_action(declare_log_level_cmd)
+    ld.add_action(declare_gz_verbosity_cmd)
     # simulator launch
     ld.add_action(gazebo_cmd)
 
@@ -99,5 +172,7 @@ def generate_launch_description():
     ld.add_action(rviz_cmd)
     ld.add_action(declare_use_mapviz_cmd)
     ld.add_action(mapviz_cmd)
+
+
 
     return ld
