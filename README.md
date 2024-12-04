@@ -20,10 +20,10 @@ This repository provides simulation environments for the **NovaMob** and **Agile
     cd ~/ros2_ws/src
     ```
 
-2. Clone this repository into your workspace:
+2. Clone this repository and its submodules into your workspace:
 
     ```bash
-    git clone https://github.com/rafa-oak/novamob.git
+    git clone --recurse-submodules https://github.com/rafa-oak/novamob.git
     ```
 3. Install necessary dependencies:
 
