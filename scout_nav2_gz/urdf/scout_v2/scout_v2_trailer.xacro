@@ -218,6 +218,11 @@
       <xacro:cylinder_inertia m="${trailer_wheel_mass}" r="${trailer_wheel_radius}" h="${trailer_wheel_length}"/>
     </link>
 
+    <gazebo reference="${prefix}_link">
+      <mu1>0.1</mu1>
+      <mu2>0.1</mu2>
+    </gazebo>
+
     <joint name="${prefix}_joint" type="continuous">
       <parent link="trailer_link"/>
       <child link="${prefix}_link"/>
@@ -281,7 +286,7 @@
       <origin xyz="${-(trailer_length/2)} 0 0"/>
     </collision>
 
-    <xacro:box_inertia m="1" w="${trailer_width}" d="${trailer_length}" h="${trailer_height}"/>
+    <xacro:box_inertia m="5" w="${trailer_width}" d="${trailer_length}" h="${trailer_height}"/>
   </link>
 
   <!-- Trailer joint -->

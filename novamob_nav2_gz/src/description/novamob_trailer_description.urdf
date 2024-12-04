@@ -165,6 +165,11 @@
       <xacro:cylinder_inertia m="${wheel_mass}" r="${wheel_radius}" h="${wheel_width}"/>
     </link>
 
+    <gazebo reference="${prefix}_link">
+      <mu1>0.1</mu1>
+      <mu2>0.1</mu2>
+    </gazebo>
+
     <joint name="${prefix}_joint" type="continuous">
       <parent link="trailer_link"/>
       <child link="${prefix}_link"/>
