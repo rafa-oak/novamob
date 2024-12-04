@@ -1,0 +1,4 @@
+[submodule "virtual_maize_field"]
+	path = virtual_maize_field
+	url = https://github.com/rafa-oak/virtual_maize_field.git
+	branch = ros2-ign
