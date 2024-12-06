@@ -2168,49 +2168,6 @@
       <pose>-5.40211 -27.7199 0.040348 0 -0 2.41558</pose>
       <self_collide>false</self_collide>
     </model>
-    <model name='portuguese_ledge'>
-      <static>true</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <heightmap>
-              <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/portuguese ledge/3/meshes/PortugueseLedgeTile1_DecDeg.nc</uri>
-              <size>1000 1000 25.34</size>
-            </heightmap>
-          </geometry>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <heightmap>
-              <use_terrain_paging>true</use_terrain_paging>
-              <texture>
-                <diffuse>materials/textures/dirt_diffusespecular.png</diffuse>
-                <normal>materials/textures/flat_normal.png</normal>
-                <size>10</size>
-              </texture>
-              <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/portuguese ledge/3/meshes/PortugueseLedgeTile1_DecDeg.nc</uri>
-              <size>1000 1000 25.34</size>
-            </heightmap>
-          </geometry>
-        </visual>
-        <pose>0 0 0 0 -0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>-118.69 -154.806 0 0 -0 0</pose>
-      <self_collide>false</self_collide>
-    </model>
     <model name='post_office'>
       <static>true</static>
       <link name='link'>
