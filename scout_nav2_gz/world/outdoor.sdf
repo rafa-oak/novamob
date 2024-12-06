@@ -974,14 +974,14 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/outdoor_1/model://outdoor_1/media/outdoor1_texture4.dae</uri>
+              <uri>model://outdoor_1/media/outdoor1_texture4.dae</uri>
             </mesh>
           </geometry>
         </visual>
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/outdoor_1/model://outdoor_1/media/outdoor1_texture4.dae</uri>
+              <uri>model://outdoor_1/media/outdoor1_texture4.dae</uri>
             </mesh>
           </geometry>
         </collision>
