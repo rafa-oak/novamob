@@ -9,7 +9,7 @@ def generate_launch_description():
     default_model_path = os.path.join(pkg_share, 'src/description/novamob_description.urdf')
     default_rviz_config_path = os.path.join(pkg_share, 'rviz/urdf_config.rviz')
     gz_models_path = os.path.join(pkg_share, 'models')
-    world_path=os.path.join(pkg_share, 'world/indoor_2.world')
+    default_world_path=os.path.join(pkg_share, 'world/indoor_2.world')
 
 
     robot_state_publisher_node = launch_ros.actions.Node(
@@ -21,7 +21,7 @@ def generate_launch_description():
         package='joint_state_publisher',
         executable='joint_state_publisher',
         name='joint_state_publisher',
-        arguments=[default_model_path],
+        arguments=[LaunchConfiguration('model')],
     )
     rviz_node = launch_ros.actions.Node(
         package='rviz2',
@@ -53,13 +53,15 @@ def generate_launch_description():
         ),
         launch.actions.DeclareLaunchArgument(name='model', default_value=default_model_path,
                                             description='Absolute path to robot urdf file'),
+        launch.actions.DeclareLaunchArgument(name='world', default_value=default_world_path,
+                                            description='Absolute path to world sdf file'),     
         launch.actions.DeclareLaunchArgument(name='rvizconfig', default_value=default_rviz_config_path,
                                             description='Absolute path to rviz config file'),
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='True',
                                             description='Flag to enable use_sim_time'),
         launch.actions.DeclareLaunchArgument(name='use_rviz', default_value='True',
                                              description='Flag to enable RViz'),
-        launch.actions.ExecuteProcess(cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so', world_path], output='screen'),
+        launch.actions.ExecuteProcess(cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so', LaunchConfiguration('world')], output='screen'),
         joint_state_publisher_node,
         #joint_state_publisher_gui_node,
         robot_state_publisher_node,
