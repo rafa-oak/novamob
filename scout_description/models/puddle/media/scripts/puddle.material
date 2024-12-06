@@ -1,0 +1,18 @@
+material Puddle/Blue
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture blue_texture.jpg
+        scale 1 1
+      }
+      ambient 0.0 0.0 1.0 1.0
+      diffuse 0.0 0.0 1.0 1.0
+      specular 0.0 0.0 0.0 1.0
+      shininess 1.0
+    }
+  }
+}

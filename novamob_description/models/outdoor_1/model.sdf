@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="outdoor_1">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <link name="body">
+      <visual name="visual">
+        <geometry>
+          <mesh><uri>model://outdoor_1/media/outdoor1_texture4.dae</uri></mesh>
+        </geometry>
+	      <!-- <material>
+          <script>
+            <uri>model://outdoor_1/media/scripts</uri>
+            <uri>model://outdoor_1/media/Textures</uri>
+            <name>RepeatedGrass/Diffuse</name>
+          </script>
+        </material> -->
+        <!-- <material>
+          <ambient>0.6 0.8 0.6 1</ambient>
+          <diffuse>0.6 0.8 0.6 1</diffuse>
+          <specular>0.4 0.6 0.4 1</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <mesh><uri>model://outdoor_1/media/outdoor1_texture4.dae</uri></mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

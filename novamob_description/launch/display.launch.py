@@ -2,11 +2,13 @@ import launch
 from launch.substitutions import Command, LaunchConfiguration
 import launch_ros
 import os
+from launch.actions import SetEnvironmentVariable
 
 def generate_launch_description():
     pkg_share = launch_ros.substitutions.FindPackageShare(package='novamob_description').find('novamob_description')
-    default_model_path = os.path.join(pkg_share, 'src/description/novamob_trailer_description.urdf')
+    default_model_path = os.path.join(pkg_share, 'src/description/novamob_description.urdf')
     default_rviz_config_path = os.path.join(pkg_share, 'rviz/urdf_config.rviz')
+    gz_models_path = os.path.join(pkg_share, 'models')
     world_path=os.path.join(pkg_share, 'world/indoor_2.world')
 
 
@@ -45,6 +47,10 @@ def generate_launch_description():
 )
 
     return launch.LaunchDescription([
+        SetEnvironmentVariable(
+                name="GAZEBO_MODEL_PATH",
+                value=gz_models_path,
+        ),
         launch.actions.DeclareLaunchArgument(name='model', default_value=default_model_path,
                                             description='Absolute path to robot urdf file'),
         launch.actions.DeclareLaunchArgument(name='rvizconfig', default_value=default_rviz_config_path,
