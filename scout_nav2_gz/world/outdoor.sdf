@@ -59,7 +59,7 @@
                 <min_height>4</min_height>
                 <fade_dist>5</fade_dist>
               </blend>
-              <uri>file:///home/rafael/.ros/virtual_maize_field/virtual_maize_field_heightmap.png</uri>
+              <uri>file://virtual_maize_field_heightmap.png</uri>
               <size>10.05 10.05 0.055</size>
               <pos>0 0 0</pos>
             </heightmap>
@@ -68,7 +68,7 @@
         <collision name='collision'>
           <geometry>
             <heightmap>
-              <uri>file:///home/rafael/.ros/virtual_maize_field/virtual_maize_field_heightmap.png</uri>
+              <uri>file://virtual_maize_field_heightmap.png</uri>
               <size>10.05 10.05 0.055</size>
               <pos>0 0 0</pos>
             </heightmap>
@@ -93,877 +93,877 @@
       <self_collide>false</self_collide>
     </model>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0000</name>
       <pose>-3.03638 -2.77646 0.04813 0 -0 0.733956</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0001</name>
       <pose>-3.02658 -2.64578 0.04813 0 -0 1.00594</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0002</name>
       <pose>-3.0308 -2.473 0.04813 0 -0 -2.2932</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0003</name>
       <pose>-3.04439 -2.30511 0.04813 0 0 -0.218391</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0004</name>
       <pose>-3.04275 -2.18602 0.04813 0 0 -0.931892</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0005</name>
       <pose>-3.03755 -2.04279 0.04813 0 0 -1.56116</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0006</name>
       <pose>-3.01353 -1.86268 0.04813 0 0 -0.550172</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0007</name>
       <pose>-3.02081 -1.70271 0.04813 0 -0 2.59087</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0008</name>
       <pose>-3.03957 -1.52935 0.04813 0 -0 1.44373</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0009</name>
       <pose>-3.01612 -1.39299 0.04813 0 -0 1.55228</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0010</name>
       <pose>-3.02852 -1.18675 0.048501 0 -0 1.07281</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0011</name>
       <pose>-3.04331 -1.02046 0.048501 0 -0 -2.72965</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0012</name>
       <pose>-3.04439 -0.825833 0.048501 0 -0 2.92894</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0013</name>
       <pose>-3.04289 -0.678386 0.048501 0 -0 -2.38376</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0014</name>
       <pose>-3.04891 -0.510637 0.048501 0 0 -1.34618</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0015</name>
       <pose>-3.03967 -0.37882 0.048501 0 -0 0.911215</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0016</name>
       <pose>-3.04172 -0.208244 0.048501 0 -0 1.63308</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0017</name>
       <pose>-3.03098 -0.04275 0.048501 0 0 -1.00271</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0018</name>
       <pose>-3.03099 0.13752 0.051537 0 0 -0.707905</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0019</name>
       <pose>-3.03671 0.262406 0.051537 0 0 -0.859648</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0020</name>
       <pose>-3.04886 0.43676 0.053038 0 -0 2.66997</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0021</name>
       <pose>-3.03453 0.582336 0.053038 0 0 -0.318944</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0022</name>
       <pose>-3.03119 0.766489 0.05278 0 -0 1.09079</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0023</name>
       <pose>-3.02878 0.887276 0.05278 0 -0 -2.91744</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0024</name>
       <pose>-3.03113 1.03769 0.05278 0 -0 1.89842</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0025</name>
       <pose>-3.02593 1.19738 0.05278 0 -0 1.50221</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0026</name>
       <pose>-3.04331 1.33406 0.05278 0 0 -1.67606</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0027</name>
       <pose>-3.04688 1.50758 0.05278 0 0 -1.75667</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0028</name>
       <pose>-3.02392 1.64702 0.05278 0 -0 1.87946</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0029</name>
       <pose>-3.03968 1.80514 0.05278 0 0 -1.79794</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0030</name>
       <pose>-3.02836 1.96816 0.05278 0 0 -2.00025</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0031</name>
       <pose>-3.01274 2.16873 0.051275 0 0 -0.197742</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0032</name>
       <pose>-3.04396 2.32453 0.051275 0 0 -0.420576</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0033</name>
       <pose>-3.03442 2.48983 0.051275 0 -0 2.33719</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0034</name>
       <pose>-3.02193 2.66425 0.051275 0 0 -1.49609</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0035</name>
       <pose>-1.53483 -2.79034 0.050035 0 -0 0.549465</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0036</name>
       <pose>-1.54404 -2.61226 0.050035 0 0 -0.296499</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0037</name>
       <pose>-1.52136 -2.43757 0.049948 0 -0 -3.08054</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0038</name>
       <pose>-1.51588 -2.30961 0.049948 0 -0 0.49389</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0039</name>
       <pose>-1.53671 -2.13012 0.049861 0 0 -0.307665</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0040</name>
       <pose>-1.52357 -2.00951 0.049861 0 -0 2.40028</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0041</name>
       <pose>-1.52047 -1.83739 0.049861 0 -0 2.55656</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0042</name>
       <pose>-1.52374 -1.67658 0.049861 0 -0 -2.59111</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0043</name>
       <pose>-1.54188 -1.53337 0.049861 0 -0 2.24253</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0044</name>
       <pose>-1.5246 -1.35936 0.051293 0 -0 2.3979</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0045</name>
       <pose>-1.51689 -1.18163 0.051613 0 -0 1.66949</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0046</name>
       <pose>-1.51493 -1.01665 0.051613 0 -0 -2.48124</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0047</name>
       <pose>-1.52129 -0.881934 0.052905 0 0 -0.614683</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0048</name>
       <pose>-1.52018 -0.718939 0.052905 0 -0 0.73747</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0049</name>
       <pose>-1.55007 -0.567915 0.052905 0 -0 2.97529</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0050</name>
       <pose>-1.54696 -0.422818 0.052905 0 -0 0.929209</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0051</name>
       <pose>-1.52851 -0.276512 0.052905 0 -0 2.07948</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0052</name>
       <pose>-1.53167 -0.104141 0.051879 0 -0 1.18017</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0053</name>
       <pose>-1.54552 0.035042 0.051879 0 -0 -2.38901</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0054</name>
       <pose>-1.53655 0.172082 0.051879 0 -0 2.37755</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0055</name>
       <pose>-1.52495 0.349023 0.051879 0 -0 0.641258</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0056</name>
       <pose>-1.54174 0.491489 0.051879 0 -0 2.21353</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0057</name>
       <pose>-1.53696 0.630062 0.051879 0 -0 -3.07392</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0058</name>
       <pose>-1.54747 0.74832 0.051879 0 0 -1.87802</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0059</name>
       <pose>-1.53603 0.940752 0.051879 0 0 -0.269527</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0060</name>
       <pose>-1.52804 1.12808 0.051879 0 0 -1.14341</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0061</name>
       <pose>-1.51991 1.28973 0.053532 0 0 -1.3719</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0062</name>
       <pose>-1.51419 1.40687 0.053532 0 0 -2.03376</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0063</name>
       <pose>-1.54536 1.57976 0.053813 0 -0 1.2752</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0064</name>
       <pose>-1.54776 1.77216 0.053204 0 0 -1.02851</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0065</name>
       <pose>-1.53625 1.96059 0.053204 0 0 -0.93588</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0066</name>
       <pose>-1.54387 2.09643 0.053204 0 -0 2.66818</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0067</name>
       <pose>-1.51178 2.26011 0.052202 0 0 -1.51647</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0068</name>
       <pose>-1.53075 2.4423 0.051548 0 -0 -2.49552</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0069</name>
       <pose>-1.54745 2.63947 0.05109 0 -0 1.74542</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0070</name>
       <pose>-0.015936 -2.80982 0.051891 0 -0 -2.35105</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0071</name>
       <pose>-0.025618 -2.65505 0.051891 0 -0 1.44408</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0072</name>
       <pose>-0.034149 -2.52621 0.051891 0 -0 1.86549</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0073</name>
       <pose>-0.040121 -2.33966 0.049677 0 0 -1.18498</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0074</name>
       <pose>-0.013472 -2.19136 0.049681 0 -0 2.51505</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0075</name>
       <pose>-0.046818 -2.00417 0.049729 0 -0 1.91313</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0076</name>
       <pose>-0.04116 -1.84558 0.049729 0 -0 1.45778</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0077</name>
       <pose>-0.015414 -1.7029 0.049893 0 -0 2.12035</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0078</name>
       <pose>-0.036177 -1.51483 0.050545 0 0 -0.276197</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0079</name>
       <pose>-0.022032 -1.36852 0.050545 0 0 -1.4535</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0080</name>
       <pose>-0.014679 -1.20317 0.050718 0 -0 -2.63139</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0081</name>
       <pose>-0.01497 -1.02432 0.050718 0 0 -1.71983</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0082</name>
       <pose>-0.043645 -0.851346 0.05121 0 -0 0.826668</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0083</name>
       <pose>-0.041175 -0.718021 0.05121 0 -0 1.26649</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0084</name>
       <pose>-0.020903 -0.578187 0.050954 0 0 -0.200877</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0085</name>
       <pose>-0.023199 -0.415894 0.050954 0 -0 1.91681</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0086</name>
       <pose>-0.01326 -0.279834 0.050954 0 0 -0.746957</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0087</name>
       <pose>-0.023141 -0.095144 0.050846 0 -0 2.65815</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0088</name>
       <pose>-0.022971 0.034821 0.050846 0 -0 0.418183</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0089</name>
       <pose>-0.037955 0.162637 0.050846 0 -0 -3.12398</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0090</name>
       <pose>-0.039685 0.33299 0.052168 0 -0 0.34816</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0091</name>
       <pose>-0.034591 0.497755 0.052198 0 -0 2.25544</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0092</name>
       <pose>-0.049567 0.651918 0.051893 0 0 -1.13117</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0093</name>
       <pose>-0.012102 0.844917 0.051718 0 -0 0.31385</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0094</name>
       <pose>-0.035481 1.00738 0.051718 0 -0 0.894582</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0095</name>
       <pose>-0.016326 1.16464 0.051718 0 0 -1.0865</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0096</name>
       <pose>-0.018838 1.33221 0.051718 0 -0 2.54881</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0097</name>
       <pose>-0.032404 1.50381 0.051718 0 -0 1.30051</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0098</name>
       <pose>-0.038656 1.66188 0.051718 0 0 -1.61221</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0099</name>
       <pose>-0.015158 1.84431 0.05271 0 -0 -2.64515</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0100</name>
       <pose>-0.049377 2.00397 0.052313 0 -0 0.525767</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0101</name>
       <pose>-0.028834 2.17652 0.052159 0 -0 -2.12181</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0102</name>
       <pose>-0.040544 2.33808 0.052033 0 0 -2.01647</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0103</name>
       <pose>-0.037412 2.49128 0.052191 0 -0 2.38733</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0104</name>
       <pose>-0.026124 2.64472 0.052191 0 0 -0.149489</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0105</name>
       <pose>1.48544 -2.76841 0.050892 0 -0 2.33934</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0106</name>
       <pose>1.45046 -2.60855 0.05087 0 -0 1.91122</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0107</name>
       <pose>1.45667 -2.44073 0.05087 0 0 -0.862644</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0108</name>
       <pose>1.47305 -2.24707 0.05087 0 -0 -2.64355</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0109</name>
       <pose>1.48912 -2.06915 0.05087 0 -0 0.508801</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0110</name>
       <pose>1.46595 -1.94787 0.05087 0 -0 -2.66924</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0111</name>
       <pose>1.47689 -1.79306 0.05087 0 0 -1.72437</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0112</name>
       <pose>1.45905 -1.6487 0.05087 0 -0 0.608449</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0113</name>
       <pose>1.45664 -1.49975 0.05087 0 -0 1.23652</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0114</name>
       <pose>1.45002 -1.32467 0.05087 0 -0 0.330569</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0115</name>
       <pose>1.47964 -1.13439 0.05087 0 -0 -2.89435</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0116</name>
       <pose>1.45085 -0.957358 0.049517 0 -0 1.07649</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0117</name>
       <pose>1.46168 -0.828943 0.049517 0 0 -1.36816</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0118</name>
       <pose>1.47032 -0.631027 0.049481 0 -0 1.52011</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0119</name>
       <pose>1.47692 -0.459575 0.049481 0 -0 -2.16099</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0120</name>
       <pose>1.48641 -0.281238 0.049481 0 0 -1.15069</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0121</name>
       <pose>1.47098 -0.134572 0.049481 0 -0 -2.83662</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0122</name>
       <pose>1.46953 0.036747 0.049481 0 0 -0.519835</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0123</name>
       <pose>1.4647 0.186806 0.049481 0 0 -0.973072</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0124</name>
       <pose>1.47687 0.355203 0.050015 0 -0 3.11205</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0125</name>
       <pose>1.48677 0.48856 0.050015 0 -0 0.060358</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0126</name>
       <pose>1.4769 0.640721 0.050015 0 -0 -3.10598</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0127</name>
       <pose>1.47998 0.82079 0.049283 0 0 -0.157134</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0128</name>
       <pose>1.48324 0.988131 0.049283 0 -0 2.96555</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0129</name>
       <pose>1.45162 1.18428 0.049283 0 0 -1.67978</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0130</name>
       <pose>1.45823 1.33802 0.049283 0 -0 -2.66089</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0131</name>
       <pose>1.48083 1.4786 0.049283 0 -0 3.02588</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0132</name>
       <pose>1.48922 1.68261 0.049654 0 -0 2.05516</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0133</name>
       <pose>1.46089 1.81085 0.049654 0 -0 2.27936</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0134</name>
       <pose>1.48679 1.96653 0.049654 0 0 -1.2112</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0135</name>
       <pose>1.45507 2.09893 0.049654 0 0 -1.00512</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0136</name>
       <pose>1.48245 2.27492 0.049654 0 -0 -2.61624</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0137</name>
       <pose>1.4688 2.42562 0.049654 0 0 -1.68934</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0138</name>
       <pose>1.48459 2.56026 0.049654 0 -0 1.54246</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0139</name>
       <pose>1.46961 2.76815 0.050035 0 -0 2.39962</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0140</name>
       <pose>2.95416 -2.80446 0.04922 0 -0 2.67411</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0141</name>
       <pose>2.97547 -2.65184 0.04922 0 -0 -2.57728</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0142</name>
       <pose>2.98607 -2.47624 0.04922 0 -0 2.34585</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0143</name>
       <pose>2.95647 -2.29396 0.048725 0 0 -0.238971</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0144</name>
       <pose>2.95384 -2.13555 0.048725 0 -0 0.591777</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0145</name>
       <pose>2.96002 -1.9487 0.048725 0 0 -1.12101</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0146</name>
       <pose>2.98146 -1.81903 0.048725 0 -0 0.276154</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0147</name>
       <pose>2.96862 -1.62118 0.048725 0 -0 1.90171</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0148</name>
       <pose>2.98682 -1.47174 0.048725 0 -0 2.2027</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0149</name>
       <pose>2.98154 -1.30236 0.048725 0 -0 2.99512</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0150</name>
       <pose>2.96894 -1.1129 0.048388 0 -0 1.05697</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0151</name>
       <pose>2.97724 -0.943298 0.048388 0 0 -1.22281</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0152</name>
       <pose>2.96883 -0.775976 0.048388 0 -0 2.18859</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0153</name>
       <pose>2.97678 -0.662455 0.048388 0 0 -1.8394</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0154</name>
       <pose>2.94927 -0.510017 0.048388 0 -0 1.08724</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0155</name>
       <pose>2.95926 -0.341219 0.046606 0 0 -1.70659</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0156</name>
       <pose>2.97382 -0.167987 0.046606 0 -0 1.16511</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0157</name>
       <pose>2.96623 0.018659 0.046606 0 -0 -2.18413</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0158</name>
       <pose>2.96686 0.218992 0.048485 0 -0 2.8457</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0159</name>
       <pose>2.95197 0.335563 0.048485 0 -0 0.487471</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0160</name>
       <pose>2.95828 0.494551 0.048485 0 -0 0.030264</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0161</name>
       <pose>2.97887 0.640532 0.048485 0 -0 2.75885</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0162</name>
       <pose>2.95867 0.792002 0.048485 0 -0 1.6588</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0163</name>
       <pose>2.95891 0.978635 0.049632 0 -0 0.827404</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0164</name>
       <pose>2.96396 1.12521 0.049632 0 -0 1.17451</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0165</name>
       <pose>2.98 1.31227 0.049729 0 -0 2.64262</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0166</name>
       <pose>2.96576 1.45236 0.049729 0 -0 1.16615</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0167</name>
       <pose>2.97712 1.61116 0.049729 0 -0 1.4586</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0168</name>
       <pose>2.95997 1.78771 0.049729 0 -0 2.68189</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0169</name>
       <pose>2.98914 1.9659 0.049729 0 0 -1.43439</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0170</name>
       <pose>2.97625 2.11143 0.049729 0 -0 0.128499</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0171</name>
       <pose>2.97946 2.28607 0.049729 0 -0 -2.82363</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0172</name>
       <pose>2.96516 2.45123 0.049729 0 -0 1.18845</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_02</uri>
+      <uri>model://maize_02</uri>
       <name>maize_02_0173</name>
       <pose>2.96495 2.59635 0.049729 0 -0 2.45884</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/install/virtual_maize_field/share/virtual_maize_field/models/maize_01</uri>
+      <uri>model://maize_01</uri>
       <name>maize_01_0174</name>
       <pose>2.96915 2.75448 0.049729 0 0 -0.51191</pose>
     </include>
@@ -4298,22 +4298,22 @@
       <self_collide>false</self_collide>
     </model>
     <include>
-      <uri>file:///home/rafael/ros2_ws/src/scout_nav2_gz/models/puddle_small</uri>
+      <uri>model://puddle_small</uri>
       <name>puddle_small</name>
       <pose>-22.699600 -5.928740 0.026846 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/src/scout_nav2_gz/models/puddle_small</uri>
+      <uri>model://puddle_small</uri>
       <name>puddle_small_1</name>
       <pose>-21.459900 1.334770 0.026846 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/src/scout_nav2_gz/models/puddle_medium</uri>
+      <uri>model://puddle_medium</uri>
       <name>puddle_medium</name>
       <pose>-20.001900 -2.501290 0 0 0 0.617175</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/ros2_ws/src/scout_nav2_gz/models/puddle_lake</uri>
+      <uri>model://puddle_lake</uri>
       <name>puddle_lake</name>
       <pose>11.838400 -15.360900 -0.029739 0 0 0.145610</pose>
     </include>
