@@ -16,7 +16,14 @@
       <render_engine>ogre2</render_engine>
     </plugin>
     <plugin name='ignition::gazebo::systems::Contact' filename='libignition-gazebo-contact-system.so'/>
-
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>-22.9</latitude_deg>
+      <longitude_deg>-43.2</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
     <gui fullscreen="0">
         <!-- 3D scene -->
       <plugin filename="GzScene3D" name="3D View">
