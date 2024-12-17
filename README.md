@@ -147,6 +147,56 @@ ros2 launch scout_nav2_gz dual_efk_navsat.launch.py
 ros2 launch nav2_bringup navigation_launch.py use_sim_time:=True
 ```
 
+
+
+## Opennav_Coverage 
+
+[Open Navigation's Nav2 Complete Coverage ](https://github.com/ros-navigation/navigation2/issues/4251#issuecomment-2441750468) is a repository that allows for complete coverage of open-fields or rows (such as in farms/vineyards). Its capabilities can be used along with Novamob's multiple environments and robots, taking into account certain constraints.
+
+### Integration
+The opennav_coverage integration must be done in a separate workspace from the rest of the project, since sourcing opennav_coverage breaks the nav2 bt_navigator, as seen in this [issue](https://github.com/ros-navigation/navigation2/issues/4251#issuecomment-2441750468). Therefore, to run any Novamob launch file (especially the ones that use GPS navigation), it is recommended to do it in the previously created workspace. To launch the opennav_coverage capabilities, a new ROS2 workspace must be setup.
+
+Start by creating a workspace:
+```
+cd ~
+mkdir open_navigation_ws
+mkdir open_navigation_ws/src
+cd open_navigation_ws/src
+```
+
+Then clone the necessary packages:
+```
+git clone https://github.com/Fields2Cover/Fields2Cover.git -b v1.2.1
+git clone https://github.com/rafa-oak/opennav_coverage.git -b humble
+git clone https://github.com/rafa-oak/novamob.git
+```
+We then need to build the fields2cover library before any of the other packages:
+```
+cd ~/open_navigation_ws/src/Fields2Cover
+mkdir -p build; 
+cd build; cmake -DCMAKE_BUILD_TYPE=Release ..; 
+make -j$(nproc); 
+sudo make install;
+```
+Finally, we can build the rest of the packages:
+```
+source /opt/ros/humble/setup.bash
+cd ~/open_navigation_ws
+colcon build --base-paths src/ --symlink-install
+```
+
+### Launch Files
+
+
+### Troubleshooting
+It is possible that an error occurs in the fields2cover package when building, which causes the opennav_coverage package to also fail building.
+
+To fix this, the fields2cover package must be removed from the workspace, along with all files in the computer related to fields2cover and the build, install and log folders in the workspace
+```rm -r build install log```
+
+After that is done, follow the integration instructions again and the error should be fixed. (As seen in this[ issue](https://github.com/open-navigation/opennav_coverage/issues/58))
+
+
 ## Useful Resources
 
 - [Nav2 Documentation](https://docs.nav2.org/concepts/index.html)
