@@ -26,7 +26,7 @@
 
 
     <xacro:property name="trailer_wheel_length" value="0.045" />
-    <xacro:property name="trailer_wheel_radius" value="0.06" />
+    <xacro:property name="trailer_wheel_radius" value="0.065" />
     <xacro:property name="trailer_wheel_mass" value="0.6"/>
 
     <xacro:property name="connector_length" value="0.15"/>
@@ -300,9 +300,9 @@
 
 
   <!-- Trailer Wheels -->
-  <xacro:trailer_wheel prefix="trailer_wheel_lf" x_reflect="1" y_reflect="1" wheel_offset="${trailer_length / 4}"/>
+  <!-- <xacro:trailer_wheel prefix="trailer_wheel_lf" x_reflect="1" y_reflect="1" wheel_offset="${trailer_length / 4}"/> -->
   <xacro:trailer_wheel prefix="trailer_wheel_lr" x_reflect="-1" y_reflect="1" wheel_offset="${trailer_length / 4}"/>
-  <xacro:trailer_wheel prefix="trailer_wheel_rf" x_reflect="1" y_reflect="-1" wheel_offset="${trailer_length / 4}"/>
+  <!-- <xacro:trailer_wheel prefix="trailer_wheel_rf" x_reflect="1" y_reflect="-1" wheel_offset="${trailer_length / 4}"/> -->
   <xacro:trailer_wheel prefix="trailer_wheel_rr" x_reflect="-1" y_reflect="-1" wheel_offset="${trailer_length / 4}"/>
 
 
