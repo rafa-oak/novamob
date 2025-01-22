@@ -275,7 +275,7 @@ def generate_launch_description():
             ),
             DeclareLaunchArgument(
                 name="use_localization",
-                default_value="True",
+                default_value="False",
                 description="Use EKF to estimagte odom->base_link transform from IMU + wheel odometry",
             ),
             DeclareLaunchArgument(
@@ -302,7 +302,7 @@ def generate_launch_description():
             robot_state_publisher_node,
             # robot_state_publisher_node_trailer,
             spawn_entity,
-            #robot_localization_node,
+            robot_localization_node,
             rviz_node,
             RegisterEventHandler(
                 event_handler=OnProcessExit(
