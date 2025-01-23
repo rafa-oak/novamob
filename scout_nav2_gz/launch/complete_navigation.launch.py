@@ -66,7 +66,7 @@ def generate_launch_description():
             "use_rviz:=false",
             ["run_headless:=", run_headless],
             ["world:=", world],
-            "use_localization:=false",
+            "use_localization:=True",
             ["use_trailer:=", use_trailer],
             ["model:=", model],
 
