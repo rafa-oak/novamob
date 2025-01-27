@@ -136,7 +136,7 @@
         </visual>
       </link>
     </model>
-
+    
     <model name="heightmap">
       <static>true</static>
       <link name="link">
@@ -179,7 +179,7 @@
                 <fade_dist>5</fade_dist>
               </blend>
               <uri>/home/rafael/.ros/virtual_maize_field/virtual_maize_field_heightmap.png</uri>
-              <size>14.1 14.1 0.055</size>
+              <size>16.05 16.05 0.055</size>
               <pos>0 0 0</pos>
             </heightmap>
           </geometry>
@@ -188,14 +188,14 @@
           <geometry>
             <heightmap>
               <uri>/home/rafael/.ros/virtual_maize_field/virtual_maize_field_heightmap.png</uri>
-              <size>14.1 14.1 0.055</size>
+              <size>16.05 16.05 0.055</size>
               <pos>0 0 0</pos>
             </heightmap>
           </geometry>
         </collision>
       </link>
     </model>
-     
+
      
     <include>
       <uri>model://maize_01</uri>
