@@ -263,7 +263,7 @@ def generate_launch_description():
             ),
             DeclareLaunchArgument(
                 name="use_localization",
-                default_value="False",
+                default_value="True",
                 description="Use EKF to estimagte odom->base_link transform from IMU + wheel odometry",
             ),
             DeclareLaunchArgument(
