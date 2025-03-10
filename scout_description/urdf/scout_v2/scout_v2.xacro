@@ -350,7 +350,7 @@
         </sensor>
     </gazebo>
 
-    <!-- Camera/Deph Sensor -->
+    <!-- Camera/Depth Sensor -->
 
 
     <link name="camera_link">
