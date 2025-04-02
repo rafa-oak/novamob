@@ -170,7 +170,7 @@ def generate_launch_description():
         [
             DeclareLaunchArgument(
                 "params_file",
-                default_value=[FindPackageShare("novamob_nav2_gz"), "/config/nav2_params.yaml"],
+                default_value=[FindPackageShare("novamob_nav2_gz"), "/config/nav2_params_novamob.yaml"],
                 description="Full path to the ROS2 parameters file to use for all launched nodes",
             ),
             DeclareLaunchArgument(
