@@ -150,14 +150,21 @@ def generate_launch_description():
         arguments=[
             "/scan@sensor_msgs/msg/LaserScan[ignition.msgs.LaserScan",
             "/imu@sensor_msgs/msg/Imu[ignition.msgs.IMU",
-            "/sky_cam@sensor_msgs/msg/Image@ignition.msgs.Image",
-            "/depth_camera@sensor_msgs/msg/Image@ignition.msgs.Image",
-            "/robot_cam@sensor_msgs/msg/Image@ignition.msgs.Image",
             "/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo",
             "/clock@rosgraph_msgs/msg/Clock[ignition.msgs.Clock",
         ],
         output="screen",
     )
+
+    image_bridge = Node(
+        package='ros_gz_image',
+        executable='image_bridge',
+        arguments=[
+            "/robot_cam",
+            "/depth_camera"
+        ],
+        output='screen',
+    )   
 
     load_joint_state_controller = ExecuteProcess(
         name="activate_joint_state_broadcaster",
@@ -287,6 +294,7 @@ def generate_launch_description():
                 description="Absolute path to the world file to load in Ignition Gazebo",
             ),
             bridge,
+            image_bridge,
             robot_state_publisher_node,
             # robot_state_publisher_node_trailer,
             spawn_entity,
