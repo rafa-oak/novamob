@@ -29,7 +29,7 @@
 
   <xacro:property name="trailer_length" value="${base_length}"/>
   <xacro:property name="trailer_width" value="${base_width}"/>
-  <xacro:property name="trailer_height" value="${base_height}"/>
+  <xacro:property name="trailer_height" value="${base_height + wheel_zoff}"/>
 
 
 
@@ -182,7 +182,7 @@
     <joint name="${prefix}_joint" type="continuous">
       <parent link="trailer_link"/>
       <child link="${prefix}_link"/>
-      <origin xyz="${(x_reflect * wheel_offset) - (trailer_length/2)} ${y_reflect * (trailer_width / 2 + wheel_width / 2)} ${-trailer_height / 2}" rpy="0 0 0"/>
+      <origin xyz="${(x_reflect * wheel_offset) - (trailer_length/2)} ${y_reflect * (trailer_width / 2 + wheel_width / 2)} ${-trailer_height / 2.5}" rpy="0 0 0"/>
       <axis xyz="0 1 0"/>
     </joint>
   </xacro:macro>
@@ -256,9 +256,9 @@
 
 
   <!-- Trailer Wheels -->
-  <xacro:trailer_wheel prefix="trailer_wheel_lf" x_reflect="1" y_reflect="1" wheel_offset="${trailer_length / 4}"/>
+  <!-- <xacro:trailer_wheel prefix="trailer_wheel_lf" x_reflect="1" y_reflect="1" wheel_offset="${trailer_length / 4}"/> -->
   <xacro:trailer_wheel prefix="trailer_wheel_lr" x_reflect="-1" y_reflect="1" wheel_offset="${trailer_length / 4}"/>
-  <xacro:trailer_wheel prefix="trailer_wheel_rf" x_reflect="1" y_reflect="-1" wheel_offset="${trailer_length / 4}"/>
+  <!-- <xacro:trailer_wheel prefix="trailer_wheel_rf" x_reflect="1" y_reflect="-1" wheel_offset="${trailer_length / 4}"/> -->
   <xacro:trailer_wheel prefix="trailer_wheel_rr" x_reflect="-1" y_reflect="-1" wheel_offset="${trailer_length / 4}"/>
 
 
