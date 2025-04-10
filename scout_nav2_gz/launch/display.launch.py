@@ -48,24 +48,6 @@ def generate_launch_description():
     world_path = LaunchConfiguration("world")  
 
 
-    # robot_state_publisher_node = Node(
-    #     condition=IfCondition(PythonExpression(["'", use_trailer, "' == 'False'"])),
-    #     package="robot_state_publisher",
-    #     executable="robot_state_publisher",
-    #     parameters=[
-    #         {"robot_description": Command(["xacro ", LaunchConfiguration("model")])}
-    #     ],
-    # )
-
-    # robot_state_publisher_node_trailer = Node(
-    #     condition=IfCondition(PythonExpression(["'", use_trailer, "' == 'True'"])),
-    #     package="robot_state_publisher",
-    #     executable="robot_state_publisher",
-    #     parameters=[
-    #         {"robot_description": Command(["xacro ", trailer_model_path])}
-    #     ],
-    # )
-
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
@@ -302,7 +284,7 @@ def generate_launch_description():
             ),
             DeclareLaunchArgument(
                 name="world",
-                default_value=default_world_path,  
+                default_value=default_world_path, 
                 description="Absolute path to the world file to load in Ignition Gazebo",
             ),
             bridge,
@@ -325,6 +307,11 @@ def generate_launch_description():
                 )
             ),
             joint_state_publisher_gui_node,
+            bridge,
+            image_bridge,
+            spawn_entity,
+            robot_localization_node,
+            rviz_node,
             relay_odom,
             relay_cmd_vel,
         ] + gazebo

@@ -46,23 +46,6 @@ def generate_launch_description():
     run_headless = LaunchConfiguration("run_headless")
     world_path = LaunchConfiguration("world")  
 
-    # robot_state_publisher_node = Node(
-    #     condition=IfCondition(PythonExpression(["'", use_trailer, "' == 'False'"])),
-    #     package="robot_state_publisher",
-    #     executable="robot_state_publisher",
-    #     parameters=[
-    #         {"robot_description": Command(["xacro ", LaunchConfiguration("model")])}
-    #     ],
-    # )
-
-    # robot_state_publisher_node_trailer = Node(
-    #     condition=IfCondition(PythonExpression(["'", use_trailer, "' == 'True'"])),
-    #     package="robot_state_publisher",
-    #     executable="robot_state_publisher",
-    #     parameters=[
-    #         {"robot_description": Command(["xacro ", trailer_model_path])}
-    #     ],
-    # )
 
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
