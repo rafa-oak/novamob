@@ -287,13 +287,7 @@ def generate_launch_description():
                 default_value=default_world_path, 
                 description="Absolute path to the world file to load in Ignition Gazebo",
             ),
-            bridge,
-            image_bridge,
             robot_state_publisher_node,
-            # robot_state_publisher_node_trailer,
-            spawn_entity,
-            robot_localization_node,
-            rviz_node,
             RegisterEventHandler(
                 event_handler=OnProcessExit(
                     target_action=spawn_entity,
