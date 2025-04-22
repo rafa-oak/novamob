@@ -197,6 +197,36 @@ To fix this, the fields2cover package must be removed from the workspace, along 
 After that is done, follow the integration instructions again and the error should be fixed. (As seen in this[ issue](https://github.com/open-navigation/opennav_coverage/issues/58))
 
 
+### Bashrc example
+
+
+```
+source /opt/ros/humble/setup.bash
+source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
+#source ~/ros2_ws/install/local_setup.bash
+source ~/farm_ws/install/local_setup.bash
+#source ~/test_ws/install/local_setup.bash
+#source ~/maize_ws/install/local_setup.bash
+source /usr/share/gazebo/setup.sh
+source /usr/share/gazebo-11/setup.sh
+
+export TURTLEBOT3_MODEL=waffle
+#export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/humble/share/turtlebot3_gazebo/models
+#export GAZEBO_MODEL_PATH=/home/rafael/Documents/objects
+
+export GAZEBO_MODEL_PATH=/home/rafael/farm_ws/src/scout_description/models
+
+
+#force Nvidia GPU to be used
+export __NV_PRIME_RENDER_OFFLOAD=1
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+
+#Use Cyclone DDS 
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+#Use Fast DDS 
+#export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+```
+
 ## Useful Resources
 
 - [Nav2 Documentation](https://docs.nav2.org/concepts/index.html)
