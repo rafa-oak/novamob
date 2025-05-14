@@ -2470,7 +2470,7 @@
           <geometry>
             <mesh>
               <scale>0.06 0.06 0.06</scale>
-              <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/suv/4/meshes/suv.obj</uri>
+              <uri>https://fuel.gazebosim.org/openrobotics/models/suv/4/meshes/suv.obj</uri>
             </mesh>
           </geometry>
         </collision>
@@ -2479,7 +2479,7 @@
           <geometry>
             <mesh>
               <scale>0.06 0.06 0.06</scale>
-              <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/suv/4/meshes/suv.obj</uri>
+              <uri>https://fuel.gazebosim.org/openrobotics/models/suv/4/meshes/suv.obj</uri>
             </mesh>
           </geometry>
         </visual>
@@ -5542,27 +5542,27 @@
       <self_collide>false</self_collide>
     </model>
     <include>
-      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>https://fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_18</name>
       <pose>12.3298 -3.95394 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>https://fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_19</name>
       <pose>11.5705 -8.22222 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/oak tree/7</uri>
+      <uri>https://fuel.gazebosim.org/openrobotics/models/oak tree/7</uri>
       <name>Oak tree_5</name>
       <pose>11.1594 -24.3905 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/oak tree/7</uri>
+      <uri>https://fuel.gazebosim.org/openrobotics/models/oak tree/7</uri>
       <name>Oak tree_6</name>
       <pose>1.90772 -38.1884 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>https://fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_20</name>
       <pose>-3.3346 -40.3306 0 0 -0 0</pose>
     </include>
@@ -5762,32 +5762,32 @@
       <self_collide>false</self_collide>
     </model>
     <include>
-      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>https://fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_21</name>
       <pose>-20.1493 -30.4232 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <uri>https://fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
       <name>Pine Tree_22</name>
       <pose>14.4854 -2.41098 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
+      <uri>https://fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>Lamp Post</name>
       <pose>-31 -2.5 0 0 -0 1.57</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
+      <uri>https://fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>Lamp Post_1</name>
       <pose>-31 -12.5 0 0 -0 1.57</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
+      <uri>https://fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>Lamp Post_1_1</name>
       <pose>-31 -22.5 0 0 -0 1.57</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
+      <uri>https://fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>Lamp Post_1_2</name>
       <pose>-25.6041 -33.6012 0 0 -0 1.57</pose>
     </include>

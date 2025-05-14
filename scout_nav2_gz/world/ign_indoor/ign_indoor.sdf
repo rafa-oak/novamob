@@ -2868,7 +2868,7 @@
           <pose>0 0 0.02 0.04 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4/meshes/casual_female.dae</uri>
+              <uri>https://fuel.gazebosim.org/openrobotics/models/casual female/4/meshes/casual_female.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -3820,17 +3820,17 @@
       <self_collide>false</self_collide>
     </model>
     <include>
-      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/foodcourttable1/2</uri>
+      <uri>https://fuel.gazebosim.org/openrobotics/models/foodcourttable1/2</uri>
       <name>FoodCourtTable1</name>
       <pose>17.5015 0.467451 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/foodcourttable1/2</uri>
+      <uri>https://fuel.gazebosim.org/openrobotics/models/foodcourttable1/2</uri>
       <name>FoodCourtTable1_0</name>
       <pose>17.4974 -1.22049 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file:///home/rafael/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/foodcourttable1/2</uri>
+      <uri>https://fuel.gazebosim.org/openrobotics/models/foodcourttable1/2</uri>
       <name>FoodCourtTable1_1</name>
       <pose>17.5332 -2.68102 0 0 -0 0</pose>
     </include>
