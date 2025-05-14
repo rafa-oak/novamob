@@ -7,29 +7,66 @@
   <maintainer email="rs.carvalho@campus.fct.unl.pt">Rafael Carvalho</maintainer>
   <license>Apache 2.0</license>
 
+    <!-- Build tools -->
   <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>ament_cmake_python</buildtool_depend>
 
+  <!-- Build dependencies -->
   <build_depend>control_msgs</build_depend>
 
-  <exec_depend>joint_state_publisher</exec_depend>
+  <!-- Run-time dependencies -->
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <!-- Robot description -->
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>urdf</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher_gui</exec_depend>
+
+  <!-- Control -->
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>hardware_interface</exec_depend>
   <exec_depend>ros2_control</exec_depend>
   <exec_depend>ros2_controllers</exec_depend>
-  <exec_depend>rviz2</exec_depend>
-  <exec_depend>xacro</exec_depend>
-  <exec_depend>robot_localization</exec_depend>
-  <exec_depend>ros_ign_gazebo</exec_depend>
-  <exec_depend>ign_ros2_control</exec_depend>
-  <exec_depend>topic_tools</exec_depend>
-  
-  <!-- For the GPS capabilities -->
-  <depend>navigation2</depend>
-  <!-- <depend>robot_localization</depend> -->
-  <depend>mapviz</depend>
-  <depend>mapviz_plugins</depend>
-  <depend>tile_map</depend>
+  <exec_depend>diff_drive_controller</exec_depend>
 
+  <!-- Navigation -->
+  <exec_depend>navigation2</exec_depend>
+  <exec_depend>nav2_bringup</exec_depend>
+  <exec_depend>nav2_controller</exec_depend>
+  <exec_depend>nav2_planner</exec_depend>
+  <exec_depend>nav2_bt_navigator</exec_depend>
+  <exec_depend>nav2_map_server</exec_depend>
+  <exec_depend>nav2_amcl</exec_depend>
+
+  <!-- Localization -->
+  <exec_depend>robot_localization</exec_depend>
+
+  <!-- TF, sensor msgs, tools -->
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>tf2_sensor_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>topic_tools</exec_depend>
+
+  <!-- Visualization -->
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>mapviz</exec_depend>
+  <exec_depend>mapviz_plugins</exec_depend>
+  <exec_depend>tile_map</exec_depend>
+  <exec_depend>image_transport</exec_depend>
+
+  <!-- Gazebo Ignition -->
+  <exec_depend>ros_ign_gazebo</exec_depend>
+  <exec_depend>ros_ign_bridge</exec_depend>
+  <exec_depend>ros_ign_interfaces</exec_depend>
+  <exec_depend>ign_ros2_control</exec_depend>
+
+  <!-- Testing -->
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
   <test_depend>launch_testing</test_depend>
