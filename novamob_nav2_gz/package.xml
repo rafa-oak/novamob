@@ -41,6 +41,7 @@
   <exec_depend>nav2_bt_navigator</exec_depend>
   <exec_depend>nav2_map_server</exec_depend>
   <exec_depend>nav2_amcl</exec_depend>
+  <exec_depend>teleop_twist_keyboard</exec_depend>
 
   <!-- Localization -->
   <exec_depend>robot_localization</exec_depend>

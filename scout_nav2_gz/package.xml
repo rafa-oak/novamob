@@ -41,6 +41,8 @@
   <exec_depend>nav2_bt_navigator</exec_depend>
   <exec_depend>nav2_map_server</exec_depend>
   <exec_depend>nav2_amcl</exec_depend>
+  <exec_depend>teleop_twist_keyboard</exec_depend>
+
 
   <!-- Localization -->
   <exec_depend>robot_localization</exec_depend>
@@ -65,6 +67,8 @@
   <exec_depend>ros_ign_bridge</exec_depend>
   <exec_depend>ros_ign_interfaces</exec_depend>
   <exec_depend>ign_ros2_control</exec_depend>
+  <exec_depend>ros_gz_image</exec_depend>
+
 
   <!-- Testing -->
   <test_depend>ament_lint_auto</test_depend>
