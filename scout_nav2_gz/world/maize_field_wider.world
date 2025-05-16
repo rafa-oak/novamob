@@ -178,7 +178,7 @@
                 <min_height>4</min_height>
                 <fade_dist>5</fade_dist>
               </blend>
-              <uri>/home/rafael/.ros/virtual_maize_field/virtual_maize_field_heightmap.png</uri>
+              <uri>file://virtual_maize_field_heightmap.png</uri>
               <size>16.05 16.05 0.055</size>
               <pos>0 0 0</pos>
             </heightmap>
@@ -187,7 +187,7 @@
         <collision name="collision">
           <geometry>
             <heightmap>
-              <uri>/home/rafael/.ros/virtual_maize_field/virtual_maize_field_heightmap.png</uri>
+              <uri>file://virtual_maize_field_heightmap.png</uri>
               <size>16.05 16.05 0.055</size>
               <pos>0 0 0</pos>
             </heightmap>
