@@ -46,7 +46,9 @@ def generate_launch_description():
     gz_verbosity = LaunchConfiguration("gz_verbosity")
     run_headless = LaunchConfiguration("run_headless")
     world_path = LaunchConfiguration("world")  
-
+    spawn_x = LaunchConfiguration("spawn_x")
+    spawn_y = LaunchConfiguration("spawn_y")
+    spawn_z = LaunchConfiguration("spawn_z")
 
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
@@ -122,10 +124,9 @@ def generate_launch_description():
             "scout",
             "-topic",
             "robot_description",
-            "-z",
-            "1.0",
-            "-x",
-            "-2.0",
+            "-x", spawn_x,
+            "-y", spawn_y,
+            "-z", spawn_z,
             "--ros-args",
             "--log-level",
             log_level,
@@ -286,6 +287,21 @@ def generate_launch_description():
                 name="world",
                 default_value=default_world_path, 
                 description="Absolute path to the world file to load in Ignition Gazebo",
+            ),
+            DeclareLaunchArgument(
+                name="spawn_x",
+                default_value="-2.0",
+                description="X-coordinate for the robot spawn position",
+            ),
+            DeclareLaunchArgument(
+                name="spawn_y",
+                default_value="0.0",
+                description="Y-coordinate for the robot spawn position",
+            ),
+            DeclareLaunchArgument(
+                name="spawn_z",
+                default_value="1.0",
+                description="Z-coordinate for the robot spawn position",
             ),
             robot_state_publisher_node,
             RegisterEventHandler(
