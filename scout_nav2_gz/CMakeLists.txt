@@ -33,6 +33,7 @@ install(
 install(PROGRAMS
   scripts/reach_goal.py
   scripts/follow_waypoints.py
+  scripts/follow_waypoints_fortress.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -17,7 +17,14 @@ endif()
 
 find_package(ament_cmake REQUIRED)
 
-install(DIRECTORY launch urdf meshes world rviz config models
+install(DIRECTORY launch urdf meshes world rviz config models scripts
   DESTINATION share/${PROJECT_NAME}/)
+
+
+# Install Python executables
+install(PROGRAMS
+  scripts/follow_waypoints_classic.py
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 ament_package()
