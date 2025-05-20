@@ -32,7 +32,8 @@ def generate_launch_description():
         name='rviz2',
         output='screen',
         arguments=['-d', LaunchConfiguration('rvizconfig')],
-        parameters=[{'use_sim_time': LaunchConfiguration('use_sim_time')}]
+        condition=launch.conditions.IfCondition(LaunchConfiguration('use_rviz'))
+
     )
     spawn_entity = launch_ros.actions.Node(
         package='gazebo_ros',
@@ -60,6 +61,8 @@ def generate_launch_description():
                                             description='Absolute path to rviz config file'),
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='True',
                                             description='Flag to enable use_sim_time'),
+        launch.actions.DeclareLaunchArgument(name='use_rviz', default_value='True',
+                                             description='Flag to enable RViz'),
         launch.actions.ExecuteProcess(cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so', LaunchConfiguration('world')], output='screen'),
 
         joint_state_publisher_node,

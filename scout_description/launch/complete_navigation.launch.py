@@ -38,7 +38,7 @@ def generate_launch_description():
         package="scout_description"
     ).find("scout_description")
     # Messages are from: https://navigation.ros.org/setup_guides/sensors/setup_sensors.html#launching-nav2
-    diff_drive_loaded_message = "Spawn status: SpawnEntity: Successfully spawned entity [scout]"
+    diff_drive_loaded_message = "Spawn status: SpawnEntity: Successfully spawned entity [scout_v2]"
     toolbox_ready_message = "Registering sensor"
     navigation_ready_message = "Creating bond timer"
     default_model_path = os.path.join(pkg_share, "urdf/scout_v2/scout_v2.xacro")
