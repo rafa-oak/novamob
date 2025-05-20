@@ -33,7 +33,7 @@ def generate_launch_description():
     
     # RViz and world file paths
     default_rviz_config_path = os.path.join(pkg_share, "rviz/urdf_config.rviz")
-    default_world_path = os.path.join(pkg_share, "world/ign_indoor/ign_indoor.sdf")
+    default_world_path = os.path.join(pkg_share, "world/ign_indoor/ign_indoor_centered.sdf")
     gz_models_path = os.path.join(pkg_share, "models")
 
     # Launch configurations
@@ -136,6 +136,7 @@ def generate_launch_description():
             "/imu@sensor_msgs/msg/Imu[ignition.msgs.IMU",
             "/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo",
             "/clock@rosgraph_msgs/msg/Clock[ignition.msgs.Clock",
+            #"/world/empty/stats@ros_gz_interfaces/msg/WorldStatistics"
         ],
         output="screen",
     )
@@ -279,7 +280,7 @@ def generate_launch_description():
             ),
             DeclareLaunchArgument(
                 name="spawn_x",
-                default_value="-2.0",
+                default_value="0.0",
                 description="X-coordinate for the robot spawn position",
             ),
             DeclareLaunchArgument(
