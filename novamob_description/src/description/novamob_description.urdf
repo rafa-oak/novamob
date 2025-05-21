@@ -391,8 +391,8 @@
           <format>R8G8B8</format>
         </image>
         <clip>
-          <near>0.05</near>
-          <far>3</far>
+          <near>0.2</near>
+          <far>10</far>
         </clip>
       </camera>
       <plugin name="depth_camera_controller" filename="libgazebo_ros_camera.so">
