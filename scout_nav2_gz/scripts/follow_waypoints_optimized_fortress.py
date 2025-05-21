@@ -171,7 +171,7 @@ def main():
 
         # Log the results
         log_results(
-            robot="scout_optimized_camera",
+            robot="scout_no_cam",
             sim_env="gazebo_fortress",
             total_time=total_duration,
             avg_cpu=avg_cpu,

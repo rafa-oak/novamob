@@ -155,7 +155,7 @@ def generate_launch_description():
         package='ros_gz_image',
         executable='image_bridge',
         arguments=[
-            "/robot_cam",
+            #"/robot_cam",
             "/depth_camera"
         ],
         output='screen',
