@@ -352,24 +352,24 @@
       <topic>scan</topic>
       <always_on>true</always_on>
       <visualize>true</visualize>
-      <update_rate>10</update_rate>
+      <update_rate>20</update_rate>
       <lidar>
         <scan>
           <horizontal>
-            <samples>180</samples>
+            <samples>360</samples>
             <resolution>1.000000</resolution>
             <min_angle>0.000000</min_angle>
             <max_angle>6.280000</max_angle>
           </horizontal>
           <vertical>
-            <samples>8</samples> <!-- VLP-16 specific -->
+            <samples>16</samples> <!-- VLP-16 specific -->
             <min_angle>-0.261799</min_angle> <!-- -15° in radians -->
             <max_angle>0.261799</max_angle> <!-- 15° in radians -->
           </vertical>
         </scan>
         <range>
           <min>0.150000</min>
-          <max>10</max>
+          <max>100</max>
           <resolution>0.01</resolution>
         </range>
         <noise>
