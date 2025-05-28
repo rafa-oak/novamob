@@ -35,6 +35,7 @@ install(PROGRAMS
   scripts/follow_waypoints.py
   scripts/follow_waypoints_fortress.py
   scripts/follow_waypoints_optimized_fortress.py
+  scripts/follow_waypoints_test.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

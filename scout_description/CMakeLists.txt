@@ -24,6 +24,7 @@ install(DIRECTORY launch urdf meshes world rviz config models scripts
 # Install Python executables
 install(PROGRAMS
   scripts/follow_waypoints_classic.py
+  scripts/follow_waypoints_test.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
