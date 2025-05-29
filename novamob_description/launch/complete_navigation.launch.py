@@ -190,7 +190,7 @@ def generate_launch_description():
                 name="world",
                 default_value=[
                     FindPackageShare("novamob_description"),
-                    '/world/indoor_2.world',
+                    '/world/indoor_2_testing.world',
                 ],
                 description="Absolute path to the world file",
             ),

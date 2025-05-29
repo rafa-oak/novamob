@@ -95,7 +95,7 @@ def spawn_object(name, x=0.0, y=0.0, z=0.0, sim_env="gazebo_fortress"):
     <link name="link">
       <visual name="visual">
         <geometry>
-          <box><size>0.5 0.5 0.5</size></box>
+          <box><size>0.4 0.4 0.5</size></box>
         </geometry>
         <material>
           <ambient>0.7 0.7 0.7 1</ambient>
@@ -106,7 +106,7 @@ def spawn_object(name, x=0.0, y=0.0, z=0.0, sim_env="gazebo_fortress"):
       </visual>
       <collision name="collision">
         <geometry>
-          <box><size>0.5 0.5 0.5</size></box>
+          <box><size>0.4 0.4 0.5</size></box>
         </geometry>
       </collision>
     </link>
@@ -217,7 +217,7 @@ def main():
             spawn_object("obstacle_cube_2", x=0.0, y=1.5, z=0.25, sim_env=args.sim_env)
             spawned_2 = True
         if feedback and feedback.current_waypoint == 3 and not spawned_3 and args.dynamic_obstacles == 'true':
-            spawn_object("obstacle_cube_3", x=0.5, y=4.5, z=0.25, sim_env=args.sim_env)
+            spawn_object("obstacle_cube_3", x=0.5, y=5.0, z=0.25, sim_env=args.sim_env)
             spawned_3 = True
         if feedback and i % 5 == 0:
             print('Executing current waypoint: ' +
