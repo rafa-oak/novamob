@@ -154,7 +154,7 @@ def spawn_object(name, x=0.0, y=0.0, z=0.0, sim_env="gazebo_fortress"):
 def main():
     
     parser = argparse.ArgumentParser(description="Waypoint navigation performance tester")
-    parser.add_argument('--robot', type=str, default='novamob', help='Robot name (e.g., novamob or scout)')
+    parser.add_argument('--robot', type=str, default='scout', help='Robot name (e.g., novamob or scout)')
     parser.add_argument('--sim_env', type=str, default='gazebo_fortress', help='Simulation environment (gazebo_fortress or gazebo_classic)')
     parser.add_argument('--csv_file', type=str, default='navigation_results.csv', help='CSV file name to log results')
     parser.add_argument('--dynamic_obstacles', type=str, choices=['true', 'false'], default='false',
