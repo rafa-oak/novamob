@@ -3391,7 +3391,7 @@
     </light>
     <model name="obstacle_cube_1">
       <static>true</static>
-      <pose>0.5 -1.0 0.25 0 0 0</pose>
+      <pose>0.5 -0.5 0.25 0 0 0</pose>
       <link name="link">
         <visual name="visual">
           <geometry>
