@@ -3391,11 +3391,11 @@
     </light>
     <model name="obstacle_cube_1">
       <static>true</static>
-      <pose>0.0 -1.0 0.25 0 0 0</pose>
+      <pose>0.5 -1.0 0.25 0 0 0</pose>
       <link name="link">
         <visual name="visual">
           <geometry>
-            <box><size>0.5 0.5 0.5</size></box>
+            <box><size>0.4 0.4 0.5</size></box>
           </geometry>
           <material>
             <ambient>0.7 0.7 0.7 1</ambient>
@@ -3406,7 +3406,7 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <box><size>0.5 0.5 0.5</size></box>
+            <box><size>0.4 0.4 0.5</size></box>
           </geometry>
         </collision>
       </link>
@@ -3418,7 +3418,7 @@
       <link name="link">
         <visual name="visual">
           <geometry>
-            <box><size>0.5 0.5 0.5</size></box>
+            <box><size>0.4 0.4 0.5</size></box>
           </geometry>
           <material>
             <ambient>0.7 0.7 0.7 1</ambient>
@@ -3429,7 +3429,7 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <box><size>0.5 0.5 0.5</size></box>
+            <box><size>0.4 0.4 0.5</size></box>
           </geometry>
         </collision>
       </link>
@@ -3437,11 +3437,11 @@
 
     <model name="obstacle_cube_3">
       <static>true</static>
-      <pose>0.5 4.5 0.25 0 0 0</pose>
+      <pose>0.5 5.0 0.25 0 0 0</pose>
       <link name="link">
         <visual name="visual">
           <geometry>
-            <box><size>0.5 0.5 0.5</size></box>
+            <box><size>0.4 0.4 0.5</size></box>
           </geometry>
           <material>
             <ambient>0.7 0.7 0.7 1</ambient>
@@ -3452,7 +3452,7 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <box><size>0.5 0.5 0.5</size></box>
+            <box><size>0.4 0.4 0.5</size></box>
           </geometry>
         </collision>
       </link>

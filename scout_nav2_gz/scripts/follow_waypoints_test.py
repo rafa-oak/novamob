@@ -211,7 +211,7 @@ def main():
         feedback = navigator.getFeedback()
 
         if feedback and feedback.current_waypoint == 1 and not spawned_1 and args.dynamic_obstacles == 'true':
-            spawn_object("obstacle_cube_1", x=0.0, y=-1.0, z=0.25, sim_env=args.sim_env)
+            spawn_object("obstacle_cube_1", x=0.5, y=-1.0, z=0.25, sim_env=args.sim_env)
             spawned_1 = True
         if feedback and feedback.current_waypoint == 2 and not spawned_2 and args.dynamic_obstacles == 'true':
             spawn_object("obstacle_cube_2", x=0.0, y=1.5, z=0.25, sim_env=args.sim_env)
