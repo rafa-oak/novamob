@@ -1,0 +1,4 @@
+timestamp,robot,sim_env,test_id,navigation_time_sec,avg_cpu_usage,avg_gpu_usage,avg_rtf
+2025-05-30 18:42:13,scout_unoptimized,gazebo_fortress,1,106.92,36.02,25.57,0.9346
+2025-05-30 18:50:26,scout_unoptimized,gazebo_fortress,2,142.25,25.15,29.38,0.7298
+2025-05-30 18:53:39,scout_unoptimized,gazebo_fortress,3,141.28,26.61,28.28,0.7949
