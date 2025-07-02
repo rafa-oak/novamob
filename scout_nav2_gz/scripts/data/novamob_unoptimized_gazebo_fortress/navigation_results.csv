@@ -1,0 +1,11 @@
+timestamp,robot,sim_env,test_id,navigation_time_sec,avg_cpu_usage,avg_gpu_usage,avg_rtf
+2025-06-19 13:12:50,novamob_unoptimized,gazebo_fortress,1,153.26,26.39,30.58,0.6900
+2025-06-19 13:28:17,novamob_unoptimized,gazebo_fortress,2,166.38,26.21,30.19,0.6319
+2025-06-19 14:16:52,novamob_unoptimized,gazebo_fortress,3,170.45,25.93,30.35,0.6182
+2025-06-19 14:28:21,novamob_unoptimized,gazebo_fortress,4,187.37,26.60,30.08,0.5719
+2025-06-19 14:37:35,novamob_unoptimized,gazebo_fortress,5,144.87,24.01,30.43,0.6753
+2025-06-19 14:49:14,novamob_unoptimized,gazebo_fortress,6,170.57,26.14,30.40,0.6156
+2025-06-19 15:26:20,novamob_unoptimized,gazebo_fortress,7,156.58,23.80,30.96,0.6576
+2025-06-19 15:37:00,novamob_unoptimized,gazebo_fortress,8,153.98,26.90,30.59,0.5671
+2025-06-19 16:06:16,novamob_unoptimized,gazebo_fortress,9,174.38,26.14,30.08,0.6024
+2025-06-19 16:38:46,novamob_unoptimized,gazebo_fortress,10,159.54,26.43,30.45,0.6402
