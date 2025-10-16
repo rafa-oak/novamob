@@ -1,8 +1,7 @@
 ## NOVAMOB
 
 
-This repository provides simulation environments for the **NovaMob** and **Agilex Scout** robots in **ROS2**, compatible with both **Gazebo Classic** (only basic features) and **Gazebo Fortress** (Ignition Gazebo). This packages include different robot models, sensors, controllers, and configuration files necessary for seamless simulation and testing.
-
+This repository provides simulation environments for the **NovaMob** and **Agilex Scout** robots in **ROS2**, compatible with both **Gazebo Classic** (only basic features) and **Gazebo Fortress** (Ignition Gazebo). This packages include different robot models, sensors, controllers, and configuration files necessary for seamless testing and navigation.
 
 ## Installation
 
@@ -226,6 +225,29 @@ export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 #Use Fast DDS 
 #export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 ```
+
+## Video Demonstrations
+
+### Test 1: Launching Different Robot Configurations
+[![Test 1 Video](https://www.youtube.com/watch?v=de5w_UzkWr4/0.jpg)](https://www.youtube.com/watch?v=de5w_UzkWr4)
+
+### Test 2: SLAM Mapping of an Unknown Environment
+[![Test 2 Video](https://www.youtube.com/watch?v=yfOf5FuHmV4/0.jpg)](https://www.youtube.com/watch?v=yfOf5FuHmV4)
+
+
+### Test 3: Navigation on a Known Map
+[![Test 3 Video](https://www.youtube.com/watch?v=Uz4oWvS0Dzc/0.jpg)](https://www.youtube.com/watch?v=Uz4oWvS0Dzc)
+
+
+### Test 4: GPS-Based Navigation in Outdoor Scenarios
+[![Test 4 Video](https://www.youtube.com/watch?v=K5aH1Chey7Y/0.jpg)](https://www.youtube.com/watch?v=K5aH1Chey7Y)
+
+
+###Test 5: Static Obstacle Avoidance
+[![Test 5 Video](https://www.youtube.com/watch?v=-IbJUOouiAg/0.jpg)](https://www.youtube.com/watch?v=-IbJUOouiAg)
+
+
+
 
 ## Useful Resources
 
