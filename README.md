@@ -1,7 +1,7 @@
 ## NOVAMOB
 
 
-This repository provides simulation environments for the **NovaMob** and **Agilex Scout** robots in **ROS2**, compatible with both **Gazebo Classic** (only basic features) and **Gazebo Fortress** (Ignition Gazebo). This packages include different robot models, sensors, controllers, and configuration files necessary for seamless testing and navigation.
+This repository provides simulation environments for the **Novamob** and **Agilex Scout** robots in **ROS2**, compatible with both **Gazebo Classic** (only basic features) and **Gazebo Fortress** (Ignition Gazebo). This packages include different robot models, sensors, controllers, and configuration files necessary for seamless testing and navigation.
 
 ## Installation
 
@@ -226,29 +226,93 @@ export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 #export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 ```
 
+
 ## Video Demonstrations
 
-### Test 1: Launching Different Robot Configurations
-[![Test 1 Video](https://www.youtube.com/watch?v=de5w_UzkWr4/0.jpg)](https://www.youtube.com/watch?v=de5w_UzkWr4)
+These test videos were recorded to exemplify the many functionalities of this project.  
+Alternatively, they can be watched in succession in this [YouTube playlist](https://www.youtube.com/playlist?list=PLAreMUJ4OLkDdXZTOYVWaCbDlmRvhL1az).
 
-### Test 2: SLAM Mapping of an Unknown Environment
-[![Test 2 Video](https://www.youtube.com/watch?v=yfOf5FuHmV4/0.jpg)](https://www.youtube.com/watch?v=yfOf5FuHmV4)
+### Test 1: Launching Different Robot Configurations  
+[![Test 1 Video](https://img.youtube.com/vi/de5w_UzkWr4/0.jpg)](https://www.youtube.com/watch?v=de5w_UzkWr4)
 
+### Test 2: SLAM Mapping of an Unknown Environment  
+[![Test 2 Video](https://img.youtube.com/vi/yfOf5FuHmV4/0.jpg)](https://www.youtube.com/watch?v=yfOf5FuHmV4)
 
-### Test 3: Navigation on a Known Map
-[![Test 3 Video](https://www.youtube.com/watch?v=Uz4oWvS0Dzc/0.jpg)](https://www.youtube.com/watch?v=Uz4oWvS0Dzc)
+### Test 3: Navigation on a Known Map  
+[![Test 3 Video](https://img.youtube.com/vi/Uz4oWvS0Dzc/0.jpg)](https://www.youtube.com/watch?v=Uz4oWvS0Dzc)
 
+### Test 4: GPS-Based Navigation in Outdoor Scenarios  
+[![Test 4 Video](https://img.youtube.com/vi/K5aH1Chey7Y/0.jpg)](https://www.youtube.com/watch?v=K5aH1Chey7Y)
 
-### Test 4: GPS-Based Navigation in Outdoor Scenarios
-[![Test 4 Video](https://www.youtube.com/watch?v=K5aH1Chey7Y/0.jpg)](https://www.youtube.com/watch?v=K5aH1Chey7Y)
+### Test 5: Static Obstacle Avoidance  
+[![Test 5 Video](https://img.youtube.com/vi/-IbJUOouiAg/0.jpg)](https://www.youtube.com/watch?v=-IbJUOouiAg)
 
+### Test 6: Dynamic Obstacle Avoidance  
+**Using LIDAR:**  
+[![Test 6 Video](https://img.youtube.com/vi/WpcBOu0J4lU/0.jpg)](https://www.youtube.com/watch?v=WpcBOu0J4lU)
 
-###Test 5: Static Obstacle Avoidance
-[![Test 5 Video](https://www.youtube.com/watch?v=-IbJUOouiAg/0.jpg)](https://www.youtube.com/watch?v=-IbJUOouiAg)
+**Using GPS:**  
+[![Test 6 GPS Video](https://img.youtube.com/vi/9sccmkO9_lE/0.jpg)](https://www.youtube.com/watch?v=9sccmkO9_lE)
+
+### Test 7: Navigating Over Ramps and Speed Bumps  
+**Scout robot:**  
+[![Test 7 Scout Video](https://img.youtube.com/vi/Ldx0hbSa1Gc/0.jpg)](https://www.youtube.com/watch?v=Ldx0hbSa1Gc)  
+
+**Novamob robot:**  
+[![Test 7 Novamob Video](https://img.youtube.com/vi/d8450XNd1dw/0.jpg)](https://www.youtube.com/watch?v=d8450XNd1dw)
+
+**Novamob robot with lowered wheels:**  
+[![Test 7 Novamob LoweredVideo](https://img.youtube.com/vi/vmbk2GNjAQo/0.jpg)](https://www.youtube.com/watch?v=vmbk2GNjAQo)
+
+### Test 8: Trailer Navigation  
+**Novamob robot:**  
+[![Test 8 Video](https://img.youtube.com/vi/9dGqhdYVlVo/0.jpg)](https://www.youtube.com/watch?v=9dGqhdYVlVo)
+
+**Scout robot:**  
+[![Test 8 Scout Video](https://img.youtube.com/vi/nffpbeH8KjQ/0.jpg)](https://www.youtube.com/watch?v=nffpbeH8KjQ)
+
+### Test 9: Open-Field Complete Coverage Path Planning  
+[![Test 9 Video](https://img.youtube.com/vi/SusDtpd-aWM/0.jpg)](https://www.youtube.com/watch?v=SusDtpd-aWM)
+
+### Test 10: Row Coverage in Maize Field  
+[![Test 10 Video](https://img.youtube.com/vi/gBNX1hG__eo/0.jpg)](https://www.youtube.com/watch?v=gBNX1hG__eo)
+
+### Test 11: Simulator Performance Comparison  
+**Baseline scenario:**  
+[![Test 11 Video](https://img.youtube.com/vi/wc4LrwbLAgo/0.jpg)](https://www.youtube.com/watch?v=wc4LrwbLAgo)
+
+**Static Obstacles scenario:**  
+[![Test 11 Video](https://img.youtube.com/vi/VsdMkV3HwZI/0.jpg)](https://www.youtube.com/watch?v=VsdMkV3HwZI)
+
+**Dynamic Obstacles scenario:**  
+[![Test 11 Video](https://img.youtube.com/vi/Suyu6FRf_LA/0.jpg)](https://www.youtube.com/watch?v=Suyu6FRf_LA)
 
 
 
 
 ## Useful Resources
 
-- [Nav2 Documentation](https://docs.nav2.org/concepts/index.html)
+### Core Documentation
+- **Nav2 Documentation:** https://docs.nav2.org
+- **Nav2 GitHub:** https://github.com/ros-navigation/navigation2
+- **ROS2 Humble Docs:** https://docs.ros.org/en/humble
+- **Gazebo Fortress Docs:** https://gazebosim.org/docs/fortress
+- **Gazebo Classic Docs:** https://classic.gazebosim.org/tutorials
+
+### Complete Coverage
+- **OpenNav Coverage Repository:**
+  https://github.com/open-navigation/opennav_coverage
+- **Fields2Cover:**
+  https://github.com/Fields2Cover/Fields2Cover
+
+### Repositories Used
+- **Novamob Repository (this project):**
+  https://github.com/rafa-oak/novamob
+- **OpenNav Coverage Fork (Only Humble Compatibility):**
+  https://github.com/rafa-oak/opennav_coverage
+- **Virtual Maize Field Fork :**
+  https://github.com/rafa-oak/virtual_maize_field
+
+
+
+
